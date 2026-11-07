@@ -12,8 +12,13 @@
       <a class="brand" href="index.html">Junwei Fu</a>
       <nav class="links">
         <a href="index.html">Home</a>
-        <a href="demos.html">Demo</a>
-        <a href="articles.html">Articles</a>
+        <a href="articles.html">Featured Essays</a>
+        <a href="articles.html?cat=privacy">Privacy</a>
+        <a href="articles.html?cat=ai-society">AI &amp; Society</a>
+        <a href="articles.html?cat=security">Security</a>
+        <a href="articles.html?cat=news">News &amp; Commentary</a>
+        <a href="articles.html?cat=explainers">Quick Explainers</a>
+        <a href="about.html">About</a>
       </nav>
     </div>
   </header>
@@ -25,7 +30,7 @@
         <div class="hero-text">
           <h1>Junwei Fu</h1>
           <p class="role">Privacy Engineering Graduate Student · Carnegie Mellon University · Pittsburgh, PA</p>
-          <p class="bio">Privacy Engineering graduate student at Carnegie Mellon University with a background in Data Science. I'm interested in the intersection of technology, privacy, governance, and risk management — working across data analysis, AI projects, and large-scale datasets. I care about responsible AI, data governance, and building trustworthy systems that balance innovation with compliance.</p>
+          <p class="bio">Privacy Engineering graduate student at Carnegie Mellon University with a background in Data Science. I'm interested in the intersection of technology, privacy, governance, and risk management — working across data analysis, AI projects, and large-scale datasets. <a href="about.html">More about me →</a></p>
           <div class="social">
             <a href="https://github.com/rfu1909829559-crypto" target="_blank" rel="noopener">GitHub</a>
             <a href="mailto:fu1909829559@gmail.com">Email</a>
@@ -36,21 +41,29 @@
     </section>
 
     <section class="section">
-      <h2>What is this site for</h2>
+      <h2>Featured Essays</h2>
+      <p class="lead">Selected writing on privacy, AI, and security. <a href="articles.html">Browse all essays →</a></p>
+      <div id="featured-preview" class="article-list"></div>
+    </section>
+
+    <section class="section">
+      <h2>Topics</h2>
+      <div class="topic-chips">
+        <a class="chip" href="articles.html?cat=privacy">Privacy</a>
+        <a class="chip" href="articles.html?cat=ai-society">AI &amp; Society</a>
+        <a class="chip" href="articles.html?cat=security">Security</a>
+        <a class="chip" href="articles.html?cat=news">News &amp; Commentary</a>
+        <a class="chip" href="articles.html?cat=explainers">Quick Explainers</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects &amp; Demos</h2>
       <div class="grid">
         <div class="card">
           <h3>Mini-tool Demos</h3>
           <p>Interactive demos of small tools and AI prototypes I've built (e.g., a privacy-law vertical chatbot).</p>
           <a class="btn" href="demos.html">View Demos →</a>
-        </div>
-        <div class="card">
-          <h3>Articles</h3>
-          <p>Thoughts, project retrospectives, and reading notes — published lightly, no need for long-form.</p>
-          <a class="btn" href="articles.html">Read Articles →</a>
-        </div>
-        <div class="card">
-          <h3>About Me</h3>
-          <p>That's the intro above. I may add a résumé or portfolio links here later.</p>
         </div>
       </div>
     </section>
@@ -59,6 +72,7 @@
   <footer>
     <p>© <span id="year"></span> Junwei Fu · Built with plain HTML/CSS/JS — no backend, hostable anywhere.</p>
   </footer>
+  <script src="assets/js/articles.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
