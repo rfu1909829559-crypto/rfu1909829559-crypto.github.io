@@ -110,8 +110,37 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 32px 20px 64px; }
   border: 1px solid var(--border); border-radius: var(--radius);
   padding: 24px; background: #fff;
 }
-.article-detail h2 { margin-top: 0; }
-.article-detail .meta { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+.article-title { margin: 0 0 6px; font-size: 26px; line-height: 1.3; }
+.article-detail .meta { color: var(--muted); font-size: 13px; margin: 0 0 14px; }
+.article-body { font-size: 15px; }
+.article-body h2 { font-size: 19px; margin: 28px 0 10px; }
+.article-body h3 { font-size: 16px; margin: 20px 0 8px; }
+.article-body p { margin: 0 0 14px; }
+.article-body ul, .article-body ol { margin: 0 0 14px; padding-left: 22px; }
+.article-body li { margin: 4px 0; }
+.article-body blockquote {
+  margin: 16px 0; padding: 10px 16px;
+  border-left: 3px solid var(--border); color: var(--muted);
+}
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+
+/* GitHub-style callouts: "> [!NOTE]" */
+.callout {
+  margin: 16px 0; padding: 14px 18px;
+  border-radius: 10px; border: 1px solid var(--border);
+  background: var(--accent-soft);
+}
+.callout.note { border-left: 4px solid var(--accent); }
+.callout.note h3 { margin: 0 0 8px; color: var(--accent); }
+
+/* Tag chips on article detail */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.tag {
+  font-size: 12px; padding: 3px 11px;
+  border: 1px solid var(--border); border-radius: 999px;
+  color: var(--muted); background: var(--bg-soft);
+}
+
 .back { display: inline-block; margin-bottom: 16px; font-size: 14px; }
 
 .topic-chips { display: flex; flex-wrap: wrap; gap: 10px; }
