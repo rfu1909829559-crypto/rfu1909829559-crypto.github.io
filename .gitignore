@@ -1,0 +1,6 @@
+# 项目私有记忆，不进公开仓库
+.workbuddy/
+
+# 系统文件
+.DS_Store
+Thumbs.db
