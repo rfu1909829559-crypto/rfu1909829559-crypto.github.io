@@ -1,42 +1,42 @@
 // ============================================================
-// 文章数据：要发布新文章，往 ARTICLES 数组里加一项即可。
-// 字段说明：
-//   id       唯一标识（英文短横，用于内部定位）
-//   title    标题
-//   date     发布日期 YYYY-MM-DD
-//   excerpt  列表页的一句话摘要
-//   content  正文（可直接写 HTML，如 <p> <ul> <code> 等）
+// Article data: to publish a new post, add an entry to the ARTICLES array.
+// Fields:
+//   id       unique id (lowercase-with-hyphens, used internally)
+//   title    post title
+//   date     publish date YYYY-MM-DD
+//   excerpt  one-line summary shown on the list page
+//   content  body (plain HTML is fine, e.g. <p> <ul> <code>)
 // ============================================================
 const ARTICLES = [
   {
     id: 'privacy-chatbot-notes',
-    title: '做隐私法垂直 Chatbot 的一点思路',
+    title: 'Notes on Building a Privacy-Law Vertical Chatbot',
     date: '2026-11-07',
-    excerpt: '20 份各国法律，不微调、用 RAG，让小模型只负责"理解模糊要求"，检索负责"给对法条"。',
+    excerpt: '20 privacy laws from different countries — no fine-tuning, just RAG: a small model interprets vague requests while retrieval picks the right articles.',
     content: `
-      <p>核心结论：这种场景不需要先进大模型。把法律做成可检索的法条库（corpus），用户提问时先由轻量模型把模糊要求解析成结构化查询，再做混合检索 + 重排，最后生成带引用的法条。</p>
-      <p>网站这边先搭好底层，chatbot 后续以 iframe / 挂载脚本形式接入 demos 页即可，互不耦合。</p>
-      <p>两条入口：AI 文本模式（自动解析）和手动下拉筛选（国家 → 情景 → 行为），在"结构化查询"这一步汇合，后面共用同一条检索链。</p>
+      <p>Key takeaway: this scenario does not need an advanced model. Turn the laws into a retrievable article corpus; when a user asks, a lightweight model first parses the vague request into a structured query, then hybrid retrieval + re-ranking runs, and finally cited articles are generated.</p>
+      <p>The site provides the foundation first; the chatbot can later be embedded into the Demos page via an iframe or mount script, fully decoupled.</p>
+      <p>Two entry points — an AI text mode (automatic parsing) and a manual dropdown filter (country → scenario → action) — converge at the "structured query" step and then share the same retrieval pipeline.</p>
     `
   },
   {
     id: 'rag-vs-finetune',
-    title: 'RAG 还是微调？小语料下的选择',
+    title: 'RAG or Fine-tuning? Choosing with a Small Corpus',
     date: '2026-10-30',
-    excerpt: '语料只有 20 份法律时，微调性价比低；RAG 即插即用，还天然可解释、可溯源。',
+    excerpt: 'With only ~20 legal documents, fine-tuning is low ROI; RAG is plug-and-play and naturally explainable and traceable.',
     content: `
-      <p>当你手里是"几十份权威文档"而不是"海量训练样本"时，RAG 几乎是默认解：</p>
+      <p>When you hold "a few dozen authoritative documents" rather than "massive training data", RAG is almost the default choice:</p>
       <ul>
-        <li>即插即用：文档改了，重新建索引就行，不用重训。</li>
-        <li>可解释：返回的是真实法条原文 + 条款号，能溯源，不怕幻觉。</li>
-        <li>成本低：模型只做"理解 + 解读"，不需很大。</li>
+        <li>Plug-and-play: edit the docs and rebuild the index — no retraining.</li>
+        <li>Explainable: it returns the real article text + article number, fully traceable, no hallucination.</li>
+        <li>Low cost: the model only "understands + explains", so it doesn't need to be large.</li>
       </ul>
-      <p>微调只在"通用模型确实听不懂你的领域黑话"时才考虑，而且需要标注数据，工程量不小。</p>
+      <p>Fine-tuning is only worth considering when "off-the-shelf models genuinely can't parse your domain jargon" — and it needs labeled data, which is a sizable engineering effort.</p>
     `
   }
 ];
 
-// 渲染列表
+// Render the list view
 function renderList() {
   var list = document.getElementById('article-list');
   var detail = document.getElementById('article-detail');
@@ -55,7 +55,7 @@ function renderList() {
   });
 }
 
-// 渲染详情
+// Render the detail view
 function renderDetail(id) {
   var a = ARTICLES.find(function (x) { return x.id === id; });
   if (!a) return;
@@ -64,7 +64,7 @@ function renderDetail(id) {
   list.hidden = true;
   detail.hidden = false;
   detail.innerHTML =
-    '<a class="back" href="#" onclick="renderList();return false;">← 返回列表</a>' +
+    '<a class="back" href="#" onclick="renderList();return false;">← Back to list</a>' +
     '<h2>' + a.title + '</h2>' +
     '<p class="meta">' + a.date + '</p>' +
     a.content;

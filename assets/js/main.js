@@ -1,7 +1,7 @@
-// 设置页脚年份
+// Set the footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 高亮当前页面对应的导航项
+// Highlight the nav item for the current page
 var path = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.links a').forEach(function (a) {
   if (a.getAttribute('href') === path) {
