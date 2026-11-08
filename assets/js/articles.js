@@ -654,38 +654,6 @@ Generative AI was used to assist with drafting, editing, language refinement, an
 `
   },
   {
-    id: 'privacy-chatbot-notes',
-    title: 'Notes on Building a Privacy-Law Vertical Chatbot',
-    date: '2026-11-07',
-    category: 'privacy',
-    featured: true,
-    excerpt: '20 privacy laws from different countries — no fine-tuning, just RAG: a small model interprets vague requests while retrieval picks the right articles.',
-    tags: ['Privacy', 'RAG', 'LLM'],
-    content: `
-<p>Key takeaway: this scenario does not need an advanced model. Turn the laws into a retrievable article corpus; when a user asks, a lightweight model first parses the vague request into a structured query, then hybrid retrieval + re-ranking runs, and finally cited articles are generated.</p>
-<p>The site provides the foundation first; the chatbot can later be embedded into the Demos page via an iframe or mount script, fully decoupled.</p>
-<p>Two entry points — an AI text mode (automatic parsing) and a manual dropdown filter (country → scenario → action) — converge at the "structured query" step and then share the same retrieval pipeline.</p>
-`
-  },
-  {
-    id: 'rag-vs-finetune',
-    title: 'RAG or Fine-tuning? Choosing with a Small Corpus',
-    date: '2026-10-30',
-    category: 'ai-society',
-    featured: true,
-    excerpt: 'With only ~20 legal documents, fine-tuning is low ROI; RAG is plug-and-play and naturally explainable and traceable.',
-    tags: ['AI', 'RAG', 'Fine-tuning'],
-    content: `
-<p>When you hold "a few dozen authoritative documents" rather than "massive training data", RAG is almost the default choice:</p>
-<ul>
-  <li>Plug-and-play: edit the docs and rebuild the index — no retraining.</li>
-  <li>Explainable: it returns the real article text + article number, fully traceable, no hallucination.</li>
-  <li>Low cost: the model only "understands + explains", so it doesn't need to be large.</li>
-</ul>
-<p>Fine-tuning is only worth considering when "off-the-shelf models genuinely can't parse your domain jargon" — and it needs labeled data, which is a sizable engineering effort.</p>
-`
-  },
-  {
     id: 'why-secure-systems-fail',
     title: 'Why Secure Systems Fail',
     date: '2026-11-08',
