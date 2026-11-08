@@ -1703,6 +1703,555 @@ The ideas, examples, and perspectives presented in this article originate from t
 `
   },
   {
+    id: 'who-wrote-this',
+    title: 'Who Wrote This?',
+    date: '2026-11-08',
+    category: 'ai-society',
+    featured: false,
+    excerpt: 'AI can now produce thousands of pages of code, text, and images from a description alone. So who is actually the author — the person who directed it, or the model that generated it?',
+    tags: ['AI & Society', 'Copyright', 'Authorship', 'Intellectual Property', 'Generative AI'],
+    content: `
+*Authorship in the Age of AI*
+
+**Estimated Reading Time:** 10–12 min
+**Level:** Beginner to Intermediate
+**Topics:** AI, Copyright, Creativity, Authorship, Intellectual Property
+
+> [!NOTE]
+> ### Why This Matters
+>
+> For centuries, authorship seemed relatively simple.
+>
+> Someone wrote the book.
+> Someone painted the image.
+> Someone composed the music.
+> Someone typed the code.
+>
+> AI challenges that intuition.
+>
+> Today, a person can describe an idea in natural language, provide examples, revise outputs, and eventually produce thousands of pages of code, text, or images.
+>
+> When that happens, a surprisingly difficult question emerges:
+>
+> **Who actually created it?**
+> **Personal Perspective**
+>
+> What fascinates me about AI is not whether it can write code, create images, or generate articles.
+>
+> What fascinates me is how quickly it forces us to revisit assumptions that seemed obvious only a few years ago.
+>
+> One of those assumptions is authorship.
+>
+> We have always assumed that creators and tools are easy to distinguish.
+>
+> AI makes that distinction increasingly blurry.
+
+---
+
+## A Developer, Claude, and Fifty Thousand Pages of Code
+
+Recently, I came across a fascinating example. A developer wanted to build an alternative to AutoCAD. To do so, the developer gathered:
+
+- Official AutoCAD documentation
+- Training materials and textbooks
+- More than ten thousand pages of existing code
+- Hundreds of pages of prompts and instructions
+
+Those materials were then used to guide Claude through the development process. The result was a large software system containing tens of thousands of pages of code. The obvious question followed:
+
+> Who wrote it?
+
+Many people's first instinct is simple. Claude wrote the code. Therefore Claude must be the author. At first glance, this seems reasonable. After all, the developer did not manually type every line. But the more you think about it, the less straightforward the answer becomes.
+
+## The Tool Problem
+
+Imagine a photographer using Photoshop. Who created the final image? Most people would answer:
+
+> The photographer. Not Photoshop.
+
+Now consider a designer using Blender. Who created the final 3D model? Again, most people would usually credit the designer rather than the rendering software. The same logic applies to cameras, word processors, and programming tools. We rarely define authorship by asking:
+
+> Which tool produced the pixels?
+
+Or:
+
+> Which tool rendered the output?
+
+Instead, we ask a different question:
+
+> Who made the creative decisions?
+
+This distinction becomes critical in the age of AI.
+
+## Copyright Never Protected Ideas
+
+Copyright law contains a surprisingly important principle:
+
+> Copyright protects expression, not ideas.
+
+A magic school cannot be copyrighted. A detective solving crimes cannot be copyrighted. A story about time travel cannot be copyrighted. Specific expressions of those ideas may be protected. The ideas themselves are not.
+
+This distinction exists for a practical reason. If ideas themselves could be owned, creativity would quickly become impossible. The first person to write a detective story could prevent all future detective stories. The first person to write science fiction could prevent everyone else from exploring similar themes. Modern copyright systems avoid this outcome by protecting how ideas are expressed rather than the underlying concepts.
+
+For centuries, this distinction worked reasonably well. Then machines started learning.
+
+## The Question Nobody Had To Ask
+
+Before AI, society rarely spent much time debating whether learning itself was legal. People learn constantly. Artists study other artists. Programmers read documentation. Writers read books. Researchers build upon previous research. This process is generally viewed as normal. In fact, it is essential. Human knowledge advances because people learn from what came before.
+
+The arrival of machine learning introduces a new question:
+
+> When a machine learns from existing content, is it learning or copying?
+
+The answer is surprisingly difficult. Because the distinction between learning and copying has never mattered quite this much before.
+
+## Learning Versus Copying
+
+Much of the current debate surrounding AI ultimately comes down to a single issue. Where is the boundary between learning and copying?
+
+Consider a human programmer reading an AutoCAD textbook. Most people would regard this as learning. Now consider an AI model trained on similar materials. Many people describe this process differently. Some characterize it as reproduction. Others characterize it as learning. Still others argue that the answer depends on what the model eventually produces.
+
+The disagreement is not merely technical. It is philosophical. Because for the first time in human history, we are asking whether learning itself should be treated differently depending on who — or what — is doing the learning.
+
+## The Author May Be the Architect
+
+Returning to the AutoCAD example reveals another possibility. Perhaps authorship does not belong entirely to the AI. But perhaps it does not belong entirely to the human either.
+
+The developer in the example did much more than type a single sentence and wait for results. The developer:
+
+- Selected the goal
+- Chose the source materials
+- Defined requirements
+- Designed prompts
+- Evaluated outputs
+- Rejected failures
+- Iteratively refined results
+
+Viewed this way, the developer resembles an architect rather than a typist. The creative contribution lies less in producing every line manually and more in shaping the process that produced them.
+
+If a movie director does not personally operate every camera, we do not conclude that the cameras made the film. Likewise, if a software engineer directs an AI through thousands of decisions, perhaps authorship should be understood through those decisions rather than through keystroke counts.
+
+## Authorship Is Becoming Distributed
+
+Historically, authorship often appeared relatively linear. Author. Work. Finished product. The model was simple.
+
+Increasingly, creation looks different. Today an output may involve:
+
+- Human intentions
+- Training data
+- AI models
+- Software tools
+- Human revision
+- Human selection
+
+The final work emerges from interactions among all of these components. Authorship begins to look less like a single point and more like a network.
+
+This does not necessarily mean authors disappear. It means that authorship becomes harder to locate. The central question may no longer be:
+
+> Who produced the output?
+
+Instead, it increasingly becomes:
+
+> Who shaped the decisions that produced the output?
+
+## The Future of Creativity
+
+Much of the public conversation about AI focuses on replacement. Will AI replace programmers? Will AI replace writers? Will AI replace artists? These are important questions. But they may not be the most interesting ones.
+
+Technological change has often altered how people create without eliminating creators entirely. Photography did not eliminate painters. Digital editing did not eliminate designers. Word processors did not eliminate authors. AI may transform creative work in a similar way.
+
+The nature of authorship may change. The tools may become dramatically more powerful. Yet human judgment may remain central. Not because humans produce every element directly. But because humans define goals, evaluate outcomes, and decide what ultimately matters.
+
+## Looking Ahead
+
+For centuries, authorship seemed obvious. Someone wrote the book. Someone painted the picture. Someone composed the music.
+
+AI challenges that intuition. Not because authors vanish. But because the process of creation becomes increasingly collaborative.
+
+The most important question may no longer be:
+
+> Did AI make this?
+
+A more useful question may be:
+
+> Who shaped the decisions that made this possible?
+
+Because authorship has never really been about who pressed the keys. It has always been about who made the creative choices. And that distinction may become more important than ever as intelligent tools become part of the creative process itself.
+
+## References
+
+Anderson, J. (2024). *Artificial intelligence and intellectual property: Emerging questions of authorship and ownership.*
+
+Ginsburg, J. C., & Budiardjo, L. A. (2019). Authors and machines. *Berkeley Technology Law Journal, 34*(2), 343–390.
+
+U.S. Copyright Office. (2025). *Copyright and artificial intelligence: Part 2 – Copyrightability.*
+
+World Intellectual Property Organization. (2024). *Generative artificial intelligence and intellectual property.*
+
+## Author's Note
+
+The ideas and perspectives presented in this article originate from the author's independent study and reflections on artificial intelligence, copyright law, authorship, and creativity. Generative AI was used to assist with drafting, editing, language refinement, and structural organization. The author reviewed and approved all content and remains responsible for the final arguments, interpretations, and conclusions.
+`
+  },
+  {
+    id: 'memory-is-becoming-infrastructure',
+    title: 'Memory Is Becoming Infrastructure',
+    date: '2026-11-08',
+    category: 'ai-society',
+    featured: false,
+    excerpt: 'AI companies are shifting from competing on intelligence to competing on memory. As systems begin to remember users across years, memory itself is quietly becoming a new form of infrastructure.',
+    tags: ['AI & Society', 'Memory', 'Privacy', 'Digital Identity', 'Personalization', 'AI'],
+    content: `
+*When AI Begins to Remember Everything*
+
+**Estimated Reading Time:** 12–14 min
+**Level:** Beginner to Intermediate
+**Topics:** AI, Memory, Privacy, Digital Identity, Personalization
+
+> [!NOTE]
+> ### Why This Matters
+>
+> For years, people evaluated AI systems by asking:
+>
+> - How intelligent is it?
+> - How accurate is it?
+> - How well can it reason?
+>
+> Increasingly, a different question is emerging:
+>
+> **How much can it remember?**
+>
+> Yesterday's AI answered questions.
+>
+> Tomorrow's AI may remember projects, preferences, habits, conversations, and years of personal history.
+>
+> That changes not only what AI can do.
+>
+> It changes the relationship between people and machines.
+
+---
+
+## The End of the Blank Slate
+
+Imagine talking to a personal assistant. On Monday, you explain a project. On Tuesday, you provide additional context. On Wednesday, you discuss deadlines. On Thursday, the assistant asks:
+
+> Could you explain everything again?
+
+Most people would find that absurd. Yet this is how AI systems worked for years. Users spent hours building context. A new conversation started. Everything disappeared. The system began from zero.
+
+This approach made sense when AI was primarily a question-answering tool. But once AI starts acting as an assistant, advisor, tutor, or collaborator, forgetting becomes increasingly expensive.
+
+## Why AI Needs Memory
+
+For a long time, many people assumed the future of AI would be determined by intelligence. Larger models. More parameters. Better reasoning. More knowledge. Those things still matter. But increasingly, the next frontier may be memory.
+
+Most major AI systems can already:
+
+- Write essays
+- Generate code
+- Summarize documents
+- Answer questions
+
+The difference between them is becoming harder to measure. What may matter more is context.
+
+Consider two requests:
+
+> Write an article about data sovereignty.
+
+Most leading AI models can do that. Now consider:
+
+> Write an article about data sovereignty using the style I have developed over the past six months.
+
+The challenge is no longer knowledge. The challenge is memory. The system must know who you are before it can personalize the answer.
+
+## The New AI Race
+
+This shift is already visible. In 2024, OpenAI introduced memory capabilities into ChatGPT, allowing the system to remember information across conversations and later reference it in future interactions. Over time, these capabilities expanded from user-saved memories to broader use of conversation history and contextual personalization. OpenAI explicitly describes memory as a way to understand user preferences, ongoing projects, and personal constraints so future conversations can begin from shared context rather than from scratch.
+
+A similar trend can be seen at Anthropic. Claude introduced memory systems designed to preserve project-level context, work preferences, and long-running workflows across sessions. Users can review, modify, and disable remembered information, recognizing that memory has become a product feature in its own right. In other words, some of the largest AI companies are no longer competing solely on intelligence. They are competing on memory.
+
+## Understanding Requires Context
+
+Human relationships work the same way. A friend of ten years is not necessarily smarter than someone you met yesterday. They simply possess more context. They know:
+
+- What interests you
+- What frustrates you
+- What you care about
+- What you have experienced
+
+Their understanding comes from memory. The same principle applies to AI. An assistant that remembers years of interactions will inevitably appear more helpful than one encountering you for the first time. A doctor benefits from medical history. A teacher benefits from knowing a student's progress. A consultant benefits from understanding a client's goals. Memory creates understanding. Without context, personalization is impossible.
+
+## Convenience Is Evidence
+
+Most people experience memory features as convenience. You switch from your phone to your laptop. The conversation continues. You purchase a new device. Years of chat history reappear. You return after months. The AI continues where you left off. Convenient? Absolutely. But convenience is also evidence.
+
+Because every synchronized memory proves something. It proves the memory exists somewhere beyond the device in front of you. Synchronization is not merely a feature. It is evidence that information persists. Stored. Maintained. Retrieved. Transferred. The convenience itself reveals the architecture underneath.
+
+## The Verification Problem
+
+This challenge is not entirely new. Voice assistants provide an interesting example. For years, companies such as Amazon have explained that systems like Alexa begin processing requests only after detecting a wake word. The explanation sounds reassuring. Yet it naturally raises a question:
+
+> How can users verify that claim?
+
+To detect a wake word, some part of the system must continuously monitor incoming audio. Users are told where interpretation begins. But they cannot directly observe what happens behind the interface. Many privacy disputes emerge from exactly this gap. Not because users know something improper is happening. But because users cannot independently verify what is happening.
+
+As AI systems accumulate memory, the same challenge begins to appear. What exactly is being remembered? Where is it stored? Who can access it? How long does it persist? The more valuable memory becomes, the more important these questions become.
+
+## AI Is Not Just Storing Data
+
+Traditional digital systems stored things. Photos. Documents. Videos. Contacts. Messages. AI introduces something different. It increasingly stores patterns. Patterns of behavior. Patterns of preference. Patterns of thought.
+
+Imagine using an AI assistant continuously for ten years. Over time, it may learn:
+
+- Your interests
+- Your career goals
+- Your projects
+- Your routines
+- Your reading habits
+- Your communication style
+- Your decision-making process
+
+Eventually the result no longer resembles a collection of conversations. It begins to resemble a digital model of a person. This distinction is important. Protecting files is one problem. Protecting digital representations of people may be another.
+
+## The Emergence of Memory Sovereignty
+
+Privacy discussions traditionally focus on data ownership. Who collected it? Who stored it? Who can access it? AI introduces a related but distinct question: **Who owns memory?**
+
+The question may sound strange at first. Yet major AI providers already allow users to inspect, modify, or delete remembered information. Features such as memory summaries and memory controls acknowledge an important reality: Memory requires governance. Once systems remember users across months or years, other questions naturally follow:
+
+- Who can delete those memories?
+- Who can move them?
+- Who inherits them?
+- What happens if the service closes?
+- What happens if the platform is acquired?
+
+These questions sound hypothetical today. They may become practical much sooner than expected.
+
+## The New Platform Lock-In
+
+Technology companies have long benefited from data lock-in. Users remain because their files, contacts, and history remain tied to a platform. AI may create something even stronger. Memory lock-in.
+
+Imagine an AI that has understood your work, habits, projects, and preferences for an entire decade. It knows how you think. It knows how you write. It knows what matters to you. Can you easily move that accumulated understanding elsewhere? Maybe. Maybe not. But the question itself reveals a new kind of dependency. If your memories live on a platform, part of your digital identity may live there too.
+
+## Every Capability Has a Cost
+
+The situation is not entirely positive or entirely negative. The benefits and risks emerge together. We want AI to understand us. We want continuity. We want context. We want personalization. We want less repetition. All of those goals require memory.
+
+At the same time: More memory means more storage. More storage means more concentration. More personalization means richer profiles. The very features that make AI more useful may also make AI more capable of understanding us than any previous technology. That is both a feature and a risk.
+
+## Looking Ahead
+
+For years, people assumed intelligence would define the future of AI. It may turn out that memory matters just as much. An AI that forgets everything can answer questions. An AI that remembers everything can understand people.
+
+The challenge is that understanding requires memory. And memory requires storage, governance, control, and trust. As AI becomes increasingly personal, the most important question may no longer be:
+
+> How intelligent is this system?
+
+Instead, we may increasingly ask:
+
+> Who controls what it remembers?
+
+Because memory is slowly becoming more than a feature. It is becoming infrastructure. And the systems that control memory may ultimately shape how people interact with AI for decades to come.
+
+## References
+
+Anthropic. (2025). *Bringing memory to teams.*
+
+OpenAI. (2024). *Memory and new controls for ChatGPT.*
+
+OpenAI. (2026). *Dreaming: Better memory for a more helpful ChatGPT.*
+
+OpenAI. (2026). *Memory in ChatGPT.*
+
+Nissenbaum, H. (2010). *Privacy in context: Technology, policy, and the integrity of social life.* Stanford University Press.
+
+## Author's Note
+
+The ideas and perspectives presented in this article originate from the author's independent study and reflections on artificial intelligence, memory systems, privacy, digital identity, and personalization. Generative AI was used to assist with drafting, editing, language refinement, and structural organization. The author reviewed and approved all content and remains responsible for the final arguments, interpretations, and conclusions.
+`
+  },
+  {
+    id: 'measuring-people',
+    title: 'Measuring People',
+    date: '2026-11-08',
+    category: 'ai-society',
+    featured: false,
+    excerpt: 'We treat measurements as if they merely describe reality. But once a measurement shapes decisions, behavior, and opportunity, it begins to build the very reality it claims to observe.',
+    tags: ['AI & Society', 'Statistics', 'Classification', 'Algorithms', 'Social Science', 'Digital Society'],
+    content: `
+*Why Measuring Changes What We Measure*
+
+**Estimated Reading Time:** 12–14 min
+**Level:** Beginner to Intermediate
+**Topics:** Statistics, Classification, Social Science, AI, Algorithms
+
+> [!NOTE]
+> ### Why This Matters
+>
+> Modern society measures almost everything.
+>
+> We measure credit risk.
+> We measure productivity.
+> We measure engagement.
+> We measure preferences.
+> We measure behavior.
+>
+> Increasingly, we measure people.
+>
+> Most of the time, we assume these measurements simply describe reality.
+>
+> But what if measurement does more than observe?
+>
+> What if measurement helps create the reality it claims to describe?
+> **Personal Perspective**
+>
+> This question first occurred to me while listening to a discussion about privacy research.
+>
+> Researchers were using surveys to understand how people think about privacy.
+>
+> The methodology seemed reasonable.
+>
+> Then I found myself wondering:
+>
+> When people answer a survey, are they reporting beliefs they already have?
+>
+> Or are they constructing those beliefs while answering the questions?
+>
+> The more I thought about it, the less obvious measurement became.
+
+---
+
+## We Think Measurement Is Neutral
+
+Most people learn statistics through a simple story. Reality exists. Researchers collect data. Analysis reveals patterns. Conclusions follow. The model appears straightforward:
+
+    Reality
+    ↓
+    Measurement
+    ↓
+    Data
+    ↓
+    Knowledge
+
+Measurement appears passive. The researcher observes reality. Reality remains unchanged. The numbers simply describe what is already there.
+
+This intuition works reasonably well when measuring physical objects. A ruler rarely changes the length of a table. A thermometer rarely changes tomorrow's temperature. People, however, are different. People know they are being measured. And that awareness can influence what happens next.
+
+## Opinions Are Often Created, Not Retrieved
+
+Consider a simple survey question:
+
+> Do you care about privacy?
+
+Many people assume the answer already exists somewhere in the respondent's mind. The survey merely retrieves it.
+
+Social scientists have long suggested that things are often more complicated. Opinions are not always stored like files waiting to be opened. They are frequently constructed during the act of answering.
+
+Imagine asking someone:
+
+> Do you support this public policy?
+
+The respondent may not possess a fully formed opinion. Instead, the respondent may begin assembling one. Relevant memories are recalled. Values are weighed. Tradeoffs are considered. An answer emerges. In that moment, the survey is doing more than measuring opinion. It may be helping create it.
+
+The difference matters. Because a survey may not simply reveal what people think. It may participate in the process through which people decide what they think.
+
+## The Question Before the Question
+
+Now imagine two nearly identical surveys. The first asks respondents to complete demographic information before answering privacy questions:
+
+- Nationality
+- Religion
+- Income
+- Occupation
+
+The second does the reverse. Privacy questions come first. Demographic questions come later.
+
+Should the answers be the same? Not necessarily. Psychologists have long observed that identity becomes more influential when attention is drawn toward it. A respondent who has just indicated a religious affiliation may evaluate later questions differently. A respondent who has just reflected on nationality may interpret issues through that lens.
+
+The key insight is subtle. Sometimes the most important question in a survey is not the one being analyzed. It is the question that came before it. Because the order of questions can influence the state of mind in which subsequent answers are produced.
+
+## The Person We Wish We Were
+
+Another complication comes from what researchers call **social desirability bias**. People generally want to appear competent. Responsible. Ethical. Informed.
+
+Privacy research offers a useful example. Many people report that they care deeply about privacy. At the same time, many people:
+
+- Accept cookies without reading them
+- Ignore privacy policies
+- Grant broad application permissions
+- Publicly share large amounts of personal information
+
+This does not necessarily mean they are lying. A different explanation may be more interesting. Perhaps people often answer as the person they aspire to be. Not necessarily the person they happen to be on an ordinary Tuesday afternoon.
+
+Survey responses may therefore capture multiple versions of the self at once. The actual self. The ideal self. The socially acceptable self. And the distinction is not always easy to detect from the data alone.
+
+## When Categories Start Acting Back
+
+The challenge becomes even more interesting once measurement is connected to classification. Imagine a platform identifies a group of users as fitness enthusiasts. Initially, the category appears descriptive. It summarizes observed behavior. But once the category exists, the platform begins acting on it. Fitness advertisements are recommended. Exercise content becomes more visible. Health products receive greater promotion. Fitness communities are surfaced more frequently.
+
+Gradually, users begin seeing more of the world through that category. Perhaps they purchase fitness products. Perhaps they join fitness groups. Perhaps they become more engaged with health-related content. The category starts influencing the behavior it originally described.
+
+Philosopher Ian Hacking referred to this phenomenon as a **looping effect**. People react to the categories applied to them. Those reactions change behavior. The changed behavior then appears to validate the category. The classification and the person begin reshaping each other.
+
+## Predictions Change Outcomes
+
+This pattern becomes even clearer when predictions enter the picture. Imagine a bank develops a model identifying individuals who are more likely to default on loans. The process appears reasonable. Historical data is analyzed. Risk is estimated. Predictions are generated.
+
+But something changes once the predictions are used. People categorized as high risk receive fewer opportunities. Loans become harder to obtain. Entrepreneurial ventures become harder to fund. Educational investments become more difficult. Over time, these constraints may make economic difficulties more likely.
+
+The prediction begins contributing to the outcome. The model appears successful. Yet part of its success may result from the decisions made because of the model itself. The prediction does not remain outside reality. It enters reality. And reality changes in response.
+
+## Recommendation Systems Don't Just Recommend
+
+Recommendation systems provide one of the clearest examples of this dynamic. Most people feel they choose what they watch. What they read. What they buy. What they follow. And in many ways they do. But recommendation systems are continually making choices as well.
+
+Platforms assign countless labels:
+
+- Investor
+- Gamer
+- Technology enthusiast
+- Sports fan
+- Movie lover
+
+Initially, these categories seem harmless. They merely describe observed interests. Yet those labels influence what appears next. The recommendations become inputs into future behavior. As a result, the distinction between describing and shaping begins to fade. The system recommends because it believes you belong to a category. You engage with the recommendations. Your future behavior reinforces the category. Once again, the measurement loop closes.
+
+## Measurement Is Becoming Infrastructure
+
+This may be the most important shift of all. Statistics is no longer merely a research tool. It is increasingly becoming infrastructure. Measurements influence:
+
+- Loan approvals
+- Insurance premiums
+- Hiring decisions
+- University admissions
+- Content recommendations
+- Online visibility
+
+Most of these decisions are no longer made entirely by individuals. They emerge from networks of statistical models, classifications, and predictions. These systems rarely issue direct commands. Instead, they shape the environment in which decisions occur. They influence what opportunities are available. Which options become visible. Which paths become accessible. The power is often indirect. But indirect power can still be powerful.
+
+## We Become What We Measure
+
+People often imagine data as something that already exists in the world, waiting to be collected. Researchers gather it. Algorithms analyze it. Statistics describe it. Reality may be more complicated.
+
+Questions shape answers. Identity shapes responses. Categories shape behavior. Predictions shape opportunities. And measurements shape the people being measured.
+
+The challenge of modern society is therefore not simply learning how to collect better data. It is understanding what happens once institutions begin acting on the measurements they create. Because once measurements influence reality, they stop behaving like mirrors. They become part of the machinery that builds the world itself. And in a society increasingly governed by algorithms, classifications, and predictions, understanding measurement may be as important as understanding the data being measured.
+
+## References
+
+Hacking, I. (1986). *Making up people.*
+
+Hacking, I. (1999). *The social construction of what?* Harvard University Press.
+
+Kahneman, D. (2011). *Thinking, fast and slow.* Farrar, Straus and Giroux.
+
+Tourangeau, R., Rips, L. J., & Rasinski, K. (2000). *The psychology of survey response.* Cambridge University Press.
+
+## Author's Note
+
+The ideas and perspectives presented in this article originate from the author's independent study and reflections on survey methodology, privacy research, classification systems, algorithmic decision-making, and the social effects of measurement. Generative AI was used to assist with drafting, editing, language refinement, and structural organization. The author reviewed and approved all content and remains responsible for the final arguments, interpretations, and conclusions.
+`
+  },
+  {
     id: 'the-binance-incident',
     title: 'The Binance Incident',
     date: '2026-11-08',
