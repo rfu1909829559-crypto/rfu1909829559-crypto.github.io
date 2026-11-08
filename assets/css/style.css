@@ -107,6 +107,17 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 32px 20px 64px; }
 .article-item .meta { color: var(--muted); font-size: 13px; margin: 0 0 6px; }
 .article-item .excerpt { color: var(--muted); font-size: 14px; margin: 0; }
 
+/* Featured Essays tab: the single flagship essay promoted as a hero card */
+.featured-hero {
+  border: 1px solid var(--accent); border-radius: var(--radius);
+  padding: 22px 24px; background: linear-gradient(180deg, var(--accent-soft), #fff);
+  margin-bottom: 22px;
+}
+.featured-hero h2 { margin: 4px 0 2px; font-size: 22px; color: var(--accent); }
+.featured-hero .hero-subtitle { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+.featured-hero .hero-blurb { font-size: 15px; line-height: 1.6; margin: 0 0 16px; }
+.featured-badge { background: var(--accent); color: #fff; margin-bottom: 8px; }
+
 .article-detail {
   border: 1px solid var(--border); border-radius: var(--radius);
   padding: 24px; background: #fff;

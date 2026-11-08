@@ -25,6 +25,21 @@ const CATEGORIES = {
 // Nav order for category links
 const CATEGORY_ORDER = ['featured', 'privacy', 'ai-society', 'security', 'news', 'explainers'];
 
+// The single "flagship" essay promoted at the top of the Featured Essays tab.
+// (Sourced from the "006 Feature" brief.) Links through to its full article.
+const FEATURED_ESSAY = {
+  linkId: 'the-coming-crisis-of-trust',
+  badge: 'Featured Essay',
+  title: 'The Coming Crisis of Trust',
+  subtitle: 'When Reality Becomes Negotiable',
+  blurb: 'For centuries, societies relied on a simple assumption: records reflected reality. ' +
+         'Artificial intelligence is challenging that assumption. Deepfakes are only one part of the story. ' +
+         'As AI begins to generate media, classify people, shape opportunities, and influence behavior, ' +
+         'the relationship between reality and representation becomes increasingly blurred. ' +
+         'This essay explores how trust, authenticity, and human agency may evolve in an age where ' +
+         'intelligent systems do more than observe the world — they help create it.'
+};
+
 const ARTICLES = [
   {
     id: 'why-privacy-became-more-than-notice-and-consent',
@@ -1127,6 +1142,422 @@ Most users will never think about trust infrastructure. That is entirely reasona
 
 The ideas, examples, and perspectives presented in this article originate from the author's independent study and reflections on cybersecurity, trust infrastructure, digital identity, and internet architecture. Generative AI was used to assist with drafting, editing, language refinement, and structural organization. The author reviewed and approved all content and remains responsible for the final arguments, interpretations, and conclusions.
 `
+  },
+  {
+    id: 'the-coming-crisis-of-trust',
+    title: 'The Coming Crisis of Trust',
+    date: '2026-11-08',
+    category: 'ai-society',
+    featured: true,
+    excerpt: 'The greatest challenge of AI may not be fake content. It may be the gradual erosion of our ability to distinguish records, reconstructions, predictions, and reality itself.',
+    tags: ['AI', 'Society', 'Deepfake', 'Trust', 'Algorithms', 'Classification', 'Synthetic Media'],
+    content: `
+*When Reality Becomes Negotiable*
+
+**Estimated Reading Time:** 15–18 min
+**Level:** Intermediate
+**Topics:** AI, Deepfakes, Classification Systems, Authenticity, Trust
+
+> [!NOTE]
+> ### Why This Matters
+>
+> Most conversations about artificial intelligence focus on intelligence itself.
+>
+> Can AI write better?
+>
+> Can AI reason better?
+>
+> Can AI automate more tasks?
+>
+> Yet one of the most important questions may be much simpler:
+>
+> **What happens when people no longer know what to trust?**
+>
+> The emerging challenge of AI is not merely that machines can generate convincing content.
+>
+> The deeper challenge is that AI is increasingly involved in recording, reconstructing, classifying, predicting, and shaping reality itself.
+>
+> **Personal Perspective**
+>
+> When I first became interested in deepfakes, I assumed the central problem was deception. Over time, however, I became less concerned with fake videos and more concerned with something broader.
+>
+> AI is beginning to blur distinctions that society has relied upon for centuries: the distinction between observation and reconstruction, prediction and intervention, description and creation. Those boundaries are becoming harder to see, and that may matter more than any individual deepfake.
+
+## Seeing Used to Mean Believing
+
+For much of modern history, visual evidence carried a unique authority. A photograph implied that someone stood behind a camera. A video implied that an event occurred in front of a lens. An audio recording implied that a voice actually produced those sounds.
+
+None of these assumptions were perfectly reliable. Photographs could be manipulated. Film could be edited. Audio could be altered. Propaganda existed long before computers. Yet these forms of manipulation were traditionally expensive, difficult, and often detectable.
+
+As a result, societies developed an informal rule:
+
+> Seeing may not guarantee truth, but seeing usually counts as evidence.
+
+Legal systems, journalism, historical archives, and everyday social interactions all depend on some version of this assumption. When a photograph appears in a newspaper, people generally treat it as evidence. When surveillance footage is presented in court, people generally treat it as evidence. When a video appears online, people often begin by assuming that something occurred before asking whether it should be trusted. The default orientation is trust.
+
+Generative AI challenges that starting point. For the first time, highly realistic images, audio recordings, and videos can be generated with unprecedented speed and accessibility. The consequence is not simply the production of fake content. The consequence is uncertainty about all content.
+
+## Deepfakes Are Not Really About Fake Videos
+
+The public conversation about deepfakes often treats them as a technological problem. Someone's face is replaced. Someone's voice is cloned. Someone appears to say something they never said. Case closed. But the deeper we look, the less satisfactory this definition becomes.
+
+Imagine two scenarios. In the first, an AI system replaces one person's face with another's. In the second, an AI system restores an old historical photograph, removes noise, improves resolution, and colorizes the image. Both outputs differ from the original. Both involve machine-generated modifications. Yet most people feel that the first example is deceptive while the second is not. Why?
+
+The difference is not primarily technical. The difference lies in what audiences believe about reality. Recent discussions of synthetic media increasingly distinguish between technological origin, authenticity, and deceptive potential rather than treating all AI-generated content as a single category (Voinea, 2026). Some definitions of deepfakes focus on how content is created. If deep-learning systems generate or modify audio-visual material, the result qualifies as a deepfake. Other definitions focus on outcomes. Under this view, a deepfake exists only when content meaningfully misleads audiences regarding reality. These perspectives emphasize different concerns. One focuses on technology. The other focuses on trust. And increasingly, trust appears to be the more important question.
+
+## From Authenticity to Synthetic Reality
+
+The discussion becomes even more difficult when we move beyond obvious deception. Suppose an AI system reconstructs a historical event. The event genuinely happened. The people involved are real. The location is accurate. The timeline is accurate. The words spoken are documented. Yet no original video recording exists. The video itself is generated.
+
+What exactly should we call this? Fake? Real? Both? Neither?
+
+Historically, authenticity was relatively straightforward because three layers usually aligned. First, the event happened. Second, the event was recorded. Third, the recording served as evidence of the event. Generative AI breaks this alignment. An event may be real. Its representation may be synthetic. Its informational content may remain accurate. For centuries, society rarely needed to distinguish between these things because they were usually bundled together. Today they increasingly diverge.
+
+A future historian may watch a highly realistic reconstruction of an ancient speech. The speech itself may be historically accurate. But the visual record may be entirely synthetic. In this situation, the question is no longer:
+
+> Is this real?
+
+The question becomes:
+
+> Which part of this is real?
+
+This shift is subtle but profound. Truth is no longer binary. Truth becomes layered.
+
+## The Gray Zone Between Truth and Fiction
+
+Much public concern focuses on obvious fabrications. Politicians saying things they never said. Celebrities appearing in places they never visited. Executives authorizing transfers they never approved. These scenarios certainly matter. But I increasingly suspect that the most difficult cases will not be obvious fabrications. Instead, they will emerge in the gray zone between record and reconstruction. Consider several possibilities:
+
+- AI-restored historical footage
+- AI-generated reenactments
+- Synthetic documentaries
+- Reconstructed crime scenes
+- Historical simulations
+- Virtual witnesses
+
+Many of these applications may serve legitimate purposes. Some may improve education. Some may improve accessibility. Some may even improve historical understanding. Yet they introduce a new challenge. For generations, authenticity primarily referred to the authenticity of the source. The future may require us to think about the authenticity of interpretation. A reconstruction may accurately represent reality while simultaneously failing to qualify as a true record. That distinction will matter for journalism. It will matter for law. It will matter for education. Most importantly, it will matter for public trust.
+
+## Deepfakes Exploit Human Psychology
+
+The reason deepfakes are concerning has less to do with pixels than people. Humans are social creatures. We evolved to trust familiar patterns. A familiar face. A familiar voice. A familiar style of speaking. A familiar way of moving. Trust often emerges long before rational verification.
+
+Imagine answering a phone call. The voice sounds exactly like a close family member. The speaking style is familiar. The vocabulary feels natural. The request seems plausible. In that situation, the attack is not occurring at the level of technology. It is occurring at the level of trust. The clone only needs to be believable enough. It does not need to be perfect.
+
+Researchers have warned that synthetic media may create not only misinformation risks but also broader erosion of trust in information environments themselves (Chesney & Citron, 2019). This distinction is important. Many people imagine that deepfakes become dangerous only when they successfully fool everyone. That is not necessarily true. They become dangerous when they make trust more expensive. When every video can be questioned. Every image can be disputed. Every recording can be challenged. The result is not merely more deception. The result is less certainty.
+
+## AI Does More Than Generate Content
+
+At this point, most discussions of trust focus on media. Images. Videos. Audio. Text. But AI is transforming another domain that receives far less attention. Classification.
+
+Modern societies are increasingly organized by systems that categorize people. Recommendation systems categorize users. Advertising systems categorize consumers. Hiring systems categorize applicants. Credit systems categorize borrowers. Educational systems categorize students. Most of the time, these classifications appear harmless. In fact, many are extremely useful. Classification helps systems cope with complexity. Without categories, large-scale decision making becomes difficult.
+
+The challenge is not that classification exists. The challenge is what happens after classification. Many people imagine the process as follows:
+
+> Reality → Data → Classification → Understanding
+
+This model assumes that categories simply describe the world. Unfortunately, real systems rarely stop there. Instead:
+
+> Reality → Data → Classification → Action → New Reality
+
+The system acts upon the category. The category influences outcomes. The outcomes influence future categories. A feedback loop emerges. This resembles what philosopher Ian Hacking described as a "looping effect," in which classifications influence the people being classified, who then change in response to those classifications (Hacking, 1999). And once this process begins, classification stops being purely descriptive. It becomes productive. It begins helping create the reality it claims to describe.
+
+## When Prediction Becomes Intervention
+
+The consequences of classification become easier to see once we focus on what happens after a prediction is made. Many AI systems are described as predictive systems. They estimate probabilities. They identify patterns. They forecast future outcomes. At first glance, this sounds passive. The model examines data and predicts what will happen next.
+
+The problem is that predictions often influence decisions. And decisions influence reality. Imagine a hiring system predicts that one group of candidates is more likely to succeed. Recruiters then allocate more interviews to that group. More people from that group gain opportunities. More people from that group accumulate experience. Several years later, the model appears validated. The predicted group truly performs better. But why? Did the system discover a preexisting reality? Or did the system contribute to creating that reality?
+
+The distinction is difficult to answer because prediction and intervention have become intertwined. The same dynamic appears throughout modern society. Credit scoring systems affect access to capital. Recommendation systems affect information exposure. University rankings affect application patterns. Risk assessment tools affect sentencing and supervision decisions. In many cases, predictions are not merely observations. They are inputs into systems that actively shape outcomes. As a result, prediction increasingly functions as a form of governance.
+
+## Statistics Do Not Merely Describe Reality
+
+Many people first encounter statistics as a descriptive tool. Statistics appear to tell us what already exists. A survey reports public opinion. A census measures a population. A report summarizes consumer behavior. The common assumption is that statistics function like mirrors. Reality exists first. Statistics merely reflect it.
+
+Yet reality is often more complicated. Once measurements are integrated into institutions, they begin influencing behavior. Suppose a university introduces a ranking system. Students adjust study habits. Departments adjust priorities. Resources shift toward measurable outcomes. Over time, the ranking no longer merely describes performance. It shapes performance. The same phenomenon can occur within digital systems. Metrics influence incentives. Incentives influence decisions. Decisions influence future metrics. What begins as measurement becomes infrastructure. What begins as description becomes organization.
+
+This is why modern algorithmic systems cannot be understood solely as information systems. They are also systems of influence. Rather than merely describing people and institutions, categories can become part of the environments that shape future behavior (Hacking, 1999). The categories do not simply exist. They participate.
+
+## The Rise of the Classification Society
+
+Every society classifies. Hospitals classify illnesses. Schools classify students. Governments classify populations. Businesses classify customers. Classification itself is not new. What is new is the scale, speed, and persistence of algorithmic classification. Many classifications now occur continuously. Every click. Every purchase. Every search. Every pause on a video. Every interaction with a recommendation system. These signals accumulate into profiles. And profiles gradually become operational. A system does not merely know something about you. The system acts on what it believes it knows. It recommends. Prioritizes. Filters. Highlights. Suppresses. Ranks.
+
+This evolution transforms classification from an analytical exercise into a governing mechanism. Increasingly, social opportunities are mediated through invisible layers of classification. The danger is not necessarily that the classification is wrong. In some cases, it may be remarkably accurate. The deeper question is:
+
+> What happens when classifications become difficult to escape?
+
+A recommendation system often assumes continuity. If you liked something yesterday, you may like it tomorrow. If you exhibited a behavior last year, you may exhibit it next year. Prediction thrives on stability. Human beings do not. People change careers. Change beliefs. Change interests. Change identities. One of the great tensions of the AI era may emerge from the conflict between statistical stability and human unpredictability. The best prediction systems prefer consistency. Human freedom often reveals itself through change.
+
+## Why People Resist Classification
+
+This tension may explain a curious behavior that appears across digital platforms. People actively resist categorization. They create secondary accounts. Delete browsing histories. Use anonymous modes. Click "Not Interested." Search for unusual topics. Introduce noise into their own profiles. On the surface, these behaviors appear related to privacy. And they often are. But they are also expressions of something deeper.
+
+Many people are attempting to preserve the ability to define themselves rather than be defined by a system. An individual may feel that platform recommendations reflect a past version of themselves. A classification system may continue seeing someone as:
+
+- A gamer
+- An investor
+- A fitness enthusiast
+- A political supporter
+
+Long after their interests have shifted. When users attempt to disrupt such classifications, they may not be protecting information. They may be protecting possibility. The ability to become someone different. This is one reason algorithmic trust differs from traditional trust. Traditional trust often involves confidence in another person. Algorithmic trust increasingly involves confidence in representations of people. The distinction becomes increasingly important when representations begin affecting real opportunities.
+
+## Synthetic Reality and the Information Environment
+
+Meanwhile, generative AI is transforming the environment in which these classifications operate. The information ecosystem is becoming saturated with synthetic content. Images. Videos. Audio. Text. Much of this content is harmless. Some may be educational. Some may be artistic. Some may be beneficial. Yet the sheer volume introduces new complexity. Recent research suggests that synthetic media has become a visible and growing component of online information ecosystems, raising new questions about authenticity and provenance (Corsi et al., 2024).
+
+The challenge is not that all synthetic media is harmful. The challenge is that provenance becomes harder to determine. Audiences increasingly encounter:
+
+- Original records
+- Edited records
+- Enhanced records
+- Reconstructed records
+- Fully generated records
+
+And these categories are beginning to overlap. A future news report may contain authentic footage alongside AI-enhanced imagery. A historical documentary may include reconstructed scenes. A virtual assistant may produce persuasive content assembled from countless sources. As synthetic content becomes normalized, authenticity becomes less visible. Verification becomes more important. And trust requires more effort.
+
+## From Deepfakes to Truth Decay
+
+Discussions about AI-generated content often focus on misinformation. While misinformation remains important, it may not be the most significant problem. A broader challenge emerges when entire information environments become more difficult to navigate. Researchers at RAND describe a phenomenon called *Truth Decay*: the diminishing role of facts and analysis in public life (Kavanagh & Rich, 2018). The report identifies several trends, including:
+
+- Increasing disagreement about facts
+- Blurring boundaries between fact and opinion
+- Growing influence of personal belief over evidence
+- Declining trust in traditional sources of information
+
+These trends existed before generative AI. But AI may accelerate them. Not because AI automatically generates falsehoods. Rather, because AI increases the complexity of verifying reality. The result is not necessarily universal deception. Instead, the result may be universal uncertainty. People become unsure which sources deserve confidence. Which records are authentic. Which classifications are meaningful. Which predictions are trustworthy. The information ecosystem becomes harder to interpret. Truth itself becomes more expensive.
+
+## Trust as Social Infrastructure
+
+One reason this matters is that trust functions as social infrastructure. When trust is present, societies operate efficiently. People cooperate. Institutions function. Information circulates. Disagreements remain manageable because participants share at least some common assumptions about reality. When trust deteriorates, everything becomes more costly. Verification requires additional effort. Institutions face skepticism. Evidence loses persuasive power. Public communication becomes more difficult. Trust is often invisible because functioning societies take it for granted. We notice trust most clearly when it begins to disappear. This observation extends beyond media. Trust matters in:
+
+- Science
+- Journalism
+- Government
+- Finance
+- Education
+- Technology
+
+AI increasingly touches all of these domains simultaneously. As a result, it influences not only individual decisions but also the conditions under which trust itself develops.
+
+## What Comes After Verification?
+
+For most of human history, verification was relatively expensive. Journalists verified information before publication. Courts authenticated evidence before accepting it. Archives preserved records. Experts acted as trusted intermediaries between information and the public. Ordinary citizens rarely had to verify everything for themselves. Instead, people often relied on institutions.
+
+AI is beginning to change this relationship. On one hand, generative models make the production of convincing content dramatically cheaper and faster. Creating a realistic image, video, or voice recording no longer requires a professional studio. The barriers to producing synthetic media continue to fall. On the other hand, AI is also accelerating the development of verification technologies. Content provenance systems. Digital signatures. Authentication frameworks. Cryptographic attestations. Content credentials. These tools aim to answer a simple question:
+
+> Where did this content come from?
+
+Rather than identifying fake content directly, many emerging approaches focus on documenting the history of content creation and modification. The goal is not proving that something is true. The goal is making authenticity easier to evaluate. This creates a strange possibility. The future information ecosystem may become simultaneously more trustworthy and less trustworthy. Less trustworthy because synthetic media becomes cheaper, faster, and more realistic. More trustworthy because verification mechanisms become easier to deploy at scale.
+
+The challenge, therefore, may not be eliminating deception. Deception has always existed. The challenge may be ensuring that trust can scale faster than deception. Whether societies can achieve that balance remains uncertain. But it is likely to become one of the defining technological and political questions of the coming decade.
+
+## The Coming Crisis of Trust
+
+At this point, we can begin to see that the problem extends far beyond deepfakes. It extends beyond misinformation. It extends beyond AI-generated images and videos. The challenge is increasingly about the systems through which reality itself is established. Many discussions frame AI as a competition between humans and machines. I suspect that framing misses something more important.
+
+The greatest challenge may not be intelligence. The greatest challenge may be legitimacy. How do people establish confidence in information? How do societies determine what counts as evidence? How do communities maintain shared reality when records, reconstructions, predictions, and classifications become deeply intertwined?
+
+Researchers have warned that synthetic media may erode trust in information systems even beyond the direct harms of misinformation itself (Chesney & Citron, 2019). The future danger is not that every image becomes fake. Nor that every video becomes deceptive. The future danger is that the distinction between reality and representation becomes increasingly difficult to communicate. When every photograph can be questioned. When every recording can be challenged. When every prediction shapes behavior. When every classification influences opportunity. Trust itself becomes fragile. The result is not merely a technological problem. It is a societal one. Because societies depend on shared methods for establishing what is real.
+
+## Looking Ahead
+
+Artificial intelligence is often presented as a story about automation. Or productivity. Or intelligence. Those stories are important. But they may not be the defining story. The deeper transformation concerns reality itself. AI now helps produce information. Interpret information. Rank information. Filter information. Generate information. And increasingly, shape the environments through which people encounter information.
+
+This broader transformation aligns with Luciano Floridi's argument that digital technologies increasingly reshape the informational environments through which people understand and interact with reality (Floridi, 2014). The challenge facing society is therefore larger than detecting deepfakes. It is larger than labeling AI-generated content. It is larger than improving moderation systems. The challenge is preserving trustworthy pathways between reality and representation.
+
+For centuries, people asked whether information was true. In the coming decade, we may find ourselves asking a more difficult question:
+
+> How do we decide what truth looks like when reality itself is increasingly mediated by intelligent systems?
+
+That may become one of the defining questions of the AI era.
+
+## References
+
+- Chesney, R., & Citron, D. K. (2019). *Deep fakes: A looming challenge for privacy, democracy, and national security.* California Law Review, 107(6), 1753–1820.
+- Corsi, G., Marino, B., & Wong, W. (2024). *The spread of synthetic media on X.* Harvard Kennedy School Misinformation Review, 5(3).
+- Floridi, L. (2014). *The fourth revolution: How the infosphere is reshaping human reality.* Oxford University Press.
+- Hacking, I. (1999). *The social construction of what?* Harvard University Press.
+- Kavanagh, J., & Rich, M. D. (2018). *Truth decay: An initial exploration of the diminishing role of facts and analysis in American public life.* RAND Corporation.
+- Voinea, C. (2026). Synthetic media, authenticity, and trust. *Journal of AI & Society*.
+
+## Author's Note
+
+The ideas, examples, and perspectives presented in this article originate from the author's independent study and reflections on artificial intelligence, digital trust, synthetic media, and algorithmic governance. Generative AI was used to assist with drafting, editing, language refinement, and structural organization. The author reviewed and approved all content and remains responsible for the final arguments, interpretations, and conclusions.
+`
+  },
+  {
+    id: 'the-classification-society',
+    title: 'The Classification Society',
+    date: '2026-11-08',
+    category: 'ai-society',
+    featured: true,
+    excerpt: 'Modern AI systems do more than understand people. By classifying, ranking, and predicting behavior, they increasingly shape opportunities, decisions, and human futures.',
+    tags: ['AI', 'Society', 'Classification', 'Algorithms', 'Recommendation Systems', 'Governance'],
+    content: `
+*How Prediction Becomes Governance*
+
+**Estimated Reading Time:** 12–15 min
+**Level:** Intermediate
+**Topics:** AI, Prediction, Classification, Society, Governance
+
+> [!NOTE]
+> ### Why This Matters
+>
+> Most discussions about AI focus on intelligence.
+>
+> Can models reason?
+>
+> Can they write?
+>
+> Can they automate work?
+>
+> Yet one of the most important functions of modern AI is far less visible.
+>
+> AI systems classify.
+>
+> They classify consumers. Students. Job applicants. Influencers. Customers. Voters.
+>
+> Increasingly, the question is no longer whether people will be classified.
+>
+> The question is what happens after classification begins to influence opportunities, decisions, and behavior.
+>
+> **Personal Perspective**
+>
+> I initially thought classification was a technical problem. Recommendation systems categorize content. Risk models categorize behavior. Advertisers categorize consumers.
+>
+> The more I studied these systems, however, the more I began to suspect something deeper:
+>
+> Modern classification systems do not merely describe reality.
+>
+> They increasingly participate in creating it.
+
+## The Scammer Does Not Need to Know Your Name
+
+When people think about privacy, they often imagine personal information. A phone number. A home address. A passport number. A leaked password. The assumption is simple:
+
+> Somebody learns who you are. Then they exploit that knowledge.
+
+Recently, while reading research on scams targeting creators and communities on social media platforms, I encountered a different possibility. What if knowing who you are is unnecessary? What if knowing where you belong is enough?
+
+Many modern scams do not begin with detailed personal profiles. Instead, they begin with communities. Followers of a cryptocurrency influencer. Members of a gaming group. Fans of a particular creator. Students preparing for university applications. The scammer may know almost nothing about any individual person. But the scammer often knows something else. The scammer knows which group they belong to. And that may be sufficient.
+
+## Following Someone Is a Classification Signal
+
+Imagine two users.
+
+One follows:
+
+- Cryptocurrency analysts
+- Quantitative finance creators
+- Investment newsletters
+
+Another follows:
+
+- Study-abroad advisors
+- Career development creators
+- Academic communities
+
+Even without access to names, addresses, or identification documents, these patterns communicate useful information. The first user may be interested in investment opportunities. The second user may be preparing for education or career transitions. Neither assumption must be perfectly correct. It only needs to be more accurate than random guessing.
+
+This is an important shift. Traditionally, influence relied on identifying individuals. Increasingly, influence can operate through categories. Follow a certain creator. Join a certain community. Subscribe to certain channels. And a growing amount of information about likely interests becomes available. Modern digital systems increasingly operate through profiles, categories, and group-based predictions rather than complete knowledge of individual identities (Floridi, 2014). In many situations, individual identity becomes less important than group membership.
+
+## From Who You Are to Where You Belong
+
+This distinction may seem subtle. In practice, it is transformative. Traditional privacy questions often sound like this:
+
+> Who knows my information?
+
+AI-era questions increasingly sound like this:
+
+> Who knows my category?
+
+Am I categorized as:
+
+- A student?
+- A trader?
+- A gamer?
+- A parent?
+- A high-value customer?
+- A likely voter?
+- A potential borrower?
+
+Notice what has changed. The focus is no longer on identity. The focus is on grouping. The power of modern classification systems comes not from knowing everything. It comes from knowing enough. Enough to predict. Enough to prioritize. Enough to influence. Enough to decide. And once those decisions begin affecting opportunities, categories acquire power.
+
+## Prediction Becomes Intervention
+
+Classification often appears passive. A model observes behavior. The model generates predictions. The process sounds descriptive. Reality enters. Predictions emerge. Nothing else changes. But that is rarely what happens.
+
+Consider a recommendation system. The system determines that a user enjoys fitness content. The platform increases exposure to:
+
+- Fitness creators
+- Exercise communities
+- Health products
+- Training programs
+
+One year later, the user genuinely becomes more interested in fitness. The prediction appears accurate. Yet an important question remains:
+
+> Did the model discover the interest, or help create it?
+
+The same pattern appears elsewhere. Education. Hiring. Finance. Advertising. Search rankings. The prediction influences subsequent decisions. The decisions influence behavior. The behavior influences future predictions. This resembles what philosopher Ian Hacking described as a looping effect, in which classifications influence the people being classified, who then change their behavior in response to those classifications (Hacking, 1999). The category begins affecting the thing being categorized. Prediction becomes intervention.
+
+## Statistics Do Not Merely Describe Reality
+
+People often learn statistics as a descriptive discipline. Statistics summarize. Measure. Observe. Report. This creates the impression that statistics function like mirrors. Reality comes first. Statistics simply reflect what already exists.
+
+Yet institutions do not merely observe measurements. They act on them. Imagine a university ranking system. Once rankings influence funding, applications, and prestige, universities begin responding to the measurement itself. Resources shift. Strategies change. Incentives evolve. The ranking no longer merely describes reality. It participates in shaping reality.
+
+The same logic appears throughout algorithmic systems. Metrics influence incentives. Incentives influence choices. Choices influence future metrics. What begins as measurement becomes infrastructure. What begins as description becomes organization. Categories do not merely describe social reality. In many cases, they become part of the environment through which reality is produced and maintained (Hacking, 1999). This is one reason algorithmic systems feel different from traditional records. They are not simply storing information. They are helping organize human behavior.
+
+## When Models Start Governing Opportunity
+
+Historically, decisions were often made by specific people. Managers hired employees. Teachers recommended students. Bankers approved loans. Editors selected stories. The processes were imperfect. But responsibility remained visible.
+
+Today, many decisions are increasingly mediated through models. A candidate receives a recommendation score. A customer receives a risk score. A user receives a relevance score. A piece of content receives an engagement score. Eventually, opportunities begin to flow through these evaluations. The classification itself may not determine the outcome. But it influences the conditions under which the outcome emerges. A student classified as promising may receive additional resources. A borrower classified as risky may face constraints. A creator classified as engaging may receive visibility. A user classified as valuable may receive preferential treatment.
+
+In each case, the system appears to be making predictions. Yet those predictions also influence future possibilities. This is why classification increasingly resembles governance. Not because algorithms rule directly. But because they shape the pathways through which decisions occur.
+
+## The Rise of the Classification Society
+
+Modern societies have always relied on categories. Governments classify populations. Hospitals classify illnesses. Universities classify academic performance. Classification itself is not new. What is new is scale. Thousands of classifications are now generated continuously. Every click. Every search. Every purchase. Every pause. Every interaction. Most people never see these classifications. Yet they increasingly influence digital experiences. Recommendations. Advertising. Content visibility. Fraud detection. Trust and safety systems. Search rankings. Customer support escalation. Financial products.
+
+As digital environments become increasingly informational and interconnected, records, classifications, and behavioral predictions gain growing influence over how opportunities and decisions are distributed (Floridi, 2014). People often imagine power as something dramatic. Political authority. Legal authority. Economic authority. But classification creates a quieter form of power. The power to influence what options become visible. And invisible.
+
+## Why People Resist Classification
+
+An interesting phenomenon emerges when people become aware of classification systems. Many try to resist them. They:
+
+- Clear watch histories.
+- Create alternate accounts.
+- Use anonymous browsing.
+- Click "Not Interested."
+- Follow unrelated topics.
+- Intentionally confuse recommendation systems.
+
+These behaviors are often described as privacy practices. In part, they are. But they also reveal something deeper. People resist categories. Not necessarily because categories are inaccurate. Sometimes categories are uncomfortably accurate. The resistance emerges because categories feel limiting. Human beings have a unique characteristic that prediction systems struggle to understand. People change. A gamer becomes a teacher. An engineer becomes a writer. A finance professional studies philosophy. A conservative voter changes political views. A fitness enthusiast develops new interests. Classification systems generally prefer stability. Humans do not. The tension between these two facts may become one of the defining tensions of the AI era.
+
+## Can We Still Become Someone New?
+
+This raises a broader question. Modern societies cannot function without classification. Recommendation systems require categories. Search engines require ranking. Financial institutions require risk assessment. Large-scale coordination depends upon simplification. The goal, therefore, cannot be eliminating classification. The goal is ensuring that classification remains flexible. The challenge is preserving the possibility of change.
+
+Can individuals move beyond categories assigned by models? Can prediction systems recognize transformation? Can institutions avoid confusing probability with destiny? These questions matter because classifications increasingly influence access to resources, information, and opportunity. The greater the influence of classification systems, the more important it becomes that those systems remain open to uncertainty. Human beings are not datasets. Not because data is useless. But because people retain the ability to become something unexpected.
+
+## Looking Ahead
+
+The public conversation about AI often focuses on intelligence. How capable are the models? How fast are they improving? How much work can they automate? These are important questions. But another question may ultimately prove just as important:
+
+> Who gets to define who we are?
+
+Every classification system tells a story. A story about likelihoods. Behaviors. Preferences. Future possibilities. Sometimes those stories are useful. Sometimes they are remarkably accurate. But they are still stories. And no classification captures the full complexity of a person.
+
+The question is no longer whether we will be classified. Modern societies cannot function without classification. The real question is whether we can remain more complex than the categories that describe us. Because the most important freedom may not be the freedom to hide from prediction. It may be the freedom to become someone a prediction never expected.
+
+## References
+
+- Floridi, L. (2014). *The fourth revolution: How the infosphere is reshaping human reality.* Oxford University Press.
+- Hacking, I. (1999). *The social construction of what?* Harvard University Press.
+
+## Author's Note
+
+The ideas, examples, and perspectives presented in this article originate from the author's independent study and reflections on AI systems, classification, prediction, and digital society. Generative AI was used to assist with drafting, editing, language refinement, and structural organization. The author reviewed and approved all content and remains responsible for the final arguments, interpretations, and conclusions.
+`
   }
 ];
 
@@ -1160,7 +1591,11 @@ function getCat() {
 
 // Articles belonging to a category
 function articlesForCat(cat) {
-  if (cat === 'featured') return ARTICLES.filter(function (a) { return a.featured; });
+  if (cat === 'featured') {
+    // The flagship essay is promoted as the hero card above, so exclude it here
+    var skip = FEATURED_ESSAY ? FEATURED_ESSAY.linkId : null;
+    return ARTICLES.filter(function (a) { return a.featured && a.id !== skip; });
+  }
   return ARTICLES.filter(function (a) { return a.category === cat; });
 }
 
@@ -1193,6 +1628,18 @@ function renderList() {
   listEl.hidden = false;
   detailEl.hidden = true;
   renderArticles(listEl, articlesForCat(cat));
+  // On the Featured tab, promote the single flagship essay as a hero card
+  if (cat === 'featured' && FEATURED_ESSAY) {
+    var hero = document.createElement('div');
+    hero.className = 'featured-hero';
+    hero.innerHTML =
+      '<span class="badge featured-badge">' + FEATURED_ESSAY.badge + '</span>' +
+      '<h2>' + FEATURED_ESSAY.title + '</h2>' +
+      (FEATURED_ESSAY.subtitle ? '<p class="hero-subtitle">' + FEATURED_ESSAY.subtitle + '</p>' : '') +
+      '<p class="hero-blurb">' + FEATURED_ESSAY.blurb + '</p>' +
+      '<a class="btn" href="articles.html?id=' + FEATURED_ESSAY.linkId + '">Read the essay &rarr;</a>';
+    listEl.insertBefore(hero, listEl.firstChild);
+  }
 }
 
 // Render a small preview (e.g., the Featured Essays section on Home)
