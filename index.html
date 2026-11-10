@@ -41,13 +41,23 @@
     </section>
 
     <section class="section">
-      <h2>Featured Essays</h2>
-      <p class="lead">Selected writing on privacy, AI, and security. <a href="articles.html">Browse all essays →</a></p>
-      <div id="featured-preview" class="article-list"></div>
+      <h2>Essays</h2>
+      <div class="subtabs" role="tablist">
+        <button class="subtab active" data-tab="feature" role="tab" aria-selected="true">Feature Essay</button>
+        <button class="subtab" data-tab="path" role="tab" aria-selected="false">Reading Path</button>
+      </div>
+      <div id="tab-feature" class="subtab-panel">
+        <p class="lead">Selected writing on privacy, AI, and security. <a href="articles.html">Browse all essays →</a></p>
+        <div id="featured-preview" class="article-list"></div>
+      </div>
+      <div id="tab-path" class="subtab-panel" hidden>
+        <p class="lead">Not sure where to start? These curated paths group essays by theme and guiding question. Expand a theme to see recommended reading — click any title to jump straight to that essay. <a href="articles.html">Browse all essays →</a></p>
+        <div id="reading-path"></div>
+      </div>
     </section>
 
     <section class="section">
-      <h2>Topics</h2>
+      <h2>Browse by Topic</h2>
       <div class="topic-chips">
         <a class="chip" href="articles.html?cat=privacy">Privacy</a>
         <a class="chip" href="articles.html?cat=ai-society">AI &amp; Society</a>

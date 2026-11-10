@@ -2830,6 +2830,190 @@ This article is a case study based on publicly available reporting, security res
   }
 ];
 
+// ----------------------------------------------------------------------------
+// Curated reading paths (sourced from "Reading guide.pdf").
+// Each theme is a collapsible group on the Home page's "Reading Path" tab.
+// `articles` holds ids that must match entries in ARTICLES above.
+// ----------------------------------------------------------------------------
+const READING_PATHS = [
+  {
+    theme: 'Start Here',
+    paths: [
+      {
+        title: 'Understanding the Digital Age',
+        question: 'How are AI, privacy, and digital systems changing the way we understand people?',
+        articles: ['the-coming-crisis-of-trust', 'did-we-really-consent', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'memory-is-becoming-infrastructure', 'who-wrote-this']
+      }
+    ]
+  },
+  {
+    theme: 'Featured Reading Path',
+    paths: [
+      {
+        title: 'The Human Side of Digital Systems',
+        question: 'How do digital systems influence trust, identity, memory, authorship, and ultimately our understanding of what it means to be human?',
+        articles: ['the-coming-crisis-of-trust', 'did-we-really-consent', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'the-classification-society', 'measuring-people', 'memory-is-becoming-infrastructure', 'who-wrote-this']
+      }
+    ]
+  },
+  {
+    theme: 'Trust',
+    paths: [
+      {
+        title: 'Trust in the Digital Age',
+        question: 'Why is trust becoming harder to establish in digital systems?',
+        articles: ['the-coming-crisis-of-trust', 'authentication-is-not-trust', 'when-trust-becomes-infrastructure', 'the-binance-incident', 'when-trust-infrastructure-fails']
+      },
+      {
+        title: 'The Cost of Belief',
+        question: 'What happens when proving reality becomes harder than generating it?',
+        articles: ['the-coming-crisis-of-trust', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive']
+      },
+      {
+        title: 'Trust, Identity, and Authenticity',
+        question: 'How do we know who someone is, and how do we know whether what they present is real?',
+        articles: ['the-coming-crisis-of-trust', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive']
+      }
+    ]
+  },
+  {
+    theme: 'Privacy',
+    paths: [
+      {
+        title: 'Privacy Beyond Consent',
+        question: 'What happens when privacy can no longer be reduced to notice and consent?',
+        articles: ['what-privacy-really-means', 'why-privacy-became-more-than-notice-and-consent', 'the-end-of-deletion', 'differential-privacy-explained', 'did-we-really-consent']
+      },
+      {
+        title: 'The Hidden Life of Data',
+        question: 'What actually happens to data after it is collected?',
+        articles: ['what-privacy-really-means', 'the-end-of-deletion', 'differential-privacy-explained', 'memory-is-becoming-infrastructure']
+      }
+    ]
+  },
+  {
+    theme: 'Identity',
+    paths: [
+      {
+        title: 'Understanding Identity',
+        question: 'What does identity mean when people, content, and even personalities can be digitally reproduced?',
+        articles: ['authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'who-wrote-this', 'memory-is-becoming-infrastructure']
+      },
+      {
+        title: 'A Theory of the Digital Self',
+        question: 'Who are we becoming in a digital society?',
+        articles: ['what-privacy-really-means', 'did-we-really-consent', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'memory-is-becoming-infrastructure', 'who-wrote-this']
+      }
+    ]
+  },
+  {
+    theme: 'Authenticity',
+    paths: [
+      {
+        title: 'Authenticity in the Age of AI',
+        question: 'How do we know something is real when identities, voices, images, and writing styles can all be generated?',
+        articles: ['authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'who-wrote-this']
+      },
+      {
+        title: 'The Economics of Authenticity',
+        question: 'What happens when creation becomes cheap and verification becomes expensive?',
+        articles: ['the-coming-crisis-of-trust', 'authenticity-is-becoming-expensive', 'who-wrote-this']
+      }
+    ]
+  },
+  {
+    theme: 'AI & Society',
+    paths: [
+      {
+        title: 'AI and Society',
+        question: 'How is AI changing the ways we trust, classify, remember, and create?',
+        articles: ['the-coming-crisis-of-trust', 'authenticity-is-becoming-expensive', 'the-classification-society', 'measuring-people', 'memory-is-becoming-infrastructure', 'who-wrote-this']
+      },
+      {
+        title: 'From Data to Personhood',
+        question: 'How does data become identity, and how does identity become personhood?',
+        articles: ['what-privacy-really-means', 'the-classification-society', 'measuring-people', 'memory-is-becoming-infrastructure', 'who-wrote-this']
+      }
+    ]
+  },
+  {
+    theme: 'Classification & Measurement',
+    paths: [
+      {
+        title: 'How Systems Understand People',
+        question: 'How do digital systems classify, observe, and remember us?',
+        articles: ['the-classification-society', 'measuring-people', 'memory-is-becoming-infrastructure']
+      },
+      {
+        title: 'The Politics of Categories',
+        question: 'Who gets to define us, and what happens once we are defined?',
+        articles: ['the-classification-society', 'measuring-people', 'did-we-really-consent']
+      },
+      {
+        title: 'Observation, Measurement, and Reality',
+        question: 'Do measurements merely describe reality, or do they help create it?',
+        articles: ['measuring-people', 'the-classification-society']
+      }
+    ]
+  },
+  {
+    theme: 'Security',
+    paths: [
+      {
+        title: 'Security for Non-Security People',
+        question: 'What do security professionals understand that most users rarely think about?',
+        articles: ['authentication-is-not-trust', 'why-secure-systems-fail', 'the-weakest-link-is-usually-human']
+      },
+      {
+        title: 'Human Factors in Security',
+        question: 'Why do secure systems continue to fail?',
+        articles: ['why-secure-systems-fail', 'the-weakest-link-is-usually-human', 'the-binance-incident']
+      },
+      {
+        title: 'Infrastructure Nobody Notices',
+        question: 'What invisible systems make digital life possible?',
+        articles: ['when-trust-becomes-infrastructure', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'when-trust-infrastructure-fails']
+      },
+      {
+        title: 'Lessons from Failure',
+        question: 'What can major security incidents teach us about trust?',
+        articles: ['the-binance-incident', 'when-trust-infrastructure-fails']
+      }
+    ]
+  },
+  {
+    theme: 'Research Themes',
+    paths: [
+      {
+        title: 'Trust, Identity, and Society',
+        question: 'How do digital systems identify us, authenticate us, classify us, remember us, and reshape our understanding of authenticity?',
+        articles: ['the-coming-crisis-of-trust', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'the-classification-society', 'measuring-people', 'memory-is-becoming-infrastructure', 'who-wrote-this']
+      }
+    ]
+  },
+  {
+    theme: 'Research Map',
+    paths: [
+      {
+        title: 'The Intellectual Thread',
+        question: 'How do digital systems reshape trust, identity, and human experience in the age of AI?',
+        thread: 'Trust → Consent → Identity → Authenticity → Classification → Measurement → Memory → Authorship',
+        articles: ['the-coming-crisis-of-trust', 'did-we-really-consent', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'the-classification-society', 'measuring-people', 'memory-is-becoming-infrastructure', 'who-wrote-this']
+      }
+    ]
+  },
+  {
+    theme: 'If You Read Only Five Essays',
+    paths: [
+      {
+        title: 'Five Essential Essays',
+        question: '',
+        articles: ['the-coming-crisis-of-trust', 'did-we-really-consent', 'authentication-is-not-trust', 'authenticity-is-becoming-expensive', 'memory-is-becoming-infrastructure']
+      }
+    ]
+  }
+];
+
 // ---- markdown rendering ----
 
 // Render markdown to HTML. Supports GitHub-style "> [!NOTE]" callouts.
@@ -2919,6 +3103,53 @@ function renderPreview(containerId, limit) {
   renderArticles(container, list);
 }
 
+// Render the curated reading-path accordion into a container (Home "Reading Path" tab).
+// Each theme is a <details> group; inside it, each path shows a guiding question
+// and an ordered list of article titles that link to articles.html?id=<id>.
+function renderReadingPaths(containerId) {
+  var container = document.getElementById(containerId);
+  if (!container) return;
+  // id -> title lookup so titles stay in sync with ARTICLES (single source of truth)
+  var titleById = {};
+  ARTICLES.forEach(function (a) { titleById[a.id] = a.title; });
+
+  var html = '<div class="rp">';
+  READING_PATHS.forEach(function (group, gi) {
+    var openAttr = gi === 0 ? ' open' : '';
+    var count = group.paths.length;
+    html += '<details class="rp-theme"' + openAttr + '>';
+    html += '<summary>' +
+              '<span class="rp-theme-name">' + group.theme + '</span>' +
+              '<span class="rp-theme-count">' + count + (count === 1 ? ' path' : ' paths') + '</span>' +
+            '</summary>';
+    html += '<div class="rp-paths">';
+    group.paths.forEach(function (p) {
+      html += '<div class="rp-path">';
+      html += '<h4 class="rp-path-title">' + p.title + '</h4>';
+      if (p.thread) {
+        html += '<p class="rp-thread">' + p.thread + '</p>';
+      }
+      if (p.question) {
+        html += '<p class="rp-question"><span class="rp-q-label">Guiding question</span> ' + p.question + '</p>';
+      }
+      // Only include article ids that actually exist in ARTICLES
+      var items = p.articles.filter(function (id) { return titleById[id]; });
+      if (items.length) {
+        html += '<ol class="rp-list">';
+        items.forEach(function (id) {
+          html += '<li><a href="articles.html?id=' + id + '">' + titleById[id] + '</a></li>';
+        });
+        html += '</ol>';
+      }
+      html += '</div>';
+    });
+    html += '</div>';
+    html += '</details>';
+  });
+  html += '</div>';
+  container.innerHTML = html;
+}
+
 // Render a single article's tags as chips
 function renderTags(tags) {
   if (!tags || !tags.length) return '';
@@ -2957,4 +3188,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   if (document.getElementById('featured-preview')) renderPreview('featured-preview', 4);
+  if (document.getElementById('reading-path')) renderReadingPaths('reading-path');
+
+  // Home: tabbed Essays section (Feature Essay / Reading Path)
+  var subtabs = document.querySelectorAll('.subtab');
+  if (subtabs.length) {
+    subtabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.getAttribute('data-tab');
+        subtabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
+        document.querySelectorAll('.subtab-panel').forEach(function (p) {
+          p.hidden = (p.id !== 'tab-' + target);
+        });
+      });
+    });
+  }
 });
