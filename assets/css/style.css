@@ -218,3 +218,75 @@ footer {
   max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 48px;
   color: var(--muted); font-size: 13px; border-top: 1px solid var(--border);
 }
+
+/* ===== My Journey timeline page ===== */
+.journey-intro { text-align: center; padding: 36px 0 8px; }
+.journey-intro .kicker {
+  color: var(--accent); font-weight: 700; font-size: 13px;
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.journey-intro h1 { font-size: 32px; margin: 8px 0 6px; }
+.journey-intro p { color: var(--muted); max-width: 640px; margin: 10px auto 0; }
+.journey-intro .scroll-hint { font-size: 13px; margin-top: 18px; opacity: .8; }
+
+.journey {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 0 40px;
+}
+/* faint central spine so the scroll reads as a timeline */
+.journey::before {
+  content: "";
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent, var(--border) 12%, var(--border) 88%, transparent);
+  opacity: .6;
+}
+
+.journey-step {
+  position: relative;
+  text-align: center;
+  padding: 46px 20px;
+  /* initial fade state — JS brightens it near the viewport center */
+  opacity: 0.1;
+  transform: translateY(34px) scale(0.95);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+.step-era {
+  display: inline-block;
+  font-size: 13px; font-weight: 700; letter-spacing: .08em;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 4px 14px; border-radius: 999px; margin-bottom: 12px;
+}
+.step-title { font-size: 26px; margin: 0 0 14px; }
+.step-question {
+  font-size: 18px; font-style: italic; color: var(--muted);
+  max-width: 560px; margin: 0 auto 18px; line-height: 1.5;
+  border: none; padding: 0;
+}
+.step-links {
+  list-style: none; padding: 0; margin: 0 auto 16px; max-width: 480px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.step-links a {
+  display: block; padding: 10px 16px;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: var(--bg-soft); font-size: 15px;
+  transition: border-color .2s ease, color .2s ease;
+}
+.step-links a:hover { border-color: var(--accent); color: var(--accent); }
+.step-themes { font-size: 13px; color: var(--muted); margin: 0; }
+.step-themes span {
+  display: inline-block; font-weight: 700; color: var(--text);
+  margin-right: 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+}
+
+.journey-outro {
+  max-width: 640px; margin: 0 auto; padding: 24px 20px 0;
+  text-align: center;
+}
+.journey-outro h2 { font-size: 24px; margin: 0 0 12px; }
+.journey-outro ul { text-align: left; max-width: 520px; margin: 16px auto; }
+.journey-outro li { margin: 6px 0; color: var(--muted); }
