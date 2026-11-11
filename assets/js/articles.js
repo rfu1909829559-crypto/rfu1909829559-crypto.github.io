@@ -2837,6 +2837,7 @@ This article is a case study based on publicly available reporting, security res
     featured: false,
     excerpt: 'A cross-national study of 138 countries finds that human development — not democracy — is the strongest predictor of comprehensive cyberlaw adoption.',
     tags: ['Cyberlaw', 'Digital Governance', 'Cross-National Analysis', 'Policy', 'Research'],
+    sourceUrl: 'assets/papers/cyberlaw-adoption.pdf',
     content: `
 *What structural conditions let countries build digital legislation?*
 
@@ -2903,6 +2904,7 @@ Countries with stronger development foundations and deeper involvement in the di
     featured: false,
     excerpt: 'Analyzing the world’s biggest breaches (2004–2025) reveals a gap between frequent small breaches and rare but massive ones — and the U.S. and the web sector dominate both.',
     tags: ['Data Breach', 'Cybersecurity', 'Data Science', 'Visualization', 'Research'],
+    sourceUrl: 'assets/papers/data-breach-analysis.md',
     content: `
 *Frequency vs. scale across time, country, and sector*
 
@@ -2960,6 +2962,7 @@ Track the 2018–2020 surge’s drivers, investigate Indonesia’s anomaly, moni
     featured: false,
     excerpt: 'Ecological niche modeling projects broad climatic suitability for the spotted lanternfly across the eastern U.S. and West Coast — with a dry "gap" in the interior.',
     tags: ['Biogeography', 'Invasive Species', 'Species Distribution Modeling', 'Climate', 'Research'],
+    sourceUrl: 'assets/papers/invasive-species-distribution.pdf',
     content: `
 *Modeling the spotted lanternfly’s climatic future in the U.S.*
 
@@ -3011,6 +3014,7 @@ Wallace shows where the species could survive based on climate alone; the USDA m
     featured: false,
     excerpt: 'Projecting two Costa Rican frogs into Panama under future climate shows the generalist expanding and the specialist contracting — a divergence driven by ecological niche breadth.',
     tags: ['Biogeography', 'Species Distribution Modeling', 'Climate Change', 'Amphibians', 'Research'],
+    sourceUrl: 'assets/papers/niche-breadth-range-expansion.docx',
     content: `
 *A specialist and a generalist frog species in Panama*
 
@@ -3063,6 +3067,7 @@ Generalists and specialists may diverge in opposite directions under climate cha
     featured: false,
     excerpt: 'From suicidal termites to alarm-pheromone aphids, extreme altruism emerges when an individual’s survival matters less than its colony’s reproductive success.',
     tags: ['Biology', 'Evolution', 'Altruism', 'Kin Selection', 'Animal Behavior', 'Research'],
+    sourceUrl: 'assets/papers/extreme-altruism-animals.docx',
     content: `
 *Self-sacrificial defense and kin selection across species*
 
@@ -3104,6 +3109,7 @@ A pattern emerges: **when the benefit of an individual’s survival is tiny comp
     featured: false,
     excerpt: 'A close read of a big-data life-expectancy project surfaces the tensions between protecting privacy, being transparent, and staying accountable.',
     tags: ['Data Ethics', 'Privacy', 'Health Data', 'Research Ethics', 'Research'],
+    sourceUrl: 'assets/papers/health-inequality-ethics.pdf',
     content: `
 *Privacy, transparency, and accountability in big-data life-expectancy research*
 
@@ -3147,6 +3153,7 @@ The project shows strong ethical commitment: it protects providers’ personal i
     featured: false,
     excerpt: 'A content analysis of 348 GW Hatchet headlines (Sept 1970–1991) shows a paper focused on its Foggy Bottom community — and far more political than the literature expects.',
     tags: ['Media Studies', 'Information Systems', 'Content Analysis', 'Research'],
+    sourceUrl: 'assets/papers/what-goes-into-gw-hatchet.pdf',
     content: `
 *What a student newspaper chooses to put above the fold*
 
@@ -3544,11 +3551,19 @@ function renderDetail(id) {
   if (listEl) listEl.hidden = true;
   if (!detailEl) { return; }
   detailEl.hidden = false;
+  var sourceHtml = '';
+  if (a.sourceUrl) {
+    var ext = (a.sourceUrl.split('.').pop() || '').toLowerCase();
+    var fmtMap = { pdf: 'PDF', docx: 'DOCX', doc: 'DOC', md: 'Markdown' };
+    var fmt = fmtMap[ext] || 'original file';
+    sourceHtml = '<a class="source-link" href="' + a.sourceUrl + '" target="_blank" rel="noopener">Download ' + fmt + '</a>';
+  }
   detailEl.innerHTML =
     '<a class="back" href="#" onclick="renderList();return false;">← Back to list</a>' +
     '<h1 class="article-title">' + a.title + '</h1>' +
     '<p class="meta">' + a.date + '</p>' +
     renderTags(a.tags) +
+    sourceHtml +
     '<div class="article-body">' + renderMarkdown(a.content) + '</div>';
   window.scrollTo(0, 0);
 }

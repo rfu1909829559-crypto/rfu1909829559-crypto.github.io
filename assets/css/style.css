@@ -124,6 +124,12 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 32px 20px 64px; }
 }
 .article-title { margin: 0 0 6px; font-size: 26px; line-height: 1.3; }
 .article-detail .meta { color: var(--muted); font-size: 13px; margin: 0 0 14px; }
+.source-link {
+  display: inline-block; margin: 4px 0 20px; padding: 8px 16px;
+  border: 1px solid var(--accent); border-radius: 8px;
+  color: var(--accent); font-size: 14px; font-weight: 600;
+}
+.source-link:hover { background: var(--accent); color: #fff; }
 .article-body { font-size: 15px; }
 .article-body h2 { font-size: 19px; margin: 28px 0 10px; }
 .article-body h3 { font-size: 16px; margin: 20px 0 8px; }
