@@ -38,7 +38,8 @@ a { color: var(--accent); text-decoration: none; }
   align-items: center;
   justify-content: space-between;
 }
-.brand { font-weight: 700; font-size: 17px; color: var(--text); }
+.brand { font-weight: 700; font-size: 17px; color: var(--text); display: flex; align-items: center; }
+.brand-logo { height: 30px; width: auto; display: block; border-radius: 6px; }
 .links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
 .links a { color: var(--muted); font-size: 14px; }
 .links a:hover { color: var(--accent); }
