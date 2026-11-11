@@ -20,10 +20,11 @@ const CATEGORIES = {
   security:     { label: 'Security',          title: 'Security' },
   news:         { label: 'News & Commentary', title: 'News & Commentary' },
   explainers:   { label: 'Quick Explainers',  title: 'Quick Explainers' },
+  research:     { label: 'Research',          title: 'Research' },
 };
 
 // Nav order for category links
-const CATEGORY_ORDER = ['featured', 'privacy', 'ai-society', 'security', 'news', 'explainers'];
+const CATEGORY_ORDER = ['featured', 'privacy', 'ai-society', 'security', 'news', 'explainers', 'research'];
 
 // The single "flagship" essay promoted at the top of the Featured Essays tab.
 // (Sourced from the "006 Feature" brief.) Links through to its full article.
@@ -2826,6 +2827,381 @@ Anderson, R. (2020). *Security engineering: A guide to building dependable distr
 ## Author's Note
 
 This article is a case study based on publicly available reporting, security research, and disclosures available at the time of writing. As with all major security incidents, additional details may emerge as investigations continue. The analysis focuses on broader lessons regarding trust infrastructure, certificate authorities, and systemic risk rather than definitive attribution or forensic reconstruction of events. Generative AI was used to assist with drafting, editing, language refinement, and structural organization. The author reviewed and approved all content and remains responsible for the final arguments, interpretations, and conclusions.
+`
+  },
+  {
+    id: 'cyberlaw-adoption',
+    title: 'Predicting Global Cyberlaw Adoption',
+    date: '2026-04-15',
+    category: 'research',
+    featured: false,
+    excerpt: 'A cross-national study of 138 countries finds that human development — not democracy — is the strongest predictor of comprehensive cyberlaw adoption.',
+    tags: ['Cyberlaw', 'Digital Governance', 'Cross-National Analysis', 'Policy', 'Research'],
+    content: `
+*What structural conditions let countries build digital legislation?*
+
+**Estimated Reading Time:** 10 min
+**Context:** Data Science Capstone, Spring 2026
+
+> [!NOTE]
+> ### Why This Matters
+> As digital legislation expands worldwide, the gap between technologically accelerating societies and their regulatory capacity is widening. Understanding what predicts adoption helps explain global disparities in digital governance.
+
+## Abstract
+
+This project examines why countries differ in their adoption of cyberlaw frameworks. Using descriptive visualizations and cross-national regression models, the study evaluates the influence of development, governance, and digital economic activity on cyberlaw readiness. The results show that development level is the strongest and most consistent predictor, ICT goods exports have a smaller but positive effect, and democracy plays little role once other factors are considered. A comparison with a harmonized 2019 model indicates that these patterns remain broadly stable over time.
+
+## Background
+
+In historical development patterns, many "catch-up" countries experience an early phase where rapid industrialization and technological adoption come with relatively low emphasis on privacy protection. Once these countries reach a development level comparable to top-tier economies, they tend to shift toward stronger privacy norms and legal protections.
+
+The objective is to explain why countries differ in adopting key digital governance legislation by analyzing cross-national variation in regulatory capacity, using UNCTAD's global dataset on Electronic Transactions, Consumer Protection, Privacy and Data Protection, Cybercrime, and Indirect Taxation.
+
+## Research Questions
+
+1. To what extent does a country's Human Development Index (HDI) predict its Cyberlaw Legislation Index score in 2026?
+2. Has the influence of HDI, democracy, and ICT exports on cyberlaw adoption changed between 2019 and the post-COVID period?
+
+## Data and Method
+
+The study uses the most recent available data: Human Development Index (HDI, 2023), Democracy Index (2024), ICT Goods Exports (2023), and the Cyberlaw Legislation Index (2026). The dependent variable is a 0–5 index built from five UNCTAD legislative categories, treated equally (no legislation = 0; draft/has legislation = 1). The final analytic sample covers **N = 138 countries**.
+
+Multiple linear regression models were estimated with HDI, Democracy Index, and log-transformed ICT Goods Exports as predictors. Classical linear model assumptions were checked via residual, scale-location, Q–Q, and leverage diagnostics; the model satisfied the key assumptions (Durbin–Watson = 2.03, p = 0.83).
+
+## What Predicts Adoption
+
+**Model:** Cyberlaw Index = 2.138 + 2.079 (HDI) + 0.021 (Democracy) + 0.079 (log ICT Exports)
+
+- **HDI is the strongest predictor** (b = 2.079, p = 0.0076). Countries with higher education, life expectancy, and income adopt substantially more comprehensive digital legislation.
+- **ICT Goods Exports have a smaller but significant positive effect** (b = 0.079, p = 0.0052): digitally engaged economies are more likely to implement cyber-related frameworks.
+- **The Democracy Index shows no significant effect** (b = 0.020, p = 0.608). Once development and digital economic activity are accounted for, governance structure does not meaningfully predict cyberlaw readiness.
+
+The model explains about a third of cross-national variation (R² = 0.3375, Adjusted R² = 0.3227).
+
+## Comparison with 2019
+
+To compare before and after COVID-19, the post-COVID model was re-estimated on the same three-category structure as the 2019 index. Standardized coefficients show HDI remains the dominant factor (β ≈ 0.29 in both periods), ICT exports contribute stably (β ≈ 0.04), and the Democracy Index effect weakens further (β from 0.17 in 2019 to 0.08 post-COVID). The broader picture is stable: development capacity matters most, political system type matters least.
+
+## Discussion
+
+National development remains the most consistent driver of cyberlaw adoption. Many non-democratic or hybrid regimes adopt cyberlaw for practical reasons — economic competitiveness or security — rather than because of democratic institutions. Cyberlaw development appears shaped primarily by structural conditions rather than political regime type.
+
+## Limitations
+
+Key limitations include uneven data availability (missingness is not random and biases toward developed countries), temporal inconsistency between the 5-category 2026 and 3-category 2019 indices, and the simplification of a complex, multidimensional phenomenon into a small number of categories.
+
+## Conclusion
+
+Countries with stronger development foundations and deeper involvement in the digital economy are better positioned to expand their legal frameworks, regardless of regime type. The findings point to a practical rather than ideological pattern of cyberlaw growth.
+`
+  },
+  {
+    id: 'data-breach-analysis',
+    title: 'Global Data Breach Analysis',
+    date: '2026-05-10',
+    category: 'research',
+    featured: false,
+    excerpt: 'Analyzing the world’s biggest breaches (2004–2025) reveals a gap between frequent small breaches and rare but massive ones — and the U.S. and the web sector dominate both.',
+    tags: ['Data Breach', 'Cybersecurity', 'Data Science', 'Visualization', 'Research'],
+    content: `
+*Frequency vs. scale across time, country, and sector*
+
+**Estimated Reading Time:** 9 min
+**Context:** Data Science project, 2026
+
+> [!NOTE]
+> ### Why This Matters
+> Breach statistics are shaped as much by disclosure regimes and attacker strategy as by real vulnerability. Distinguishing frequency-driven risk from scale-driven risk is essential for allocating defensive resources.
+
+## Introduction
+
+This analysis examines global data breaches to provide practical insights for governments and industries strengthening their data protection strategies. By looking at both the frequency of incidents and the scale of records lost, the study highlights patterns across temporal, country-level, and sectoral dimensions.
+
+## Data and Methods
+
+The dataset is the Kaggle *World’s Biggest Data Breaches & Hacks (2004–2025)*, cleaned and merged with a manually curated country-code mapping. Analysis used descriptive statistics and visualization: annual trends, country and sector distributions, a year × sector heatmap, and longitudinal sector-share lines (in Python with pandas, matplotlib, and seaborn).
+
+## Annual Trends
+
+Total records lost stayed relatively flat until ~2012, then fluctuated sharply, peaking in 2018 before declining with large oscillations. The number of breaches shows a clearer steady upward trend, with peaks around 2012, 2018, and 2023.
+
+Years such as 2008, 2011, 2020, 2023, and 2025 had high incident counts but low volumes — many small breaches. Years such as 2016–2018, 2021, 2022, and 2024 saw fewer incidents but disproportionately large losses — a few massive breaches.
+
+## Country and Region
+
+The United States is an extreme outlier in both total records lost and incident count (300+ incidents). The UK, Japan, and Germany form the next tier. Indonesia, India, and China rank high in records lost but much lower in incident counts — suggesting fewer but enormous breaches (e.g., large centralized national databases).
+
+## Sectoral Analysis
+
+The **web** and **government** sectors dominate. Web leads in both records lost and incident count (140+). Government and telecoms follow. Health ranks high in incident counts but not in volume (frequent smaller breaches); telecoms show the opposite (fewer but severe).
+
+## Heatmap and Sector Share Over Time
+
+The 2018–2020 period stands out as a cluster of extreme losses in web and tech sectors — coinciding with the rise of ransomware "double extortion," GDPR-driven disclosure, and rapid cloud adoption. By the early 2020s, sectoral shares become more balanced, hinting that web dominance may be weakening.
+
+## Discussion
+
+The U.S. and the web sector are dominant outliers. Mechanisms include the location of corporate headquarters, population size (centralized databases), and disclosure regimes (strong-transparency countries appear more vulnerable). The 2018–2020 surge reflects ransomware, new regulation, technological transition, and geopolitical tension.
+
+## Conclusion
+
+Analyze breaches through multiple lenses — frequency, scale, geography, sector. Beware inertia in risk perception: the landscape is dynamic, and future vulnerabilities may emerge in unexpected domains.
+
+## Future Research
+
+Track the 2018–2020 surge’s drivers, investigate Indonesia’s anomaly, monitor whether web dominance continues to weaken, and systematically study frequency- vs scale-driven risk.
+`
+  },
+  {
+    id: 'invasive-species-distribution',
+    title: 'Invasive Species Distribution in New Territory',
+    date: '2026-04-23',
+    category: 'research',
+    featured: false,
+    excerpt: 'Ecological niche modeling projects broad climatic suitability for the spotted lanternfly across the eastern U.S. and West Coast — with a dry "gap" in the interior.',
+    tags: ['Biogeography', 'Invasive Species', 'Species Distribution Modeling', 'Climate', 'Research'],
+    content: `
+*Modeling the spotted lanternfly’s climatic future in the U.S.*
+
+**Estimated Reading Time:** 9 min
+**Context:** Biogeography course paper, April 2026
+
+> [!NOTE]
+> ### Why This Matters
+> Climate-based models show where a species *could* survive; real invasions are shaped by trade, dispersal, and ecological interaction. The gap between the two is where invasion management actually happens.
+
+## Abstract
+
+This study uses ecological niche modeling (ENM) in the Wallace platform to evaluate the potential distribution of the spotted lanternfly (*Lycorma delicatula*) in the United States. Occurrence data from the species’ native range in Beijing, an accessible area (M), and Maxent models with 19 bioclimatic variables were used to project climatic suitability across the continental U.S. under three CMIP6 CanESM5 future periods (2021–2040, 2041–2060, 2061–2080).
+
+## Introduction
+
+Invasive species are non-native organisms that establish sustaining populations and cause measurable ecological, economic, or social impacts. Human-mediated transport — ships, ornamental plant trade, recreational travel — now overshadows natural dispersal.
+
+The spotted lanternfly, native to China and Southeast Asia, is a phloem-feeding planthopper with a broad host range and a strong preference for the invasive tree-of-heaven (*Ailanthus altissima*). First detected in the U.S. in Berks County, Pennsylvania, in September 2014, it has since spread across the Northeast along transportation corridors.
+
+## Hypothesis
+
+Based on accumulating natural enemies and ecological integration, I hypothesized that *L. delicatula* would begin to show distributional patterns more characteristic of an established species — reduced local densities due to biotic pressure, without a substantial contraction of its climatically suitable range.
+
+## Method
+
+Occurrence records (max 500) were downloaded from GBIF and cleaned in Wallace. The accessible area (M) was a user-drawn polygon around Beijing with a 0.7-degree buffer. Nineteen WorldClim v2 bioclimatic variables were filtered for collinearity (|r| > 0.7 removed). Maxent models (feature classes L, LQ, H; regularization 0.5–4) were calibrated and selected via ENMeval. The best model was transferred onto a U.S. polygon under CMIP6 CanESM5 (SSP2-4.5) for three future periods.
+
+## Results
+
+Projected suitability is high throughout much of the eastern U.S. and along parts of the West Coast, with lower suitability in the central interior. A distinct "gap region" appears between the two high-suitability zones, reflecting a major climatic transition — drier, more continental, higher-elevation conditions outside the native Beijing envelope. Across all three periods, the spatial pattern barely changes.
+
+## Discussion
+
+The original hypothesis was not supported: no substantial differences appeared among the three periods. Two reasons stand out. First, Wallace predicts based on climate, which stays broadly stable over 60 years; real-world constraints (dispersal, ecology) are excluded. Second, the Wallace projection is far broader than the USDA’s 2026 map because it shows *climatic potential*, not *actual spread*.
+
+The 2018 fungal mortality event (Beauveria bassiana, Batkoa major) should not be seen as a catastrophe for the species, but as part of its integration into the regional ecological system — native predators, pathogens, and plants gradually incorporate it.
+
+## Conclusion
+
+Wallace shows where the species could survive based on climate alone; the USDA map reflects where it has actually spread. Each answers a different question. Future work should add ecological and human-driven factors — and a native-range control projection — for a more complete picture of invasion potential.
+`
+  },
+  {
+    id: 'niche-breadth-range-expansion',
+    title: 'Niche Breadth and Predicted Range Expansion',
+    date: '2026-02-27',
+    category: 'research',
+    featured: false,
+    excerpt: 'Projecting two Costa Rican frogs into Panama under future climate shows the generalist expanding and the specialist contracting — a divergence driven by ecological niche breadth.',
+    tags: ['Biogeography', 'Species Distribution Modeling', 'Climate Change', 'Amphibians', 'Research'],
+    content: `
+*A specialist and a generalist frog species in Panama*
+
+**Estimated Reading Time:** 9 min
+**Context:** Biogeography course paper, February 2026
+
+> [!NOTE]
+> ### Why This Matters
+> Niche breadth is not just theory — it is a practical lens for anticipating which species will struggle or thrive as climates shift, and for targeting conservation where specialists are most exposed.
+
+## Abstract
+
+This study evaluates whether ecological niche breadth explains why some species expand into new regions while others stay restricted. Using two co-occurring Costa Rican frogs that differ sharply in breadth — the generalist *Smilisca baudinii* and the specialist *Isthmohyla pseudopuma* — species distribution models were calibrated with Costa Rican occurrence data and projected into Panama under three future CMIP6 climate periods. The generalist showed broad and increasing suitability, including a central corridor; the specialist showed a restricted, shrinking area near the Costa Rica–Panama border.
+
+## Introduction
+
+Generalists, with broad climatic tolerances, are expected to maintain or increase suitability under changing conditions, whereas specialists are more vulnerable. Cross-taxon evidence — animals, plants, fungi, bacteria — supports niche breadth as a key determinant of geographic range.
+
+## Study Design
+
+Costa Rica was chosen as the source pool because its microclimatic diversity makes finding a co-occurring specialist–generalist pair straightforward.
+
+- **Specialist — *Isthmohyla pseudopuma*:** a treefrog of mid-elevation montane zones (1,120–2,340 m), dependent on humid cloud forests and temporary ponds; breeding relies on heavy rains.
+- **Generalist — *Smilisca baudinii*:** the Mexican treefrog, found from sea level to 1,610 m across diverse habitats including dry forests and savannas; not precipitation-dependent for breeding.
+
+## Method
+
+Occurrence records were obtained from GBIF and cleaned in Wallace. The accessible area (M) was a user-drawn polygon per species. Nineteen WorldClim v2 bioclimatic variables were filtered for collinearity (|r| ≥ 0.7). Maxent models (feature classes L, Q, H; regularization 0.5–4) were calibrated and selected via ENMeval, then transferred to a Panama polygon under CMIP6 CanESM5 (SSP2-4.5) for 2021–2040, 2041–2060, and 2061–2080.
+
+## Results
+
+*S. baudinii* consistently showed substantially higher predicted suitability, increasing over time, with a pronounced expansion through a corridor between the Golfo de Panamá and the Caribbean Sea. *I. pseudopuma* exhibited a small, moderate-suitability patch near the Costa Rica–Panama border that shrank and fragmented across the three periods; no new suitable areas emerged.
+
+The temporal patterns reversed: the generalist expanded, the specialist contracted.
+
+## Interpretation
+
+The divergence aligns with niche-breadth theory. The generalist capitalizes on shifting conditions; the specialist — a montane microhabitat specialist with limited dispersal — is vulnerable to the same changes. For conservation, attention may need to focus on the northwestern border region where the last moderate-suitability pockets persist.
+
+## Conclusion
+
+Generalists and specialists may diverge in opposite directions under climate change — one expanding into new areas, the other facing accelerating habitat loss. Understanding these dynamics is essential for anticipating which species need targeted monitoring and protection.
+`
+  },
+  {
+    id: 'extreme-altruism-animals',
+    title: 'Extreme Altruism Behavior Among Animals',
+    date: '2025-06-19',
+    category: 'research',
+    featured: false,
+    excerpt: 'From suicidal termites to alarm-pheromone aphids, extreme altruism emerges when an individual’s survival matters less than its colony’s reproductive success.',
+    tags: ['Biology', 'Evolution', 'Altruism', 'Kin Selection', 'Animal Behavior', 'Research'],
+    content: `
+*Self-sacrificial defense and kin selection across species*
+
+**Estimated Reading Time:** 7 min
+**Context:** Literature review, June 2025
+
+> [!NOTE]
+> ### Why This Matters
+> Extreme altruism tests the limits of kin selection: when does an individual’s self-sacrifice increase the fitness of relatives enough to be selected for?
+
+## Overview
+
+Altruism among animals is long-debated. Suicidal behavior in eusocial insects is a striking example: individuals sacrifice themselves for the colony. According to kin selection theory — which links altruism to genetic relatedness — these acts enhance the colony’s overall fitness by protecting closely related nestmates.
+
+## Suicidal Defense in Termites
+
+*Globitermes sulphureus* soldiers rupture their body when threatened, exposing a sticky defensive secretion that entangles both soldier and enemy; the forceful expulsion can be fatal. Specialized frontal glands, which rupture on violent contraction, make this the species’ most effective defense — a single soldier’s rupture can isolate intruders from the flock.
+
+## Suicidal Biting in Stingless Bees
+
+*Trigona* stingless bees lack functional stingers and defend by biting intruders without disengaging — often fatally. A bioassay across 12 species found *Trigona hyalinata* especially self-sacrificial, with **83% of workers** engaging in lethal biting. Microscopic analysis showed these species have five sharp mandible teeth, sharper than other stingless bees, explaining their potent defense.
+
+## Alarm Pheromones in Aphids (Non-Eusocial)
+
+Aphids are not eusocial, yet show defensive altruism: when attacked they drop off plants and release alarm pheromones from their cornicles to warn neighbors. Experiments manipulating clone-mate group size (2, 6, 12) found that smeared parasitoids spent more time grooming and less foraging, reducing oviposition in the patch. The tendency to engage increased with more clone-mates present.
+
+This is a *passive* warning signal: the actor gains no direct fitness, but indirect fitness by alerting nearby clones — while also distracting the parasitoid.
+
+## Conclusion
+
+A pattern emerges: **when the benefit of an individual’s survival is tiny compared with the reproductive success of relatives — especially when the individual cannot itself reproduce — extreme altruistic behavior is more likely to occur.** Eusocial species show proactive suicidal defense; non-eusocial species show passive warning, but the underlying logic of kin-selected indirect fitness is the same.
+`
+  },
+  {
+    id: 'health-inequality-ethics',
+    title: 'Ethics Surrounding the Health Inequality Project',
+    date: '2024-11-29',
+    category: 'research',
+    featured: false,
+    excerpt: 'A close read of a big-data life-expectancy project surfaces the tensions between protecting privacy, being transparent, and staying accountable.',
+    tags: ['Data Ethics', 'Privacy', 'Health Data', 'Research Ethics', 'Research'],
+    content: `
+*Privacy, transparency, and accountability in big-data life-expectancy research*
+
+**Estimated Reading Time:** 7 min
+**Context:** Data Science writing, November 2024
+
+> [!NOTE]
+> ### Why This Matters
+> Big-data projects that measure societal problems inherit the ethical burdens of data collection itself — privacy, bias, and accountability do not disappear just because the goal is virtuous.
+
+## Introduction
+
+The Health Inequality Project uses big data to measure differences in life expectancy by income and identify strategies to improve outcomes for low-income Americans. Its goal is morally commendable, but the founder must stay vigilant about the ethics of data collection, ownership, and processing.
+
+## Privacy and Confidentiality
+
+Privacy concern over data collection has intensified since 2000 and accelerated around 2010 with the internet and AI. The project gathers individual-level data — income, gender, household percentile, race (for balancing and later disaggregation).
+
+Data that is not useful (name, phone, SSN) should not be collected; essential data like income should be. Address is collected only to city level, so no more specific location is disclosed. Yet once collected, storage and use raise new questions: a database could contain more specific information, and any leak — intentional (data trade) or unintentional (breach) — would expose individuals. Large firms like AT&T have suffered massive breaches; a single leak here could expose enormous amounts of individual data.
+
+## The Transparency–Bias Dilemma
+
+The project separately counts men’s and women’s life expectancy, aligning with a growing standard in health statistics. But its mechanism for balancing by race risks supporting stereotypes if exposed, while *lacking* transparency risks "backroom" biased standards set by organizers. Similarly, including smoking/drinking correlations in public statistics could fuel stereotypes (e.g., labeling a city’s residents as smokers or heavy drinkers).
+
+The conflict: increased transparency can create public bias; decreased transparency can create organizational bias.
+
+## Accountability
+
+Factors like smoking, drinking, drug use, and insurance were excluded from the statistics. This might seem to weaken accountability, but it actually helps maintain basic accountability: these factors span government action and personal habits and are hard to quantify into fair "weights." Forced quantification can neglect specific effects and reduce accountability further. The statistics are not meant to pinpoint life-shortening factors, but to indicate where life expectancy is higher or lower.
+
+## Conclusion
+
+The project shows strong ethical commitment: it protects providers’ personal information while making results accessible, maintains transparency while minimizing public bias, and reinforces accountability by limiting statistical factors. The statistics serve as indicators of where to look further — not as precise causal claims.
+`
+  },
+  {
+    id: 'what-goes-into-gw-hatchet',
+    title: 'What Goes into the GW Hatchet?',
+    date: '2023-11-11',
+    category: 'research',
+    featured: false,
+    excerpt: 'A content analysis of 348 GW Hatchet headlines (Sept 1970–1991) shows a paper focused on its Foggy Bottom community — and far more political than the literature expects.',
+    tags: ['Media Studies', 'Information Systems', 'Content Analysis', 'Research'],
+    content: `
+*What a student newspaper chooses to put above the fold*
+
+**Estimated Reading Time:** 8 min
+**Context:** University writing course, November 2023
+
+> [!NOTE]
+> ### Why This Matters
+> What a newspaper prints is never everything that happened — it is a selection shaped by audience, geography, and editorial logic. Counting headlines makes that hidden logic visible.
+
+## Introduction: The Air Florida 90 Absence
+
+When Air Florida Flight 90 crashed into the Potomac on January 13, 1982, it rocked the city. Yet the GW Hatchet — the student newspaper serving the George Washington University community — did not report it in the issues of January 18 or 25. The crash involved no GW students, was an outbound flight, and occurred on the 14th Street Bridge, a distance from Foggy Bottom. The omission reveals the paper’s baseline criterion: relevance to the GW community.
+
+## The Publisher and Its Mission
+
+The Hatchet describes itself as editorially and financially independent, striving to "fairly report news that informs the Foggy Bottom community" and serve every member regardless of background. Its aim — serving Foggy Bottom — signals a different news standard from a general city paper.
+
+## What the Literature Says
+
+Schmidt (2014) analyzed six top U.S. student newspapers and found: heavy emphasis on sports (neglecting other topics), frequent apolitical coverage, health issues largely ignored, and limited sourcing (often peer interviews, with a ~2:1 male-to-female source ratio).
+
+## The Investigation
+
+I built a database of 348 "above the fold" headlines from September issues, 1970–1991 — a period of drastic global change ending just before the Soviet collapse. September was chosen because it is the first month of the school year after a three-month gap, concentrating the editor’s news choices.
+
+After categorization, the results (share of 348 headlines):
+
+- **Economic** — 11.78% (top)
+- **Events & Programs** — 11.49%
+- **Political** — 10.92%
+- **Student Life** — 10.35%
+- **Campus Development** — 9.77%
+- **Student Organization** — 9.20%
+- **Administration** — 6.61%
+- **Campus Security** — 6.03%
+- **General Protest** — 4.89%
+- **SGWC** — 4.31%
+- **Faculty / Sports** — 3.45% each
+- **Off-campus Org** — 2.30%
+- **Study** — 1.72%
+- **Health** — 0.57% (last)
+- **Other** — 3.16%
+
+## Discussion vs. Schmidt
+
+Like Schmidt, my study found health reporting rare (only 2 of 348 headlines). But two findings diverge. First, **politics**: the Hatchet’s political topics (plus protests) reach ~15.8% — far from "apolitical." Its location next to the White House and government facilities immerses students in a political environment. Second, **sports** sat at just 3.45% and was absent in the first eight years — the opposite of Schmidt’s "heavy sports emphasis." The Hatchet leans toward campus-relevant news.
+
+## Limitations
+
+Time forced two compromises: "above the fold" only (which may magnify certain topics), and September only (topic focus shifts across the year — e.g., elections boost November politics). Both bias the sample and warrant year-round follow-up.
+
+## Conclusion
+
+The Hatchet leans heavily toward student life and on-campus events, following the general student-newspaper trend of focusing certain topics and ignoring others — yet it stands apart in its political coverage, shaped by the unique Foggy Bottom community it serves.
 `
   }
 ];

@@ -277,6 +277,12 @@ footer {
   transition: border-color .2s ease, color .2s ease;
 }
 .step-links a:hover { border-color: var(--accent); color: var(--accent); }
+.journey-note {
+  list-style: none; padding: 8px 16px; margin: 0;
+  font-size: 14px; font-style: italic; color: var(--muted);
+  border: 1px dashed var(--border); border-radius: 10px;
+  background: transparent;
+}
 .step-themes { font-size: 13px; color: var(--muted); margin: 0; }
 .step-themes span {
   display: inline-block; font-weight: 700; color: var(--text);
