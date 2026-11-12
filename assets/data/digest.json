@@ -1,12 +1,40 @@
 {
-  "updated": "PREVIEW — not yet auto-generated",
+  "updated": "2026-11-12",
   "items": [
     {
-      "title": "Daily Digest launches at 09:00 (Beijing)",
-      "source": "Automated · updates daily",
-      "summary": "This section fills in automatically each morning with the top 5 stories across AI, Security, and Privacy. Each item carries a short summary, a brief impact note, and a link to the original source — no manual editing required.",
-      "impact": "Once the scheduled task is live, this placeholder is replaced automatically; just refresh the page.",
-      "url": "articles.html"
+      "title": "Google Releases Gemini 4 Carbon With Agent 'Swarm' Feature",
+      "source": "The Verge",
+      "summary": "On November 10, Google DeepMind opened general access to Gemini 4 Carbon, its strongest model to date, after a two-week preview limited to vetted cybersecurity defenders. The model targets long-horizon agentic work — complex multi-step coding, scientific reasoning and security analysis — and ships via the Gemini API, AI Studio, Gemini for Business and Google AI Ultra. Google also previewed a 'swarm' mode in Antigravity that splits one prompt into a coordinated team of specialized agents. Introductory pricing is $2 per million input tokens and $10 per output, roughly a quarter of Anthropic's Fable 5.2.",
+      "impact": "Carbon intensifies the frontier price-performance race and signals a shift from single-model chat to orchestrated multi-agent workflows. Its cheap, phased rollout lets Google pressure rivals while keeping the most capable cyber build under controlled access.",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout"
+    },
+    {
+      "title": "Anthropic Kicks Off IPO Roadshow at Up to $1.4T Valuation",
+      "source": "Zacks",
+      "summary": "Anthropic began its IPO roadshow this week, offering 825 million shares at $70 to $78 each and planning a Nasdaq debut under ticker 'ANT' on November 19. At the top of the range the deal values the Claude-maker at up to $1.41 trillion fully diluted, potentially one of the largest listings ever. About 20% of the offering is earmarked for retail investors, while a roughly $26 billion private placement draws Google, Nvidia, AMD, Microsoft, Broadcom, Micron and TSMC as strategic backers.",
+      "impact": "A successful raise would validate sky-high AI valuations and set a benchmark for the sector. Heavy insider and strategic investment signals deep confidence in frontier-model economics, even as training costs and net losses remain enormous.",
+      "url": "https://www.zacks.com/featured-articles/761/anthropic-ipo"
+    },
+    {
+      "title": "Microsoft's November Patch Tuesday Fixes 1,094 Flaws, Including Exploited Outlook Zero-Day",
+      "source": "Microsoft MSRC",
+      "summary": "Microsoft's November 2026 Patch Tuesday resolved 1,094 vulnerabilities across Windows, Office, SharePoint, Exchange, SQL Server, Azure and Edge — among the largest monthly tallies on record. The batch includes CVE-2026-124194, an Outlook spoofing flaw Microsoft confirms is under active attack; opening a crafted message leaks the victim's NTLMv2 hash to an attacker-controlled server. Two further zero-click flaws (CVE-2026-116928 Windows Search RCE and CVE-2026-119958 Windows LDAP RCE) carry CVSS 9.8, and CISA added the Outlook bug to its KEV catalog.",
+      "impact": "Enterprises must prioritize the Outlook patch and domain-controller exposure immediately; the NTLMv2 leak enables credential relay and account takeover. The sheer volume underscores how AI-assisted discovery is inflating the monthly CVE count defenders must manage.",
+      "url": "https://msrc.microsoft.com/update-guide/releaseNote/2026-Nov"
+    },
+    {
+      "title": "OpenSSH 'SSHole' Auth-Bypass Flaw Actively Exploited on Alpine Linux",
+      "source": "BleepingComputer",
+      "summary": "Attackers are exploiting CVE-2026-123158 ('SSHole'), an authentication bypass in OpenSSH on musl-based Linux systems such as Alpine, to breach cloud and container hosts. A long password triggers a musl hashing error that OpenSSH mistakes for a valid match, granting passwordless login to accounts whose shadow entry is '*'. GreyNoise logged the first in-the-wild success on November 7, about 40 hours after the 10.6p2 fix shipped; post-exploitation included cloud-metadata theft and a Python C2 implant (TAC Agent). CISA added it to KEV.",
+      "impact": "Alpine-based containers and edge devices face instant, low-effort unauthorized logins and persistence. Operators should upgrade to 10.6p2 now or disable password authentication, and hunt for rogue authorized_keys and TAC Agent artifacts.",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/"
+    },
+    {
+      "title": "China Adopts First Public-Interest Litigation Law, Codifying Personal-Data Abuse Suits",
+      "source": "China Daily",
+      "summary": "On November 6, the NPC Standing Committee passed the Law on Procuratorial Public-Interest Litigation, effective January 1, 2027. The 53-article statute consolidates over a decade of practice and explicitly lets prosecutors bring civil public-interest litigation against 'personal-information processors that unlawfully process personal data and harm the rights of many individuals.' It sets out full procedures for investigation, filing, evidence and enforcement, turning a scattered statutory authorization into a unified legal mechanism for mass privacy harms.",
+      "impact": "The law gives prosecutors a clear, standing path to pursue large-scale personal-information abuses that individuals cannot litigate alone, raising compliance risk for data-handling firms in China and strengthening collective privacy protection.",
+      "url": "https://epaper.chinadaily.com.cn/a/202611/09/WS6af10f24e4b07a432ddca079.html"
     }
   ]
 }
