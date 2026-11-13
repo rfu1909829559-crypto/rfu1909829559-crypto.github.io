@@ -1,40 +1,40 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "items": [
     {
-      "title": "AWS Ships Kiro Bots: Persistent Coding Agents With Their Own Memory and Schedules",
-      "source": "InfoWorld / VentureBeat",
-      "summary": "AWS made Kiro Bots generally available on November 5 inside Kiro Crew, its open-source multi-agent coding workspace. Each bot is a named, long-running agent that owns one slice of a developer's workflow (CI watching, issue triage, release checks), keeps separate persistent memory ('Notes'), spawns parallel worker sessions, and runs on conversational schedules such as 'check CI every 30 minutes' or 'draft release notes every Friday.' Permissions are scoped per bot, and different models can be mixed for planning vs. workers. AWS frames the shift as 'from task delegation to process delegation.'",
-      "impact": "Coding agents are graduating from one-shot sessions to standing, scheduled jobs with memory — the same pattern operators run with cron and CI, now agent-native. The real watch-items are a 'coordination tax' (scheduled bots burn credits 24/7) and auditability (why did a bot decide X across weeks of notes?). Teams should scope bots to one job, keep merge/deploy rights with humans, and meter cost before scaling.",
-      "url": "https://saassentinel.com/news/aws-makes-kiro-bots-generally-available-with-persistent-memory-and-scheduled-jobs"
+      "title": "Google Antigravity Ships /swarm: Multi-Agent Coding Orchestration Powered by Gemini 4 Carbon",
+      "source": "Google / AI Compass (ashutoshai.com)",
+      "summary": "Google previewed the /swarm command inside Antigravity (desktop app and CLI) on November 10, coordinating parallel coding workers, independent diff verifiers, and a stall monitor over one shared, zero-idle-cost message board. Backed by the newly released Gemini 4 Carbon, the setup has already delivered a complete open-world 3D game and, from seven city-planning PDFs (206 engineering drawings), an interactive 3D model of ~906,000 triangles generated in a single overnight run.",
+      "impact": "This is the 'coordination before generation' thesis made native in the IDE: the bottleneck has shifted from writing code to orchestrating, verifying, and recovering across many agents. For builders, the lesson is that a managed agent team (roles + independent review + stall detection) now beats a single stronger model. Watch the cost model — shared boards and parallel workers can quietly multiply token spend.",
+      "url": "https://ashutoshai.com/ai-compass/category/coding-agent"
     },
     {
-      "title": "Cognition Releases SWE-2 Flash: a 276B Coding Model at One-Fifth the Price of SWE-2",
-      "source": "Cognition / CSDN AI Daily",
-      "summary": "On November 4, Cognition released SWE-2 Flash, a coding model built on Thinking Machines' Inkling-Small (276B total / 12B active parameters, MoE). A mid-training stage plus RL lifted Terminal-Bench 4.0 pass rate from 0.9% to 20.0% and FrontierCode 2.0 from 3.2% to 24.0% over the base. Cognition reports ~3x the speed of SWE-2 at one-fifth the price; it runs in Devin Desktop and CLI (free through Nov 30, then 1/5 SWE-2 pricing). Weights stay private for now.",
-      "impact": "A clear signal in the 'smaller, cheaper, specialized' coding-model race: a mid-training step on code/science corpora can unlock large benchmark gains without frontier-scale spend. For teams, the takeaway is that cost-per-task — not just raw capability — is becoming the differentiator in production coding agents.",
-      "url": "https://zmem.cn/archives/3674.html"
+      "title": "Cursor Launches Multiplayer Projects for Human + Agent Collaboration",
+      "source": "Cursor / AI Compass (ashutoshai.com)",
+      "summary": "Rolled out in beta to all Cursor users on November 10, Multiplayer Projects lets engineering, design, and product teammates collaborate alongside their coding agents on one shared board. Rather than each person running a private agent, the work — and the agents — live in a single shared surface where teammates assign, review, and track changes together.",
+      "impact": "Coding agents are moving from solo assistants to team-level, collaborative surfaces. Combined with GitHub's four-stage workflow and Antigravity's /swarm, the industry is converging on one pattern: agents need defined roles, shared context, and explicit authority to be useful at team scale. The competitive axis is shifting from 'best model' to 'best multiplayer operating system for agents.'",
+      "url": "https://ashutoshai.com/ai-compass/category/coding-agent"
     },
     {
-      "title": "GitHub Formalizes the Agentic Coding Workflow — and Pushes Copilot Into Xcode and JetBrains Air",
-      "source": "GitHub Changelog / JavaRubberDuck",
-      "summary": "GitHub's November guidance formalizes agentic coding around four stages — Plan, Build, Verify, Observe — and reports 1.2B weekly commits in October (400%+ YoY) alongside a finding that pull requests sat 441% longer in review as AI adoption rose. In parallel, Copilot landed in Xcode's built-in coding assistant (public preview, Nov 4) and inside JetBrains Air via the Agent Client Protocol (Nov 3), while the @GitHub bot for Slack/Teams reached GA (Nov 6), able to open issues and PRs straight from a chat thread.",
-      "impact": "The bottleneck is moving from generation to coordination and verification. More commits do not equal more productivity when review queues balloon; the winning setup is defined roles, current context, explicit authority, and independent verification — not just a stronger model. ACP looks set to become the standard 'socket' for coding agents inside editors, much like LSP did for language tooling.",
-      "url": "https://javarubberduck.com/ai/news-2026-11-08-dev-tools"
+      "title": "OpenAI's dot Adds Multi-Computer Orchestration Across Cloud Devboxes, GPUs, and Laptops",
+      "source": "OpenAI / AI Compass (ashutoshai.com)",
+      "summary": "OpenAI updated dot (formerly a local coding agent) so developers can manage tasks spanning remote Linux servers, GPU instances, and secondary laptops from a single local workspace. The same task can fan out across heterogeneous compute — a cloud devbox for builds, a GPU box for heavy jobs, a laptop for local checks — without leaving one command surface.",
+      "impact": "The line between 'local' and 'cloud' development is dissolving. As agents take on longer, heavier jobs, the ability to schedule work across machines becomes core infrastructure, not a nice-to-have. Teams should plan for agent identities and permissions that follow workloads across hosts, not just within one machine.",
+      "url": "https://ashutoshai.com/ai-compass/category/coding-agent"
     },
     {
-      "title": "At the China International Import Expo, Embodied Intelligence Moves From 'Performances' to Real Service",
-      "source": "Xinhua / Sina Finance",
-      "summary": "At the 9th CIIE (Nov 5-6, Shanghai), humanoid robots shifted from demo stunts (dancing, sparring) to practical work — hotel concierge, luggage carrying, tea service, and on-site photo printing. The parallel Hongqiao Forum on humanoid robots released the '2026 Humanoid Robot Application Scenario Atlas' covering ten domains (manufacturing, public services, special operations, agriculture). Industry leaders converged on a thesis: embodied progress comes from co-evolving 'body' and 'brain,' and the hardest gap is the 'last few millimeters' of alignment between AI and the physical world — a problem several predicted could close within 1-2 years via self-improving data flywheels.",
-      "impact": "The narrative for humanoids is maturing from spectacle to deployable value, backed by an authoritative scenario map that helps match supply and demand. For builders, the consensus that hardware embodiment caps generalization — and that real-world data loops are the core driver — reframes where to invest (sim-to-real, edge inference, dexterous end-effectors).",
-      "url": "https://finance.sina.com.cn/roll/2026-11-06/doc-inixuize5502612.shtml"
+      "title": "NVIDIA Unveils GR00T 2: A 2B-Parameter 'World Action Model' That Runs On-Robot",
+      "source": "NVIDIA Blog / Humanoids Daily (CoRL 2026, Austin)",
+      "summary": "Presented at the Conference on Robot Learning (CoRL) on November 9, GR00T 2 is a 2-billion-parameter world action model built on Cosmos. It predicts future video frames and robot actions in one diffusion pass. NVIDIA reports 71% average success across 50 tasks from a single demonstration per task, rising to 95% with five demos (under three minutes of robot data each, then a ~30-minute RTX 5090 fine-tune). The lighter GR00T 2 Turbo runs onboard a Unitree G1 on a Jetson AGX Thor at 124 ms per prediction; open weights and the cross-embodiment training recipe arrive in December. Foxconn, Siemens, and MicroAGI are already testing it in factories and cable-handling work.",
+      "impact": "GR00T 2 marks two shifts at once: robot 'brains' moving to edge/onboard real-time inference, and skills transferring across robot bodies from human video — sharply lowering the data and fine-tuning barrier. It reinforces that the future is a fast 'System 1' skill model steered by a reasoning 'System 2,' and that sim-to-real plus cross-embodiment transfer — not just bigger models — is where embodied intelligence compounds.",
+      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
     },
     {
-      "title": "Industry Report: Over 60% of Humanoids Still Stuck in Demos, Only ~8% in Real Factories",
-      "source": "Xinhua Finance / China Financial Information Service",
-      "summary": "The '2026 Embodied Intelligence Industry Innovation Report' (released Nov 5-6) finds the sector moving from development demos toward real-world continuous operation, but with a stark gap: only about 8% of humanoids have entered manufacturing or warehousing, while over 60% remain in exhibitions, commercial shows, or research/teaching. Yet supply is scaling fast — H1 2026 global humanoid shipments exceeded 22,000 units, up nearly 300% YoY, and daily rental prices have fallen below 1,000 yuan. Bright spots exist: Galbot S1 runs 7x24 on CATL's line; 15 Leju 'Kuafu' robots hit 98% success over ~1,000 hours at Zhaofeng; Zhisquare signed a ~500M yuan, 1,000-unit, 3-year order with HKC.",
-      "impact": "The metric that matters is shifting from 'how many shipped' to 'how many run continuously and deliver results.' Reliability engineering — not flashy skills — is the binding constraint (hidden degradation of tendons/sensors only shows under 24/7 load). Buyers now ask about repeatability, payload, deployment time, and stable uptime, signaling a market pivot from novelty to operational units.",
-      "url": "https://finance.sina.com.cn/jjxw/2026-11-06/doc-inixuqhu5050190.shtml"
+      "title": "Humanoid Mass Production Crosses From Demos to Volume: AgiBot 20k, Figure BotQ, Tesla's Fremont Line",
+      "source": "Humanoid Press — Live Deployment Tracker (November 2026)",
+      "summary": "The November 2026 deployment tracker shows the sector scaling hard: AgiBot has produced 20,000 units across all series; Figure's BotQ has built 1,000+ Figure 03 units at a rate of one robot per hour; Tesla disclosed Optimus assembly on its Fremont high-volume line (Musk: ~20,000/week is a year-plus away, external customers possibly by end of 2027); and Unitree targets 10,000–20,000+ units in 2026. Asia-Pacific accounts for roughly 80–90% of deployments, with Boston Dynamics' Atlas, Agility's Digit, and 1X's NEO advancing in the US and Europe.",
+      "impact": "Embodied intelligence is crossing the prototype-to-volume threshold that separates hype from industry. The signal to watch is no longer 'how many shipped' but 'how many run continuously and pay back' — reliability, payload, and stable uptime are the real constraints. China's manufacturing base is setting the production tempo, framing 2027 as the first year of commercial external deliveries.",
+      "url": "https://humanoid.press/"
     }
   ]
 }
