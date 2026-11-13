@@ -2,39 +2,39 @@
   "updated": "2026-11-13",
   "items": [
     {
-      "title": "Google Antigravity Ships /swarm: Multi-Agent Coding Orchestration Powered by Gemini 4 Carbon",
-      "source": "Google / AI Compass (ashutoshai.com)",
-      "summary": "Google previewed the /swarm command inside Antigravity (desktop app and CLI) on November 10, coordinating parallel coding workers, independent diff verifiers, and a stall monitor over one shared, zero-idle-cost message board. Backed by the newly released Gemini 4 Carbon, the setup has already delivered a complete open-world 3D game and, from seven city-planning PDFs (206 engineering drawings), an interactive 3D model of ~906,000 triangles generated in a single overnight run.",
-      "impact": "This is the 'coordination before generation' thesis made native in the IDE: the bottleneck has shifted from writing code to orchestrating, verifying, and recovering across many agents. For builders, the lesson is that a managed agent team (roles + independent review + stall detection) now beats a single stronger model. Watch the cost model — shared boards and parallel workers can quietly multiply token spend.",
-      "url": "https://ashutoshai.com/ai-compass/category/coding-agent"
+      "title": "Google DeepMind Unveils Gemini Robotics 2.5 for Real-World Dexterity",
+      "source": "Google DeepMind",
+      "summary": "Google DeepMind introduced Gemini Robotics 2.5, its most capable vision-language-action (VLA) model to date, on November 10. Trained with Gemini 4 Argon, it was evaluated across more than 200 real-world tasks (serving food with tongs, tying bows, liquid pipetting) and shows 30-100% higher success rates and 20-30% faster completion than prior baselines. In a Mercedes-Benz production-line proof-of-concept, Apptronik's Apollo 2 humanoid reached a 96% kitting success rate. The release also adds improved physical safety steering and the open ASIMOV-Jailbreak benchmark for robotic adversarial resistance, and is rolling out to robotics partners.",
+      "impact": "This pushes physical AI from lab demos toward unstructured, real industrial environments. The big shift is reliability at scale plus explicit safety steerability for human-adjacent robots, signaling that embodied intelligence is becoming a deployment problem, not just a research one.",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
     },
     {
-      "title": "Cursor Launches Multiplayer Projects for Human + Agent Collaboration",
-      "source": "Cursor / AI Compass (ashutoshai.com)",
-      "summary": "Rolled out in beta to all Cursor users on November 10, Multiplayer Projects lets engineering, design, and product teammates collaborate alongside their coding agents on one shared board. Rather than each person running a private agent, the work — and the agents — live in a single shared surface where teammates assign, review, and track changes together.",
-      "impact": "Coding agents are moving from solo assistants to team-level, collaborative surfaces. Combined with GitHub's four-stage workflow and Antigravity's /swarm, the industry is converging on one pattern: agents need defined roles, shared context, and explicit authority to be useful at team scale. The competitive axis is shifting from 'best model' to 'best multiplayer operating system for agents.'",
-      "url": "https://ashutoshai.com/ai-compass/category/coding-agent"
+      "title": "Alibaba Opens Early Access to Qwen4-Max Preview with 1M-Token Context",
+      "source": "MLLLM",
+      "summary": "On November 11, 2026, Alibaba (Aliyun) opened early access to Qwen4-Max Preview, the flagship of its new Qwen4 generation. The model accepts images and video as input and supports a context window of up to 1 million tokens. It is integrated into Qwen App, Qoder, QwenWork, and QwenStudio, and is callable via API through the Token Plan subscription, with credit consumption cut to 20% of standard rate (8% during night hours) through November 25. Alibaba emphasizes stronger coding, agentic task execution, frontend design, and world-knowledge capabilities, though it has not yet published independent benchmarks.",
+      "impact": "This is chiefly a price-and-context attack on flagship inference where the battle for coding and agent pipelines is fought. The two-week discounted window lets teams run their own evaluations on long-context, multimodal, agentic scenarios before committing to a model.",
+      "url": "https://mlllm.io/articles/3805-alibaba-opens-early-access-to-qwen4-max-preview-1m-token-context-and-discounted-rates-until-november-25"
     },
     {
-      "title": "OpenAI's dot Adds Multi-Computer Orchestration Across Cloud Devboxes, GPUs, and Laptops",
-      "source": "OpenAI / AI Compass (ashutoshai.com)",
-      "summary": "OpenAI updated dot (formerly a local coding agent) so developers can manage tasks spanning remote Linux servers, GPU instances, and secondary laptops from a single local workspace. The same task can fan out across heterogeneous compute — a cloud devbox for builds, a GPU box for heavy jobs, a laptop for local checks — without leaving one command surface.",
-      "impact": "The line between 'local' and 'cloud' development is dissolving. As agents take on longer, heavier jobs, the ability to schedule work across machines becomes core infrastructure, not a nice-to-have. Teams should plan for agent identities and permissions that follow workloads across hosts, not just within one machine.",
-      "url": "https://ashutoshai.com/ai-compass/category/coding-agent"
+      "title": "GitLab CVE-2026-97229: Critical Unauthenticated RCE Added to CISA KEV",
+      "source": "CISA",
+      "summary": "CVE-2026-97229 is an integer overflow in GitLab's CI/CD regular-expression compiler that lets an unauthenticated attacker achieve remote code execution (CVSS 10.0). CISA added it to the Known Exploited Vulnerabilities (KEV) catalog on October 29, 2026, confirming active exploitation, with a federal remediation deadline of November 1. Shadowserver reported over 1,000 internet-exposed instances remained unpatched; Alpine Linux disclosed a thwarted attempt against its own instance. Fixed in 19.2.8, 19.3.5, and 19.4.2 (and later 19.5.x), with a related CVSS 10 regex-handling RCE (CVE-2026-110264) and a dependent Ruby/Onigmo engine patch also required for self-compiled installs.",
+      "impact": "GitLab is the control plane for source code, CI/CD, and increasingly MCP/AI pipelines. An unauthenticated RCE on self-managed instances exposes repository secrets, model artifacts, and deployment credentials. Patch immediately; GitLab.com and GitLab Dedicated are already fixed, but self-managed and custom-Ruby deployments need both the app and engine updates.",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
     {
-      "title": "NVIDIA Unveils GR00T 2: A 2B-Parameter 'World Action Model' That Runs On-Robot",
-      "source": "NVIDIA Blog / Humanoids Daily (CoRL 2026, Austin)",
-      "summary": "Presented at the Conference on Robot Learning (CoRL) on November 9, GR00T 2 is a 2-billion-parameter world action model built on Cosmos. It predicts future video frames and robot actions in one diffusion pass. NVIDIA reports 71% average success across 50 tasks from a single demonstration per task, rising to 95% with five demos (under three minutes of robot data each, then a ~30-minute RTX 5090 fine-tune). The lighter GR00T 2 Turbo runs onboard a Unitree G1 on a Jetson AGX Thor at 124 ms per prediction; open weights and the cross-embodiment training recipe arrive in December. Foxconn, Siemens, and MicroAGI are already testing it in factories and cable-handling work.",
-      "impact": "GR00T 2 marks two shifts at once: robot 'brains' moving to edge/onboard real-time inference, and skills transferring across robot bodies from human video — sharply lowering the data and fine-tuning barrier. It reinforces that the future is a fast 'System 1' skill model steered by a reasoning 'System 2,' and that sim-to-real plus cross-embodiment transfer — not just bigger models — is where embodied intelligence compounds.",
-      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
+      "title": "Google's November 2026 Android Bulletin Fixes 216 Flaws, Including Zero-Click RCE",
+      "source": "Android Open Source Project (Google)",
+      "summary": "Google's November 2026 Android Security Bulletin patches 216 vulnerabilities (23 rated Critical) across the Framework, System, kernel, and chipset components. The headline issue is CVE-2026-58868, a critical heap buffer overflow in FrameDecoder.cpp that enables remote code execution with no user interaction or elevated privileges, affecting Android 14 through 17. Two further critical zero-click RCEs appear in System (CVE-2026-58876, CVE-2026-58936). Fixes ship across two patch levels, 2026-11-01 and 2026-11-05, with the later level covering all issues plus kernel and vendor (MediaTek, Qualcomm, Unisoc) components.",
+      "impact": "A zero-click media-processing RCE is a prime attack path for mobile fleets. Google's bulletin does not confirm in-the-wild exploitation, but enterprises must verify patch levels (aim for 2026-11-05 or later) across mixed vendor and carrier fleets, since an OS patch date alone does not cover vulnerable baseband or modem firmware.",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-11-01"
     },
     {
-      "title": "Humanoid Mass Production Crosses From Demos to Volume: AgiBot 20k, Figure BotQ, Tesla's Fremont Line",
-      "source": "Humanoid Press — Live Deployment Tracker (November 2026)",
-      "summary": "The November 2026 deployment tracker shows the sector scaling hard: AgiBot has produced 20,000 units across all series; Figure's BotQ has built 1,000+ Figure 03 units at a rate of one robot per hour; Tesla disclosed Optimus assembly on its Fremont high-volume line (Musk: ~20,000/week is a year-plus away, external customers possibly by end of 2027); and Unitree targets 10,000–20,000+ units in 2026. Asia-Pacific accounts for roughly 80–90% of deployments, with Boston Dynamics' Atlas, Agility's Digit, and 1X's NEO advancing in the US and Europe.",
-      "impact": "Embodied intelligence is crossing the prototype-to-volume threshold that separates hype from industry. The signal to watch is no longer 'how many shipped' but 'how many run continuously and pay back' — reliability, payload, and stable uptime are the real constraints. China's manufacturing base is setting the production tempo, framing 2027 as the first year of commercial external deliveries.",
-      "url": "https://humanoid.press/"
+      "title": "EDPB Adopts Statement on Privacy Risks of Smart Glasses",
+      "source": "EDPB",
+      "summary": "On October 13, 2026, the European Data Protection Board adopted a statement - accompanied by the expert report 'The connected gaze' - on the data-protection risks of smart glasses. These devices resemble ordinary eyewear but capture video and audio and run AI such as facial and object recognition, enabling near-invisible collection of bystanders' personal data. The EDPB clarifies that posting footage to public accounts makes the user a controller and that manufacturers and app providers cannot offload their GDPR obligations onto users. It recommends prominent, hard-to-disable recording indicators (LEDs, audio cues), privacy-by-design defaults (on-device processing, blurring of bystanders, geofencing), and notes valid bystander consent is difficult to obtain.",
+      "impact": "The statement sets a de-facto EU design standard for AI wearables and signals looming enforcement by national data-protection authorities. Manufacturers and organizations deploying smart glasses must revisit recording indicators, purpose-limitation documentation, and controller-versus-processor allocation - part of tightening scrutiny on pervasive AI capture devices.",
+      "url": "https://www.edpb.europa.eu/news/edpb-publishes-statement-on-the-data-protection-challenges-of-smart-glasses_en"
     }
   ]
 }
