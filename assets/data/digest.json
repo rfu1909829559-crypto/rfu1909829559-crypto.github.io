@@ -2,39 +2,39 @@
   "updated": "2026-11-14",
   "items": [
     {
-      "title": "JetBrains Air Ships Natively in 2026.3 IDEs as a Multi-Agent Orchestration Layer",
-      "source": "JetBrains",
-      "summary": "From the 2026.3 release wave (early November), JetBrains Air is built into all JetBrains IDEs rather than sold as a closed assistant. It connects first-party and third-party agents — Claude Agent, Codex, GitHub Copilot, Junie out of the box, plus Gemini CLI, OpenCode and Antigravity via the ACP registry — and lets developers run them in parallel Git worktrees with IDE-level diff review, refactors and debugger access. Local sessions use your own ChatGPT/Copilot/Google/Claude subscriptions or API keys (no JetBrains AI plan required), and Junie Lite is free with a JetBrains account.",
-      "impact": "This is the clearest signal yet that the IDE is becoming a neutral command center for competing coding agents instead of a single-vendor chatbot. The 'bring-your-own-agent' model shifts leverage to the developer and makes multi-agent coordination, not model access, the real product surface.",
-      "url": "https://www.jetbrains.com/air/ides/"
+      "title": "Anthropic Releases Claude Fable 5.2 and Mythos 5.2 With Tiered Access",
+      "source": "Anthropic",
+      "summary": "Anthropic released Claude Fable 5.2 and Mythos 5.2 on November 9. Fable 5.2 is generally available through the API at $8 per million input tokens and $40 per million output tokens, with strengthened cybersecurity and biological safeguards. Mythos 5.2, which improves coding, reasoning and vision, is restricted to verified organisations in those fields via Anthropic's cyber and life-sciences verification programs. Both share an underlying model, extending the company's approach of separating broad availability from vetted access to sensitive capabilities.",
+      "impact": "Tiered access separates general availability from vetted, sensitive-capability use — a template for responsible frontier-model distribution. The pricing also signals the intensifying margin war among leading AI labs.",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     },
     {
-      "title": "Google Winds Down Jules, Consolidating Its Async Coding Agent Into Antigravity",
-      "source": "Google (Jules changelog)",
-      "summary": "Announced October 29 and effective now: Jules stopped accepting new sessions on November 11 and turned read-only through December 31, when it shuts down entirely. Google frames the move as unifying its agentic-coding efforts; learnings flow into the agent-first platform Antigravity, which gained a plugin marketplace (Atlassian, Figma, Stripe, Datadog and others) the same day. Code, branches and PRs already live in GitHub and are unaffected, but settings, memories, scheduled tasks and session history must be exported via the Jules Tools CLI before year-end.",
-      "impact": "The closure of a flagship async coding agent shows the market is consolidating around a few integrated platforms rather than many standalone agents. Teams relying on cloud background tasks should migrate now and treat agent data export as a routine offboarding step.",
-      "url": "https://jules.google/docs/changelog/"
+      "title": "Google Opens Gemini 4 Carbon to Paying Developers and Publishes Safety Report",
+      "source": "On The Wire (RelayAI)",
+      "summary": "Google opened Gemini 4 Carbon to all paying developers and enterprises through its API at an introductory price set to expire on November 30, and published a dedicated Carbon safety report. The report carries forward the findings from Gemini 4 Argon, including Google's assessment that it cannot rule out the model reaching its critical cyber and biological capability levels without out-of-model safeguards. Carbon had earlier been limited to a subset of cyber defenders before this broader rollout.",
+      "impact": "Broader access to a frontier model with documented critical-risk potential raises the stakes for deployment controls, third-party safeguards and ongoing safety monitoring.",
+      "url": "https://onthewire.ai/article/google-opens-gemini-4-carbon-to-paying-developers-and-publishes-a-carbon-safety-"
     },
     {
-      "title": "Gartner Publishes Its First Magic Quadrant for AI Agent Management Platforms",
-      "source": "Gartner / CX Today",
-      "summary": "Gartner's inaugural Magic Quadrant for AI Agent Management Platforms (report dated October 27) names Microsoft, IBM and ServiceNow as Leaders, with AWS, Salesforce, OneReach.ai and Gravitee as Challengers. The category covers agent discovery, lifecycle management, guardrails, evaluation, identity/access, integration controls and cost tracking — and Gartner forecasts that by 2029, 60% of AI agents will be managed through such a platform and over 35% of enterprise AI run-budgets will be routed on verified business outcomes.",
-      "impact": "Agent governance and 'tokenomics' just became their own software category with an analyst scorecard. For anyone running more than a handful of agents, the signal is clear: discovery, ownership and per-task cost tracking are becoming table stakes, not nice-to-haves.",
-      "url": "https://cxtoday.com/gartner-unveils-inaugural-magic-quadrant-for-ai-agent-management"
+      "title": "Ivanti Connect Secure Zero-Day Chain Added to CISA KEV After Active Exploitation",
+      "source": "Black Hat Ethical Hacking",
+      "summary": "Ivanti shipped fixes for two more zero-days — CVE-2026-111357 (CVSS 8.8 missing-authentication privilege escalation) and CVE-2026-118527 (predictable-identifier file upload) — that were chained with the October authentication-bypass flaw CVE-2026-104935 by actor UTA0576 to achieve unauthenticated root-level remote code execution on Connect Secure VPN appliances. CISA added both new flaws to its Known Exploited Vulnerabilities catalog; the federal remediation deadline for CVE-2026-118527 was November 13. Organisations that applied only the mid-October patch remain exposed.",
+      "impact": "Edge VPN appliances remain prime attack targets. Organisations that patched only the October fix stay vulnerable to full takeover — immediate updates and credential rotation are required.",
+      "url": "https://www.blackhatethicalhacking.com/news/ivanti-patches-two-additional-zero-days-exploited-in-connect-secure-vpn-attacks"
     },
     {
-      "title": "Tsinghua, Wubu XinQiong and AgiBot Demo Collective Experience Learning Across 96 Humanoids",
-      "source": "The Paper (澎湃新闻)",
-      "summary": "A joint industry-academia team introduced Collective Experience Learning (CEL), a paradigm where robots share successes and failures instead of each being hand-taught. Validated on 96 real humanoids performing five home and industrial tasks (flower arranging, folding, phone charging, stool assembly, phone packaging), the group reached a 97.5% overall success rate — beating the average of six human operators — with the hardest task rising from 79.2% to 98.3%. A fault-tolerant async training system (FATS) kept hardware-failure overhead to just 1.3% of runtime, and scaling from 16 to 96 robots further improved capability.",
-      "impact": "CEL attacks the core scaling bottleneck of embodied AI: human demonstration can't keep pace with fleet size. Turning experience-sharing into a system primitive could make large-scale robot deployment a point of continuous improvement rather than a one-time training cost.",
-      "url": "https://www.thepaper.cn/newsDetail_forward_34389209"
+      "title": "WordPress Core TOCTOU Flaw (CVE-2026-119977) Added to CISA KEV for Unauthenticated RCE",
+      "source": "Wordfence / CISA",
+      "summary": "CISA added a WordPress core time-of-check/time-of-use (TOCTOU) race-condition vulnerability, CVE-2026-119977, to its Known Exploited Vulnerabilities catalog, with a remediation due date of November 6. The flaw lets unauthenticated attackers execute code on the server during the core upgrade window because of predictable, web-accessible staging paths used for full-package upgrades. The issue is addressed in WordPress 7.1.4. CISA's BOD 26-04 now requires forensic triage for affected federal assets.",
+      "impact": "One of the world's most deployed platforms is exposed to unauthenticated RCE during routine updates, underscoring the need to patch promptly and limit web-write exposure.",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-core/wordpress-core-470-713-unauthenticated-upgrade-window-staged-installer-remote-code-execution"
     },
     {
-      "title": "Agility Robotics Lists on Nasdaq as AGLT, First U.S. Pure-Play Humanoid Company to Go Public",
-      "source": "Agility Robotics (investor relations)",
-      "summary": "On November 5, Agility Robotics began trading on Nasdaq under ticker AGLT after merging with Churchill Capital Corp XI, raising roughly $465M in gross capital. The company enters public markets with more than 65,000 hours of real-world operation and over $300M in committed multi-year orders for its next-generation Digit 5 humanoid, with deployments at GXO, Schaeffler and Toyota Motor Manufacturing Canada and a U.S. RoboFab capacity of up to 10,000 robots per year.",
-      "impact": "A pure-play humanoid company reaching public markets is a milestone for embodied intelligence as an investable asset class. It sets a financial benchmark — and a scrutiny bar — for the whole sector as vendors shift from demos to commercial fleets.",
-      "url": "https://investors.agilityrobotics.com/news-releases/news-release-details/agility-becomes-first-us-publicly-listed-pure-play-humanoid"
+      "title": "California Fines FedEx $2.975M for Ignoring Global Privacy Control Opt-Out Signals",
+      "source": "California Privacy Protection Agency (via Digital Privacy Regs)",
+      "summary": "California's privacy agency fined Federal Express $2.975 million after finding it ran cross-context behavioral advertising while claiming it did not sell or share personal information, ignored Global Privacy Control (GPC) opt-out preference signals, and operated broken cookie controls and an opt-out request form that never reached its online trackers. Under the settlement, FedEx must inventory its tracking technologies and test its opt-out and request methods every quarter, and keep a working Do Not Sell or Share link.",
+      "impact": "The enforcement gives real teeth to universal opt-out signals. Businesses that fail to honor GPC now face fines plus ongoing, audited compliance obligations.",
+      "url": "https://digitalprivacyregs.com/news"
     }
   ]
 }
