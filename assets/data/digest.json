@@ -1,40 +1,40 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "items": [
     {
-      "title": "Google DeepMind Unveils Gemini Robotics 2.5 for Real-World Dexterity",
-      "source": "Google DeepMind",
-      "summary": "Google DeepMind introduced Gemini Robotics 2.5, its most capable vision-language-action (VLA) model to date, on November 10. Trained with Gemini 4 Argon, it was evaluated across more than 200 real-world tasks (serving food with tongs, tying bows, liquid pipetting) and shows 30-100% higher success rates and 20-30% faster completion than prior baselines. In a Mercedes-Benz production-line proof-of-concept, Apptronik's Apollo 2 humanoid reached a 96% kitting success rate. The release also adds improved physical safety steering and the open ASIMOV-Jailbreak benchmark for robotic adversarial resistance, and is rolling out to robotics partners.",
-      "impact": "This pushes physical AI from lab demos toward unstructured, real industrial environments. The big shift is reliability at scale plus explicit safety steerability for human-adjacent robots, signaling that embodied intelligence is becoming a deployment problem, not just a research one.",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+      "title": "JetBrains Air Ships Natively in 2026.3 IDEs as a Multi-Agent Orchestration Layer",
+      "source": "JetBrains",
+      "summary": "From the 2026.3 release wave (early November), JetBrains Air is built into all JetBrains IDEs rather than sold as a closed assistant. It connects first-party and third-party agents — Claude Agent, Codex, GitHub Copilot, Junie out of the box, plus Gemini CLI, OpenCode and Antigravity via the ACP registry — and lets developers run them in parallel Git worktrees with IDE-level diff review, refactors and debugger access. Local sessions use your own ChatGPT/Copilot/Google/Claude subscriptions or API keys (no JetBrains AI plan required), and Junie Lite is free with a JetBrains account.",
+      "impact": "This is the clearest signal yet that the IDE is becoming a neutral command center for competing coding agents instead of a single-vendor chatbot. The 'bring-your-own-agent' model shifts leverage to the developer and makes multi-agent coordination, not model access, the real product surface.",
+      "url": "https://www.jetbrains.com/air/ides/"
     },
     {
-      "title": "Alibaba Opens Early Access to Qwen4-Max Preview with 1M-Token Context",
-      "source": "MLLLM",
-      "summary": "On November 11, 2026, Alibaba (Aliyun) opened early access to Qwen4-Max Preview, the flagship of its new Qwen4 generation. The model accepts images and video as input and supports a context window of up to 1 million tokens. It is integrated into Qwen App, Qoder, QwenWork, and QwenStudio, and is callable via API through the Token Plan subscription, with credit consumption cut to 20% of standard rate (8% during night hours) through November 25. Alibaba emphasizes stronger coding, agentic task execution, frontend design, and world-knowledge capabilities, though it has not yet published independent benchmarks.",
-      "impact": "This is chiefly a price-and-context attack on flagship inference where the battle for coding and agent pipelines is fought. The two-week discounted window lets teams run their own evaluations on long-context, multimodal, agentic scenarios before committing to a model.",
-      "url": "https://mlllm.io/articles/3805-alibaba-opens-early-access-to-qwen4-max-preview-1m-token-context-and-discounted-rates-until-november-25"
+      "title": "Google Winds Down Jules, Consolidating Its Async Coding Agent Into Antigravity",
+      "source": "Google (Jules changelog)",
+      "summary": "Announced October 29 and effective now: Jules stopped accepting new sessions on November 11 and turned read-only through December 31, when it shuts down entirely. Google frames the move as unifying its agentic-coding efforts; learnings flow into the agent-first platform Antigravity, which gained a plugin marketplace (Atlassian, Figma, Stripe, Datadog and others) the same day. Code, branches and PRs already live in GitHub and are unaffected, but settings, memories, scheduled tasks and session history must be exported via the Jules Tools CLI before year-end.",
+      "impact": "The closure of a flagship async coding agent shows the market is consolidating around a few integrated platforms rather than many standalone agents. Teams relying on cloud background tasks should migrate now and treat agent data export as a routine offboarding step.",
+      "url": "https://jules.google/docs/changelog/"
     },
     {
-      "title": "GitLab CVE-2026-97229: Critical Unauthenticated RCE Added to CISA KEV",
-      "source": "CISA",
-      "summary": "CVE-2026-97229 is an integer overflow in GitLab's CI/CD regular-expression compiler that lets an unauthenticated attacker achieve remote code execution (CVSS 10.0). CISA added it to the Known Exploited Vulnerabilities (KEV) catalog on October 29, 2026, confirming active exploitation, with a federal remediation deadline of November 1. Shadowserver reported over 1,000 internet-exposed instances remained unpatched; Alpine Linux disclosed a thwarted attempt against its own instance. Fixed in 19.2.8, 19.3.5, and 19.4.2 (and later 19.5.x), with a related CVSS 10 regex-handling RCE (CVE-2026-110264) and a dependent Ruby/Onigmo engine patch also required for self-compiled installs.",
-      "impact": "GitLab is the control plane for source code, CI/CD, and increasingly MCP/AI pipelines. An unauthenticated RCE on self-managed instances exposes repository secrets, model artifacts, and deployment credentials. Patch immediately; GitLab.com and GitLab Dedicated are already fixed, but self-managed and custom-Ruby deployments need both the app and engine updates.",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      "title": "Gartner Publishes Its First Magic Quadrant for AI Agent Management Platforms",
+      "source": "Gartner / CX Today",
+      "summary": "Gartner's inaugural Magic Quadrant for AI Agent Management Platforms (report dated October 27) names Microsoft, IBM and ServiceNow as Leaders, with AWS, Salesforce, OneReach.ai and Gravitee as Challengers. The category covers agent discovery, lifecycle management, guardrails, evaluation, identity/access, integration controls and cost tracking — and Gartner forecasts that by 2029, 60% of AI agents will be managed through such a platform and over 35% of enterprise AI run-budgets will be routed on verified business outcomes.",
+      "impact": "Agent governance and 'tokenomics' just became their own software category with an analyst scorecard. For anyone running more than a handful of agents, the signal is clear: discovery, ownership and per-task cost tracking are becoming table stakes, not nice-to-haves.",
+      "url": "https://cxtoday.com/gartner-unveils-inaugural-magic-quadrant-for-ai-agent-management"
     },
     {
-      "title": "Google's November 2026 Android Bulletin Fixes 216 Flaws, Including Zero-Click RCE",
-      "source": "Android Open Source Project (Google)",
-      "summary": "Google's November 2026 Android Security Bulletin patches 216 vulnerabilities (23 rated Critical) across the Framework, System, kernel, and chipset components. The headline issue is CVE-2026-58868, a critical heap buffer overflow in FrameDecoder.cpp that enables remote code execution with no user interaction or elevated privileges, affecting Android 14 through 17. Two further critical zero-click RCEs appear in System (CVE-2026-58876, CVE-2026-58936). Fixes ship across two patch levels, 2026-11-01 and 2026-11-05, with the later level covering all issues plus kernel and vendor (MediaTek, Qualcomm, Unisoc) components.",
-      "impact": "A zero-click media-processing RCE is a prime attack path for mobile fleets. Google's bulletin does not confirm in-the-wild exploitation, but enterprises must verify patch levels (aim for 2026-11-05 or later) across mixed vendor and carrier fleets, since an OS patch date alone does not cover vulnerable baseband or modem firmware.",
-      "url": "https://source.android.com/docs/security/bulletin/2026/2026-11-01"
+      "title": "Tsinghua, Wubu XinQiong and AgiBot Demo Collective Experience Learning Across 96 Humanoids",
+      "source": "The Paper (澎湃新闻)",
+      "summary": "A joint industry-academia team introduced Collective Experience Learning (CEL), a paradigm where robots share successes and failures instead of each being hand-taught. Validated on 96 real humanoids performing five home and industrial tasks (flower arranging, folding, phone charging, stool assembly, phone packaging), the group reached a 97.5% overall success rate — beating the average of six human operators — with the hardest task rising from 79.2% to 98.3%. A fault-tolerant async training system (FATS) kept hardware-failure overhead to just 1.3% of runtime, and scaling from 16 to 96 robots further improved capability.",
+      "impact": "CEL attacks the core scaling bottleneck of embodied AI: human demonstration can't keep pace with fleet size. Turning experience-sharing into a system primitive could make large-scale robot deployment a point of continuous improvement rather than a one-time training cost.",
+      "url": "https://www.thepaper.cn/newsDetail_forward_34389209"
     },
     {
-      "title": "EDPB Adopts Statement on Privacy Risks of Smart Glasses",
-      "source": "EDPB",
-      "summary": "On October 13, 2026, the European Data Protection Board adopted a statement - accompanied by the expert report 'The connected gaze' - on the data-protection risks of smart glasses. These devices resemble ordinary eyewear but capture video and audio and run AI such as facial and object recognition, enabling near-invisible collection of bystanders' personal data. The EDPB clarifies that posting footage to public accounts makes the user a controller and that manufacturers and app providers cannot offload their GDPR obligations onto users. It recommends prominent, hard-to-disable recording indicators (LEDs, audio cues), privacy-by-design defaults (on-device processing, blurring of bystanders, geofencing), and notes valid bystander consent is difficult to obtain.",
-      "impact": "The statement sets a de-facto EU design standard for AI wearables and signals looming enforcement by national data-protection authorities. Manufacturers and organizations deploying smart glasses must revisit recording indicators, purpose-limitation documentation, and controller-versus-processor allocation - part of tightening scrutiny on pervasive AI capture devices.",
-      "url": "https://www.edpb.europa.eu/news/edpb-publishes-statement-on-the-data-protection-challenges-of-smart-glasses_en"
+      "title": "Agility Robotics Lists on Nasdaq as AGLT, First U.S. Pure-Play Humanoid Company to Go Public",
+      "source": "Agility Robotics (investor relations)",
+      "summary": "On November 5, Agility Robotics began trading on Nasdaq under ticker AGLT after merging with Churchill Capital Corp XI, raising roughly $465M in gross capital. The company enters public markets with more than 65,000 hours of real-world operation and over $300M in committed multi-year orders for its next-generation Digit 5 humanoid, with deployments at GXO, Schaeffler and Toyota Motor Manufacturing Canada and a U.S. RoboFab capacity of up to 10,000 robots per year.",
+      "impact": "A pure-play humanoid company reaching public markets is a milestone for embodied intelligence as an investable asset class. It sets a financial benchmark — and a scrutiny bar — for the whole sector as vendors shift from demos to commercial fleets.",
+      "url": "https://investors.agilityrobotics.com/news-releases/news-release-details/agility-becomes-first-us-publicly-listed-pure-play-humanoid"
     }
   ]
 }
