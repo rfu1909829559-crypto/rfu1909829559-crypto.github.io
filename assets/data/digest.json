@@ -1,40 +1,40 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "items": [
     {
-      "title": "Anthropic Releases Claude Fable 5.2 and Mythos 5.2 With Tiered Access",
+      "title": "OpenAI Acquires Pierre Computer Company to Build Agent-Native Dev Infrastructure",
+      "source": "OpenAI",
+      "summary": "On November 4, OpenAI announced it will acquire Pierre Computer Company, the startup behind Code Storage and the open-source Trees and Diffs libraries already powering file browsing and diff review inside the Codex app. Pierre's Code Storage is a Git-backed hosting service built for high-frequency agent workloads — unlimited repos, 32 TB single-repo capacity and 500+ Git requests per second — directly addressing the rate-limit and review bottlenecks traditional Git platforms hit when many agents commit in parallel. OpenAI pairs the deal with its in-house Pando source-control backend, which it says cut production push latency by roughly 80%.",
+      "impact": "The move signals OpenAI's intent to own the full agentic software-development stack — storage, review and delivery — rather than sit atop GitHub. As agents become high-frequency committers, Git itself is becoming contested infrastructure, and OpenAI is positioning Codex as the end-to-end workspace from the first branch to deployment.",
+      "url": "https://openai.com/index/openai-to-acquire-pierre/"
+    },
+    {
+      "title": "Claude Code v2.1.316 Cuts Background Subagent Status Costs by ~99%",
       "source": "Anthropic",
-      "summary": "Anthropic released Claude Fable 5.2 and Mythos 5.2 on November 9. Fable 5.2 is generally available through the API at $8 per million input tokens and $40 per million output tokens, with strengthened cybersecurity and biological safeguards. Mythos 5.2, which improves coding, reasoning and vision, is restricted to verified organisations in those fields via Anthropic's cyber and life-sciences verification programs. Both share an underlying model, extending the company's approach of separating broad availability from vetted access to sensitive capabilities.",
-      "impact": "Tiered access separates general availability from vetted, sensitive-capability use — a template for responsible frontier-model distribution. The pricing also signals the intensifying margin war among leading AI labs.",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+      "summary": "Claude Code v2.1.316, rolled out around November 4–5, now generates the 30-second background-subagent status line from compact running notes via Claude Haiku 5.5 instead of re-summarizing the worker's entire transcript on every tick. Anthropic says each status refresh costs roughly 99% less, trimming about 5% off total session allowance and freeing roughly 6% more prompts within rolling limit windows. The optimization is automatic and applies to most Pro/Max/Ultra and all Team/Enterprise accounts with no configuration changes.",
+      "impact": "Long-running, multi-agent workflows were quietly burning allowance on status bookkeeping rather than real work. By bounding that cost, Anthropic makes persistent agent fleets and parallel workers economically viable — directly enabling the 'standing agent' pattern (scheduled bots, always-on reviewers) that is reshaping coding-ops cost models.",
+      "url": "https://ashutoshai.com/ai-compass/2026/11/04/anthropic-claude-code-subagent-status-cost"
     },
     {
-      "title": "Google Opens Gemini 4 Carbon to Paying Developers and Publishes Safety Report",
-      "source": "On The Wire (RelayAI)",
-      "summary": "Google opened Gemini 4 Carbon to all paying developers and enterprises through its API at an introductory price set to expire on November 30, and published a dedicated Carbon safety report. The report carries forward the findings from Gemini 4 Argon, including Google's assessment that it cannot rule out the model reaching its critical cyber and biological capability levels without out-of-model safeguards. Carbon had earlier been limited to a subset of cyber defenders before this broader rollout.",
-      "impact": "Broader access to a frontier model with documented critical-risk potential raises the stakes for deployment controls, third-party safeguards and ongoing safety monitoring.",
-      "url": "https://onthewire.ai/article/google-opens-gemini-4-carbon-to-paying-developers-and-publishes-a-carbon-safety-"
+      "title": "Texas Instruments Brings Agentic AI Into CCStudio for Embedded Development",
+      "source": "Texas Instruments",
+      "summary": "On November 10 at electronica 2026, TI unveiled major agentic-AI upgrades to its CCStudio ecosystem for MCU, wireless and radar development. Beyond code generation, agents can now configure peripherals, build, flash and debug autonomously, grounded in TI device data through MCP servers (SDKs, pin maps, peripheral registers). Its headline 'device migration skill' orchestrates subagents to port code from a competing chip to a TI device — analyzing the project, remapping pins and APIs, and iterating on build errors — cutting migrations from months to days.",
+      "impact": "AI coding is crossing from web and enterprise software into hardware engineering, where lack of device-specific context has long blocked generic assistants. TI's context-engineering approach (grounded, retrieval-based, low-token) is a template for vertical, domain-specific agent platforms, and shrinks the silicon-migration friction that has historically locked teams to one vendor.",
+      "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2026/2026-11-10-ti-redefines-embedded-development-with-agentic-ai-in-its-ccstudio-ecosystem-empowering-engineers-to-accelerate-innovation"
     },
     {
-      "title": "Ivanti Connect Secure Zero-Day Chain Added to CISA KEV After Active Exploitation",
-      "source": "Black Hat Ethical Hacking",
-      "summary": "Ivanti shipped fixes for two more zero-days — CVE-2026-111357 (CVSS 8.8 missing-authentication privilege escalation) and CVE-2026-118527 (predictable-identifier file upload) — that were chained with the October authentication-bypass flaw CVE-2026-104935 by actor UTA0576 to achieve unauthenticated root-level remote code execution on Connect Secure VPN appliances. CISA added both new flaws to its Known Exploited Vulnerabilities catalog; the federal remediation deadline for CVE-2026-118527 was November 13. Organisations that applied only the mid-October patch remain exposed.",
-      "impact": "Edge VPN appliances remain prime attack targets. Organisations that patched only the October fix stay vulnerable to full takeover — immediate updates and credential rotation are required.",
-      "url": "https://www.blackhatethicalhacking.com/news/ivanti-patches-two-additional-zero-days-exploited-in-connect-secure-vpn-attacks"
+      "title": "OpenAI Confirms It Is Building a Humanoid Robot, Targeting a 2027 Demo",
+      "source": "OpenAI / Engadget (via Huanqiu)",
+      "summary": "Sam Altman confirmed on a podcast that OpenAI will build its own humanoid robot, aiming for 'a really cool demo' in 2027, with industrial and data-center deployment as the near-term focus rather than consumer homes. He stressed the hard problem is the robot's 'brain' — real-time perception, planning and reliable action — not the body, and noted OpenAI has rebuilt its robotics capabilities (a roughly 100-person teleoperation data team and custom actuators) after two earlier retreats from hardware.",
+      "impact": "The leading frontier lab is becoming a direct competitor to Tesla, Figure and others in physical AI, not just a model supplier. It validates embodied intelligence as a core frontier and sets up a 2027 milestone the whole industry will benchmark against — while underscoring that the differentiator is the vision-language-action 'brain,' not mechanical form.",
+      "url": "https://www.huanqiu.com/article/4TfrA4RjoLB"
     },
     {
-      "title": "WordPress Core TOCTOU Flaw (CVE-2026-119977) Added to CISA KEV for Unauthenticated RCE",
-      "source": "Wordfence / CISA",
-      "summary": "CISA added a WordPress core time-of-check/time-of-use (TOCTOU) race-condition vulnerability, CVE-2026-119977, to its Known Exploited Vulnerabilities catalog, with a remediation due date of November 6. The flaw lets unauthenticated attackers execute code on the server during the core upgrade window because of predictable, web-accessible staging paths used for full-package upgrades. The issue is addressed in WordPress 7.1.4. CISA's BOD 26-04 now requires forensic triage for affected federal assets.",
-      "impact": "One of the world's most deployed platforms is exposed to unauthenticated RCE during routine updates, underscoring the need to patch promptly and limit web-write exposure.",
-      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-core/wordpress-core-470-713-unauthenticated-upgrade-window-staged-installer-remote-code-execution"
-    },
-    {
-      "title": "California Fines FedEx $2.975M for Ignoring Global Privacy Control Opt-Out Signals",
-      "source": "California Privacy Protection Agency (via Digital Privacy Regs)",
-      "summary": "California's privacy agency fined Federal Express $2.975 million after finding it ran cross-context behavioral advertising while claiming it did not sell or share personal information, ignored Global Privacy Control (GPC) opt-out preference signals, and operated broken cookie controls and an opt-out request form that never reached its online trackers. Under the settlement, FedEx must inventory its tracking technologies and test its opt-out and request methods every quarter, and keep a working Do Not Sell or Share link.",
-      "impact": "The enforcement gives real teeth to universal opt-out signals. Businesses that fail to honor GPC now face fines plus ongoing, audited compliance obligations.",
-      "url": "https://digitalprivacyregs.com/news"
+      "title": "Beijing's X-Humanoid Releases Hi-WBC, a General Whole-Body Control Model",
+      "source": "Beijing Innovation Center of Humanoid Robotics",
+      "summary": "On November 2, the Beijing Innovation Center of Humanoid Robotics (X-Humanoid) released Hi-WBC (Whole-Body Control for Humanoid Intelligence) on its 'Wise Kaiwu' platform. It reframes human motion as a flexible 'prior' rather than a rigid template, adapting posture, support and contact to payload, external forces and terrain. Built on Mixture-of-Experts with policy distillation, contact-aware learning (force estimated from joint currents) and perceptive terrain control, it was validated by a multi-robot 'meeting-room tidy-up' task and medal wins at a robot games.",
+      "impact": "Open, generalizable whole-body control is the missing layer between flashy demos and real deployment — exactly the 'last few millimeters' bottleneck flagged at the CIIE. A national innovation center publishing a platform-grade control model raises the baseline for the field and points toward self-evolving, multi-robot motion agents.",
+      "url": "https://english.beijing.gov.cn/latest/news/202611/t20261113_4944289.html"
     }
   ]
 }
