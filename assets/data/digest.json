@@ -2,39 +2,39 @@
   "updated": "2026-11-15",
   "items": [
     {
-      "title": "OpenAI Acquires Pierre Computer Company to Build Agent-Native Dev Infrastructure",
-      "source": "OpenAI",
-      "summary": "On November 4, OpenAI announced it will acquire Pierre Computer Company, the startup behind Code Storage and the open-source Trees and Diffs libraries already powering file browsing and diff review inside the Codex app. Pierre's Code Storage is a Git-backed hosting service built for high-frequency agent workloads — unlimited repos, 32 TB single-repo capacity and 500+ Git requests per second — directly addressing the rate-limit and review bottlenecks traditional Git platforms hit when many agents commit in parallel. OpenAI pairs the deal with its in-house Pando source-control backend, which it says cut production push latency by roughly 80%.",
-      "impact": "The move signals OpenAI's intent to own the full agentic software-development stack — storage, review and delivery — rather than sit atop GitHub. As agents become high-frequency committers, Git itself is becoming contested infrastructure, and OpenAI is positioning Codex as the end-to-end workspace from the first branch to deployment.",
-      "url": "https://openai.com/index/openai-to-acquire-pierre/"
+      "title": "OpenAI Disbands Standalone Robotics Team as General Models Take Over",
+      "source": "Fortune",
+      "summary": "On November 13, Fortune reported — and OpenAI confirmed — that the company has disbanded its standalone robotics team, folding robotics researchers into the core research organization under Chief Research Officer Mark Chen and applied robotics and hardware staff into the Applied org under Greg Brockman. The move reflects OpenAI's bet that general-purpose frontier models such as GPT-6 Astra can increasingly control robots directly, removing the need for a dedicated robotics stack. Nvidia research cited an Astra-driven agent reaching 74.8% success on a simulated manipulation benchmark, versus 51% for the best specialized model. OpenAI insists it remains committed to humanoid robots, with CEO Sam Altman still targeting a 2027 public demonstration.",
+      "impact": "The reorganization signals a sector-wide tilt toward 'embodied AI' powered by general models rather than specialized robotics stacks. It pressures robotics startups to justify dedicated teams and accelerates the convergence of foundation models with physical-world control.",
+      "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
     },
     {
-      "title": "Claude Code v2.1.316 Cuts Background Subagent Status Costs by ~99%",
-      "source": "Anthropic",
-      "summary": "Claude Code v2.1.316, rolled out around November 4–5, now generates the 30-second background-subagent status line from compact running notes via Claude Haiku 5.5 instead of re-summarizing the worker's entire transcript on every tick. Anthropic says each status refresh costs roughly 99% less, trimming about 5% off total session allowance and freeing roughly 6% more prompts within rolling limit windows. The optimization is automatic and applies to most Pro/Max/Ultra and all Team/Enterprise accounts with no configuration changes.",
-      "impact": "Long-running, multi-agent workflows were quietly burning allowance on status bookkeeping rather than real work. By bounding that cost, Anthropic makes persistent agent fleets and parallel workers economically viable — directly enabling the 'standing agent' pattern (scheduled bots, always-on reviewers) that is reshaping coding-ops cost models.",
-      "url": "https://ashutoshai.com/ai-compass/2026/11/04/anthropic-claude-code-subagent-status-cost"
+      "title": "Google Rolls Out Gemini 4 Hydrogen Across Global Search",
+      "source": "The Threshold",
+      "summary": "On November 12, Google released Gemini 4 Hydrogen and deployed it across Google Search worldwide, calling it 'the biggest model upgrade to Search yet.' It replaces Gemini 3.8 Flash as the default model in AI Mode and handles the hardest questions in AI Overviews. Built for fast, affordable everyday tasks — coding, tool use and agentic workflows — it is 2.5 times faster than 3.8 Flash, cuts fabricated claims more than fivefold, and scores 51 on the Artificial Analysis Intelligence Index (versus Argon's 50). Pricing is uniform across its 1-million-token context at $1.50 per million input and $7.50 per million output tokens, with a new top 'xhigh' reasoning level.",
+      "impact": "By making a fast, cheap model the default search brain, Google shifts AI competition from raw benchmark scores to distribution-chain efficiency — search default, free auto-selection, paid tiers and API — shaping how billions experience model output daily.",
+      "url": "https://thethreshold.media/blog/gemini-4-hydrogen-price-access-whats-new-2026"
     },
     {
-      "title": "Texas Instruments Brings Agentic AI Into CCStudio for Embedded Development",
-      "source": "Texas Instruments",
-      "summary": "On November 10 at electronica 2026, TI unveiled major agentic-AI upgrades to its CCStudio ecosystem for MCU, wireless and radar development. Beyond code generation, agents can now configure peripherals, build, flash and debug autonomously, grounded in TI device data through MCP servers (SDKs, pin maps, peripheral registers). Its headline 'device migration skill' orchestrates subagents to port code from a competing chip to a TI device — analyzing the project, remapping pins and APIs, and iterating on build errors — cutting migrations from months to days.",
-      "impact": "AI coding is crossing from web and enterprise software into hardware engineering, where lack of device-specific context has long blocked generic assistants. TI's context-engineering approach (grounded, retrieval-based, low-token) is a template for vertical, domain-specific agent platforms, and shrinks the silicon-migration friction that has historically locked teams to one vendor.",
-      "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2026/2026-11-10-ti-redefines-embedded-development-with-agentic-ai-in-its-ccstudio-ecosystem-empowering-engineers-to-accelerate-innovation"
+      "title": "Cursor Breach: Stolen Fireworks Key Shipped Backdoored Claude Code Extension to ~5,000 Devs",
+      "source": "BleepingComputer",
+      "summary": "On November 13, Cursor published its incident report tracing an October breach to an access key exposed at AI vendor Fireworks. Attackers copied historical coding-agent traces from a shared bucket, harvested unredacted credentials found in some of those traces, then on October 29 planted malicious copies of Anthropic's Claude Code extension (versions 2.1.312 and 2.1.313) on Cursor's VS Code marketplace cache for about 11 hours, potentially reaching 5,000 users. The trojanized build tried to install an SSH backdoor (an 'svc-telemetry' key), enable SSH and persist on the host. Fewer than 0.05% of users had traces exposed and under 0.01% had API credentials compromised; production systems and Privacy-Mode data were unaffected.",
+      "impact": "The incident exposes the AI developer-tool supply chain: vendor keys, unredacted agent traces and marketplace caches are now high-value attack surfaces. It shows how a single leaked credential can cascade into downstream developer-machine compromise.",
+      "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/"
     },
     {
-      "title": "OpenAI Confirms It Is Building a Humanoid Robot, Targeting a 2027 Demo",
-      "source": "OpenAI / Engadget (via Huanqiu)",
-      "summary": "Sam Altman confirmed on a podcast that OpenAI will build its own humanoid robot, aiming for 'a really cool demo' in 2027, with industrial and data-center deployment as the near-term focus rather than consumer homes. He stressed the hard problem is the robot's 'brain' — real-time perception, planning and reliable action — not the body, and noted OpenAI has rebuilt its robotics capabilities (a roughly 100-person teleoperation data team and custom actuators) after two earlier retreats from hardware.",
-      "impact": "The leading frontier lab is becoming a direct competitor to Tesla, Figure and others in physical AI, not just a model supplier. It validates embodied intelligence as a core frontier and sets up a 2027 milestone the whole industry will benchmark against — while underscoring that the differentiator is the vision-language-action 'brain,' not mechanical form.",
-      "url": "https://www.huanqiu.com/article/4TfrA4RjoLB"
+      "title": "CISA Adds UnrealIRCd and Check Point Flaws to KEV Amid Active Exploitation",
+      "source": "The Hacker News",
+      "summary": "On November 13, CISA added two actively exploited flaws to its Known Exploited Vulnerabilities catalog. CVE-2026-114713 (CVSS 8.6) is a command-injection bug in UnrealIRCd's labeled-response module (versions 6.0.0 through 6.2.7.1) that lets any user on a network with two or more linked servers run commands with server authority; maintainer Bram Matthys called it the most critical UnrealIRCd issue in 15 years, with exploitation seen in the wild. CVE-2026-123039 (CVSS 7.8) is an incorrect-permission flaw in multiple Check Point products already exploited against dozens of customers via the Mobile Access portal. Federal agencies must patch both by November 16.",
+      "impact": "The additions show attackers pivoting to network infrastructure and open-source servers for initial access. The short KEV deadlines force rapid patching of internet-facing gear — a persistent weak point for enterprises and a model other organizations are urged to copy.",
+      "url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html"
     },
     {
-      "title": "Beijing's X-Humanoid Releases Hi-WBC, a General Whole-Body Control Model",
-      "source": "Beijing Innovation Center of Humanoid Robotics",
-      "summary": "On November 2, the Beijing Innovation Center of Humanoid Robotics (X-Humanoid) released Hi-WBC (Whole-Body Control for Humanoid Intelligence) on its 'Wise Kaiwu' platform. It reframes human motion as a flexible 'prior' rather than a rigid template, adapting posture, support and contact to payload, external forces and terrain. Built on Mixture-of-Experts with policy distillation, contact-aware learning (force estimated from joint currents) and perceptive terrain control, it was validated by a multi-robot 'meeting-room tidy-up' task and medal wins at a robot games.",
-      "impact": "Open, generalizable whole-body control is the missing layer between flashy demos and real deployment — exactly the 'last few millimeters' bottleneck flagged at the CIIE. A national innovation center publishing a platform-grade control model raises the baseline for the field and points toward self-evolving, multi-robot motion agents.",
-      "url": "https://english.beijing.gov.cn/latest/news/202611/t20261113_4944289.html"
+      "title": "Italy Fines Meta €805M for Accessing Users' Phone Photo Albums Without Consent",
+      "source": "Xinhua",
+      "summary": "On November 14, Italy's data protection authority (Garante) fined Meta Platforms Ireland €805 million (about $887 million) for accessing photos, videos and related metadata stored on Italian Android users' phones without consent through Facebook's 'Get suggestions from your gallery' feature. Active since 2023 and enabled by default, the feature used a single broad authorization rather than asking specifically about gallery access. The watchdog said Meta breached Article 122 of Italy's Privacy Code, which treats the smartphone as part of a person's private sphere and requires informed consent. About 20 million Italian Android users were affected. Meta must disable the feature by default within 60 days and seek separate, explicit consent.",
+      "impact": "The record penalty — among the largest of the GDPR era — confirms that device-local data such as photos and metadata is protected even without transmission, and that dark-pattern defaults and silent consent capture now carry severe regulatory cost.",
+      "url": "http://chinaview.cn/europe/20261115/31d4057006424e83b7bbe0b7e49a748b/c.html"
     }
   ]
 }
