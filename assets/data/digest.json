@@ -1,40 +1,40 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "items": [
     {
-      "title": "OpenAI Disbands Standalone Robotics Team as General Models Take Over",
-      "source": "Fortune",
-      "summary": "On November 13, Fortune reported — and OpenAI confirmed — that the company has disbanded its standalone robotics team, folding robotics researchers into the core research organization under Chief Research Officer Mark Chen and applied robotics and hardware staff into the Applied org under Greg Brockman. The move reflects OpenAI's bet that general-purpose frontier models such as GPT-6 Astra can increasingly control robots directly, removing the need for a dedicated robotics stack. Nvidia research cited an Astra-driven agent reaching 74.8% success on a simulated manipulation benchmark, versus 51% for the best specialized model. OpenAI insists it remains committed to humanoid robots, with CEO Sam Altman still targeting a 2027 public demonstration.",
-      "impact": "The reorganization signals a sector-wide tilt toward 'embodied AI' powered by general models rather than specialized robotics stacks. It pressures robotics startups to justify dedicated teams and accelerates the convergence of foundation models with physical-world control.",
-      "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
+      "title": "Claude Code Adds \"Code Mode\": Agents Now Write JavaScript to Call Their Own Tools",
+      "source": "DEV Community / Anthropic CHANGELOG",
+      "summary": "In the week of November 15, Anthropic shipped Claude Code v2.1.323 with Code Mode, an experimental opt-in in which Claude writes JavaScript programs to invoke its tools instead of issuing one tool call at a time. It is off by default and can be disabled organization-wide. The same release wave also hardened the agent: v2.1.321 closed four permission and sandbox gaps — including a cp/mv-into-directory route that bypassed deny rules and an MCP OAuth redirect that could leak refresh tokens to another host — while v2.1.325 patched a security issue in zstd-compressed response decoding. Plugins can now declare engines[\"claude-code\"] version ranges, and TypeScript hooks are type-checked at validation time.",
+      "impact": "Code Mode is a genuine interface shift: rather than treating tools as fixed buttons, the agent programs them, enabling tighter loops and complex tool compositions. Combined with the permission fixes, it shows the friction moving from 'what the agent can do' to 'how safely it can do it' — the central engineering problem for autonomous coding agents.",
+      "url": "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-november-15-2026-4pmm"
     },
     {
-      "title": "Google Rolls Out Gemini 4 Hydrogen Across Global Search",
-      "source": "The Threshold",
-      "summary": "On November 12, Google released Gemini 4 Hydrogen and deployed it across Google Search worldwide, calling it 'the biggest model upgrade to Search yet.' It replaces Gemini 3.8 Flash as the default model in AI Mode and handles the hardest questions in AI Overviews. Built for fast, affordable everyday tasks — coding, tool use and agentic workflows — it is 2.5 times faster than 3.8 Flash, cuts fabricated claims more than fivefold, and scores 51 on the Artificial Analysis Intelligence Index (versus Argon's 50). Pricing is uniform across its 1-million-token context at $1.50 per million input and $7.50 per million output tokens, with a new top 'xhigh' reasoning level.",
-      "impact": "By making a fast, cheap model the default search brain, Google shifts AI competition from raw benchmark scores to distribution-chain efficiency — search default, free auto-selection, paid tiers and API — shaping how billions experience model output daily.",
-      "url": "https://thethreshold.media/blog/gemini-4-hydrogen-price-access-whats-new-2026"
+      "title": "Codex Tightens Trust: --sandbox No Longer Loads MCP Servers in Untrusted Folders",
+      "source": "DEV Community / OpenAI Codex Releases",
+      "summary": "OpenAI's Codex CLI reached v0.169.0 this week with a behavioural change that matters for CI. codex exec now keeps project configuration and MCP servers disabled in untrusted directories even with --sandbox workspace-write; teams must pass --trust explicitly to load them. The opt-in terminal workspace gained multiple side-chat tabs that survive a restart, and a Ctrl+S diagnostic ZIP export for locked-down environments. Across four releases, incremental tool updates became the default on Google Cloud Vertex AI, and features.multi_agent was deprecated in favour of agents.enabled.",
+      "impact": "This is a supply-chain guardrail for agentic CI: a writeable sandbox is no longer treated as permission to auto-load a repo's MCP servers. Anyone running codex exec in automation should audit their trust flags now — the change silently breaks builds that relied on implicit project config.",
+      "url": "https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-november-15-2026-4pmm#codex"
     },
     {
-      "title": "Cursor Breach: Stolen Fireworks Key Shipped Backdoored Claude Code Extension to ~5,000 Devs",
-      "source": "BleepingComputer",
-      "summary": "On November 13, Cursor published its incident report tracing an October breach to an access key exposed at AI vendor Fireworks. Attackers copied historical coding-agent traces from a shared bucket, harvested unredacted credentials found in some of those traces, then on October 29 planted malicious copies of Anthropic's Claude Code extension (versions 2.1.312 and 2.1.313) on Cursor's VS Code marketplace cache for about 11 hours, potentially reaching 5,000 users. The trojanized build tried to install an SSH backdoor (an 'svc-telemetry' key), enable SSH and persist on the host. Fewer than 0.05% of users had traces exposed and under 0.01% had API credentials compromised; production systems and Privacy-Mode data were unaffected.",
-      "impact": "The incident exposes the AI developer-tool supply chain: vendor keys, unredacted agent traces and marketplace caches are now high-value attack surfaces. It shows how a single leaked credential can cascade into downstream developer-machine compromise.",
-      "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/"
+      "title": "\"Thinking in Code\": Agents Compress Their Own Output by 99.4%",
+      "source": "AgentGid Changelogs",
+      "summary": "Context Mode, an emerging agent framework, shipped 15 releases in November built around a technique it calls Thinking in Code — agents emit compact scripts that compress their own tool output by roughly 99.4%, sharply cutting context-window consumption. It is part of a broader November pattern: Claude Code's Code Mode, Codex's programmable workspace, and a wave of context-compression tooling all converge on the same idea that code is the most token-efficient interface between a model and its tools.",
+      "impact": "Context length and cost are the binding constraints on long-running coding agents. If agents can programmatically summarise and transform their own outputs, multi-hour autonomous sessions become far more economical — a lever that matters much more than marginal benchmark gains for anyone deploying agents at scale.",
+      "url": "https://agentgid.com/agents/context-mode/changelog/"
     },
     {
-      "title": "CISA Adds UnrealIRCd and Check Point Flaws to KEV Amid Active Exploitation",
-      "source": "The Hacker News",
-      "summary": "On November 13, CISA added two actively exploited flaws to its Known Exploited Vulnerabilities catalog. CVE-2026-114713 (CVSS 8.6) is a command-injection bug in UnrealIRCd's labeled-response module (versions 6.0.0 through 6.2.7.1) that lets any user on a network with two or more linked servers run commands with server authority; maintainer Bram Matthys called it the most critical UnrealIRCd issue in 15 years, with exploitation seen in the wild. CVE-2026-123039 (CVSS 7.8) is an incorrect-permission flaw in multiple Check Point products already exploited against dozens of customers via the Mobile Access portal. Federal agencies must patch both by November 16.",
-      "impact": "The additions show attackers pivoting to network infrastructure and open-source servers for initial access. The short KEV deadlines force rapid patching of internet-facing gear — a persistent weak point for enterprises and a model other organizations are urged to copy.",
-      "url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html"
+      "title": "Huawei Cloud Launches CloudRobo-WM1.2, Its First Ascend-Native Embodied World Model",
+      "source": "Tencent News / Huawei Cloud",
+      "summary": "On November 16 from 14:00 to 15:30 Beijing time, Huawei Cloud is holding an online launch for CloudRobo-WM1.2, the first Ascend-native embodied world model and the first native world model under its 'Industry AI Dream Factory' programme. A world model acts as an internal simulation of physical rules, letting a robot predict consequences and plan in unfamiliar settings before acting. The company says the model targets the hard bottlenecks in embodied AI — multimodal physical understanding, coupling world knowledge to action generation, scaling heterogeneous data, cross-embodiment generalisation and real-time inference cost. Partners including YiJiaHe, Topstar, iSoftStone and Galaxea are expected to sign on; Huawei has said it will not build robot bodies itself.",
+      "impact": "This is China's AI infrastructure stack extending from text and images into physical-world reasoning, with domestic compute (Ascend) at the core. It reframes embodied AI competition from robot hardware toward a full 'model + compute + toolchain + scenario' system that other vendors can call into — a platform play worth watching closely.",
+      "url": "https://news.qq.com/rain/a/20261115A07BYT00"
     },
     {
-      "title": "Italy Fines Meta €805M for Accessing Users' Phone Photo Albums Without Consent",
-      "source": "Xinhua",
-      "summary": "On November 14, Italy's data protection authority (Garante) fined Meta Platforms Ireland €805 million (about $887 million) for accessing photos, videos and related metadata stored on Italian Android users' phones without consent through Facebook's 'Get suggestions from your gallery' feature. Active since 2023 and enabled by default, the feature used a single broad authorization rather than asking specifically about gallery access. The watchdog said Meta breached Article 122 of Italy's Privacy Code, which treats the smartphone as part of a person's private sphere and requires informed consent. About 20 million Italian Android users were affected. Meta must disable the feature by default within 60 days and seek separate, explicit consent.",
-      "impact": "The record penalty — among the largest of the GDPR era — confirms that device-local data such as photos and metadata is protected even without transmission, and that dark-pattern defaults and silent consent capture now carry severe regulatory cost.",
-      "url": "http://chinaview.cn/europe/20261115/31d4057006424e83b7bbe0b7e49a748b/c.html"
+      "title": "Swiss Startup Unveils AIR: a Tendon-Driven Humanoid That Learns Factory Tasks on the Job",
+      "source": "Robotics & Automation News",
+      "summary": "At Humanoid Europe 2026 on November 15, Swiss company Embodied AI unveiled AIR, a humanoid designed to work beside people on factory floors rather than behind cages. Its arms are light and tendon-driven, with motors moved into the torso so they yield on contact, and it runs on wheels for stability on flat floors — safety by mechanical design, targeting ISO/TS 15066 with CE marking planned for 2027. AIR starts each job under human teleoperation, records every run, and its AI stack learns from those demonstrations until it can perform the task alone, typically within a month; what one robot learns transfers to the next. The company says it went from research to an industrial humanoid in nine months and hit 98% reliability on a cable-handling task against a 90% target.",
+      "impact": "AIR attacks the real deployment gap — high-dexterity, frequently changing manual work — with a pragmatic mix of imitation learning, built-in safety and human fallback rather than promising full autonomy. Its 'learn from one shift, deploy in a month' model is a concrete template for how physical AI could actually enter factories at scale.",
+      "url": "https://roboticsandautomationnews.com/2026/11/15/embodied-ai-unveils-air-humanoid-robot-designed-to-learn-factory-tasks-on-the-job/107133/"
     }
   ]
 }
