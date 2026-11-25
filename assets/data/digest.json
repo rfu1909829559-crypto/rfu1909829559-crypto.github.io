@@ -2,39 +2,39 @@
   "updated": "2026-11-25",
   "items": [
     {
-      "title": "PrismML Squeezes an Agentic Coding Model into 5.9 GB with Ternary Bonsai 2.5 27B",
-      "source": "PrismML",
-      "summary": "PrismML released Ternary Bonsai 2.5 27B on Nov 24, an Apache 2.0 update to its ternary-quantized Qwen3.8 27B derivative that keeps the same 5.9 GB footprint while targeting multi-turn tool use and long agent runs. In the company's whitepaper, SWE-bench Verified rises from 60.8 to 75.6 (full-precision base: 80.6), Terminal-Bench 2.1 from 52.8 to 60.1, and AppWorld from 51.2 to 90.5. The model reaches 291 tokens/s on an H100 with multi-token prediction and about 204 tokens/s on a consumer RTX 4090; it runs via llama.cpp on NVIDIA/Intel GPUs and MLX on Mac, iPhone and iPad.",
-      "impact": "It pushes genuinely useful agentic coding onto consumer hardware and private repositories, where sensitive code never has to leave the device. The trade-off is real: all numbers are vendor-run, and LiveCodeBench v6 slipped slightly (83.8 to 83.0), so the 'near full-precision' claim needs outside testing.",
-      "url": "https://prismml.com/news/bonsai-2-5-27b"
-    },
-    {
-      "title": "Artificial Analysis Shows the Coding Harness Can Move Cost 5.4x While Score Barely Budges",
-      "source": "Artificial Analysis",
-      "summary": "On Nov 24 the independent evaluator added Harness Comparisons to its Coding Agent Index v2.1, holding the model and reasoning effort fixed while swapping the agent harness across 13 options. GPT-6 Luna scored highest in OpenAI's Codex (25.9) and lowest in Qwen Code (17.2), while GLM-5.3-Flash peaked in Claude Code (38.9) and ranked last in Codex (27.8) - nine of 13 harnesses shifted three or more places between the two models. Cost per task varied far more than score: $0.11 to $0.62 for Luna and $0.38 to $0.91 for GLM-5.3-Flash. In first-turn replays, Codex's exec_command tool definition alone induced terse, telegraphic reasoning in 12 of 12 samples; Claude Code's tools did so in 0 of 11.",
-      "impact": "Buying a coding agent is a model-plus-harness decision, and the wrapper can dominate the bill. It also suggests tool schemas themselves shape model reasoning, a design lever most teams do not measure. Caveats: only two models, one effort setting, default configurations and a small task suite.",
-      "url": "https://artificialanalysis.ai/agents/coding-agents#harness-comparisons"
-    },
-    {
-      "title": "Anthropic Turns MCP Servers into Skill Distributors as Tasks and Elicitation Go GA",
-      "source": "Anthropic / TNW",
-      "summary": "Anthropic opened Skills over MCP to public beta on Nov 24 in Claude and Claude Code: an MCP server can now ship step-by-step playbooks and best practices alongside its tools, loaded only when needed and updated with the server. Shopify uses them for store design and HubSpot for customer onboarding. Two protocol features reached general availability - Tasks, which lets a server run long background jobs, and Elicitation, which pauses for user confirmation (GitHub requires typing a repo name before deletion; Supabase confirms paid-project costs). File Uploads is coming next. Anthropic reports over 700 million monthly MCP SDK downloads; the beta is on by default for Pro, Max and Ultra.",
-      "impact": "The agent toolchain is standardizing beyond tool calls into instructions, async work and human checkpoints - useful for anyone wiring agents into enterprise systems. The same flexibility is an attack surface: researchers found malicious agent skills after about 1.7 million installs in August, so skill provenance deserves the same scrutiny as package dependencies.",
+      "title": "Anthropic Lets MCP Servers Ship Skills as Tasks and Elicitation Go GA",
+      "source": "Anthropic",
+      "summary": "On Nov 24 Anthropic opened Skills over MCP to public beta in Claude and Claude Code, letting an MCP server distribute step-by-step playbooks and best practices alongside its tools, loaded only when needed and updated centrally with the server. Shopify is using them for store design, HubSpot for customer onboarding and Atlassian for organisational-context work. Two protocol features reached general availability: Tasks, which runs long background jobs and agent loops while Claude continues working, and Elicitation, which pauses for user confirmation before risky actions such as GitHub repository deletion or Supabase charges. File Uploads is coming next. Anthropic reports more than 700 million monthly MCP SDK downloads and over 10,000 Claude connectors.",
+      "impact": "The agent toolchain is standardising beyond tool calls into instructions, asynchronous work and human checkpoints - useful for teams wiring agents into enterprise systems. Because the features live in the open MCP spec, compatible servers work in any client. The flip side is provenance: centrally updated skills execute inside agent workflows, so they need the same vetting as software dependencies.",
       "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
     },
     {
-      "title": "BAAI Launches REAL, a Physical-AI Benchmark That Finds Even Leaders Barely Above Half",
-      "source": "Beijing Academy of Artificial Intelligence",
-      "summary": "At its REAL Physical AI Open Day on Nov 24, BAAI published an evaluation system spanning 5 capability domains, 14 dimensions, 55 capabilities and 158 metrics, linked across benchmark, simulation and real-robot tracks, plus four first leaderboards. Kling 4.0 led the world-model board at 53.32 (closed models averaged 48.7, open models 30.3; best open model MiniMax H3 placed eighth). Gemini 4 Argon topped embodied reasoning at 75, with the top three all closed general models and the best dedicated embodied model, RynnBrain1.1-122B-A10B, at 18th. pi0.5 led simulated manipulation (59.83) and InternVLA-A1.5 real-robot manipulation (66.56). Science understanding averaged 83.8 but short-term memory only 37.8. BAAI also released the Innata-0 world system, Physis-V1-Preview, a 12,500-hour first-person HumanCOIN dataset sample and a human-centric safety whitepaper. Results were published by BAAI and not independently reproduced.",
-      "impact": "This is the first attempt at a unified, deployment-oriented yardstick for physical AI, and the numbers puncture demo-driven narratives: spatial and physical reasoning remain weak and memory is a glaring bottleneck. The accompanying REAL Olympics, built with logistics, auto, home-appliance and manufacturing partners, shifts the test from staged tasks to real operating conditions.",
-      "url": "https://realphysical.ai/"
+      "title": "OpenAI and Cisco Open-Source Shirudo for Live, Reboot-Free Linux Shields",
+      "source": "OpenAI",
+      "summary": "On Nov 23 OpenAI and Cisco released Shirudo, an open-source runtime that uses eBPF to block exploit paths on running Linux systems while permanent patches are tested and rolled out. Shields are narrowly scoped so legitimate traffic using the same kernel operations keeps working; they can be observed before enforcement and deployed without restarting services. Shields must be cryptographically signed and pass the Linux eBPF verifier, with TPM-backed records of loading and removal. In a controlled test, a Codex-generated shield added input checks to Java's Base64 decoder and stopped a Java4Shell exploit against a live Elasticsearch service with no restart. The code is BSD 2-Clause; BPF programs carry BSD/GPL dual licensing.",
+      "impact": "It targets the expensive gap between disclosure and a verified patch, especially for always-on inference servers that cannot be rebooted. Letting agents draft shields accelerates response but concentrates trust in signed artefacts and human approval; the project is pre-release, and a shield is containment, not a fix.",
+      "url": "https://openai.com/index/introducing-shirudo/"
     },
     {
-      "title": "Waymo Recalls 4,400+ Robotaxis After 11 Incursions into Closed Freeway Lanes",
-      "source": "Gizmodo / NHTSA filings",
-      "summary": "NHTSA filings disclosed this week show Waymo filed two voluntary recalls on Nov 19 covering more than 4,400 vehicles with fifth- and sixth-generation driver systems. Between Oct 1 and Nov 6, eight robotaxis entered freeway areas closed by cones, construction or California Highway Patrol traffic breaks; a few days after Waymo deployed a fix, three more entered a construction site. Only two of the 11 incidents had been public. The California DMV banned Waymo from state freeways on Nov 11, citing an imminent hazard and saying the ban stays until effective corrective action is demonstrated. Waymo says no collisions or injuries occurred and that it runs six million driverless miles a week.",
-      "impact": "Even the most mature autonomous fleet still fails on dynamic, human-controlled edge cases - cones, construction layouts and police gestures - which is exactly the long tail that matters for deploying robots in the physical world. The regulator's willingness to suspend operations also shows that aggregate safety statistics do not substitute for handling rare scenarios correctly.",
-      "url": "https://gizmodo.com/waymo-recalls-vehicles-after-11-robotaxis-entered-closed-freeway-lanes-2000844815"
+      "title": "CIA and ODNI Discover Intrusion into Unclassified Open-Source Intelligence Network",
+      "source": "The Independent",
+      "summary": "US intelligence agencies discovered a cyber intrusion involving a network used to mine publicly available, unclassified material for intelligence insights, The New York Times reported on Nov 24, with AP and Reuters confirming further details. Some unclassified information was exposed, and officials said data held by other government agencies may also have been affected. ODNI said there were 'no disruptions to critical capabilities or classified systems' and that the issue had been resolved. The attacker has not been identified and the entry route remains unknown. The disclosure follows separate breaches at the FBI's National Crime Information Center and the Agriculture Department, though no link between the incidents has been established.",
+      "impact": "Unclassified does not mean harmless: an OSINT platform reveals what analysts collect, which queries they run and which commercial feeds they rely on - a map of agency priorities without a single secret document. For contractors and data vendors, it underlines that access keys on low-sensitivity networks deserve zero-trust controls.",
+      "url": "https://www.independent.co.uk/news/world/americas/cia-cyber-attack-dni-breach-fbi-b3090993.html"
+    },
+    {
+      "title": "CISA Adds Actively Exploited MONAI Label and N-able Mail Assure Flaws to KEV",
+      "source": "CISA",
+      "summary": "On Nov 23 CISA added two vulnerabilities to its Known Exploited Vulnerabilities catalog based on evidence of active exploitation. CVE-2026-133968 is a path traversal flaw (CVSS 9.8) in Project MONAI's MONAI Label, an open-source medical-imaging annotation server that can let an unauthenticated attacker write files outside the datastore and achieve remote code execution. Amazon reported that a suspected China-nexus operator used the open-source CAIRN AI framework to find and exploit the flaw in roughly 11 minutes, then dropped a reverse shell in sitecustomize.py to gain root. CVE-2026-134624 is a CVSS 9.3 server-side request forgery flaw in N-able Mail Assure (SpamExperts) tied to a Nov 16 service disruption. Federal agencies must remediate by Nov 26 under BOD 26-04.",
+      "impact": "The two listings turn an AI-agent capability demo into a compliance deadline: federal agencies and healthcare research networks must patch or document exceptions on a fixed schedule. The 11-minute discovery-to-shell timeline shows why multi-day patch cycles are inadequate for internet-facing research tools that ship without authentication.",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/23/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "title": "Gatwick AutoPay Breach Exposes Drivers' Credentials, Addresses and Travel Times",
+      "source": "SecNews",
+      "summary": "London Gatwick confirmed on Nov 24 that AutoPay, the third-party system used to charge drivers automatically in its drop-off zones, had been accessed without authorisation. Operator Times24 UK discovered the intrusion; Gatwick disabled AutoPay, emailed affected customers and notified the UK Information Commissioner's Office. Exposed data includes AutoPay login credentials, names, email and home addresses, registered vehicle details, drop-off times and transaction records; in isolated cases the card brand, last four digits and expiry date were also exposed. Full card numbers and security codes were not reported as affected. The number of customers, intrusion window and entry method remain undisclosed, and no group has claimed responsibility.",
+      "impact": "For drivers, reused passwords and the combination of home address with travel times create account-takeover and burglary risk, not just card fraud. For operators, it shows that parking and drop-off systems are identity and payment systems in practice, and that a brand stays accountable when a little-known supplier is breached.",
+      "url": "https://secnews.co.uk/2026/11/gatwick-drop-off-autopay-breach-times24"
     }
   ]
 }
