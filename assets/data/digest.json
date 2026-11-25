@@ -1,40 +1,40 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "items": [
     {
-      "title": "Google DeepMind Uses Gemini 4 Agents to Design Faster Quantum Algorithms, Verified by Lean",
-      "source": "Google DeepMind",
-      "summary": "Google DeepMind and Google Quantum AI said on Nov 23 that teams of Gemini 4 agents redesigned several quantum algorithms and circuits, with every result proved correct in Lean rather than tested on hardware. One arcsin state-loading subroutine improved 290-fold; a circuit for inertial-confinement-fusion calculations cut combined cost 11.8x and logical-qubit memory from 5,650 to 4,338. Simulations of a photosensitive molecule became 8x cheaper and cytochrome P450 modeling 2.5x, while one Grover implementation sped up 2.57x. Agents met every four hours to trade ideas in a shared notebook. The team open-sourced its Lean library, problem specifications and verified solutions.",
-      "impact": "It demonstrates a reusable pattern for scientific discovery: agent search plus machine-checkable proofs, valuable when experiments are too costly to run. The work could shorten algorithm-design cycles for fusion and drug research, although the resulting circuits still exceed first-generation fault-tolerant hardware.",
-      "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+      "title": "PrismML Squeezes an Agentic Coding Model into 5.9 GB with Ternary Bonsai 2.5 27B",
+      "source": "PrismML",
+      "summary": "PrismML released Ternary Bonsai 2.5 27B on Nov 24, an Apache 2.0 update to its ternary-quantized Qwen3.8 27B derivative that keeps the same 5.9 GB footprint while targeting multi-turn tool use and long agent runs. In the company's whitepaper, SWE-bench Verified rises from 60.8 to 75.6 (full-precision base: 80.6), Terminal-Bench 2.1 from 52.8 to 60.1, and AppWorld from 51.2 to 90.5. The model reaches 291 tokens/s on an H100 with multi-token prediction and about 204 tokens/s on a consumer RTX 4090; it runs via llama.cpp on NVIDIA/Intel GPUs and MLX on Mac, iPhone and iPad.",
+      "impact": "It pushes genuinely useful agentic coding onto consumer hardware and private repositories, where sensitive code never has to leave the device. The trade-off is real: all numbers are vendor-run, and LiveCodeBench v6 slipped slightly (83.8 to 83.0), so the 'near full-precision' claim needs outside testing.",
+      "url": "https://prismml.com/news/bonsai-2-5-27b"
     },
     {
-      "title": "Sarvam Releases Open-Weight 105B 'Flash-Lite' Model With 160K Context and $0.15/M-Token Pricing",
-      "source": "Sarvam AI",
-      "summary": "Bengaluru-based Sarvam AI published Sarvam-105B-1711 on Nov 22, a new open-weight checkpoint of its 105-billion-parameter mixture-of-experts model aimed at high-volume customer support, voice agents and on-premise deployment. Continued pretraining on upgraded B200 hardware extended context to 160K tokens and lifted its average across eight conversational-agent benchmarks from 42.6 to 73.9, the company says, close to Gemini 3.5 Flash-Lite's 74.0. A 65GB NVFP4 build fits on a single 96GB RTX PRO 6000 GPU; BF16 weights are also available. Inference optimizations cut Sarvam's blended API price from $0.44 to $0.15 per million tokens. All benchmarks are vendor-run.",
-      "impact": "Cheap, self-hostable agents with strong Indic-language support widen options for banks and public agencies that cannot send data abroad. If independent checks hold up, the pricing could pressure Western API vendors; if not, it is another vendor-reported leaderboard claim.",
-      "url": "https://www.sarvam.ai/blogs/sarvam-105b-1711"
+      "title": "Artificial Analysis Shows the Coding Harness Can Move Cost 5.4x While Score Barely Budges",
+      "source": "Artificial Analysis",
+      "summary": "On Nov 24 the independent evaluator added Harness Comparisons to its Coding Agent Index v2.1, holding the model and reasoning effort fixed while swapping the agent harness across 13 options. GPT-6 Luna scored highest in OpenAI's Codex (25.9) and lowest in Qwen Code (17.2), while GLM-5.3-Flash peaked in Claude Code (38.9) and ranked last in Codex (27.8) - nine of 13 harnesses shifted three or more places between the two models. Cost per task varied far more than score: $0.11 to $0.62 for Luna and $0.38 to $0.91 for GLM-5.3-Flash. In first-turn replays, Codex's exec_command tool definition alone induced terse, telegraphic reasoning in 12 of 12 samples; Claude Code's tools did so in 0 of 11.",
+      "impact": "Buying a coding agent is a model-plus-harness decision, and the wrapper can dominate the bill. It also suggests tool schemas themselves shape model reasoning, a design lever most teams do not measure. Caveats: only two models, one effort setting, default configurations and a small task suite.",
+      "url": "https://artificialanalysis.ai/agents/coding-agents#harness-comparisons"
     },
     {
-      "title": "Samsung Confirms Vendor Breach as n0n Leaks 150,000 Smart-TV Viewing Records",
-      "source": "VARINDIA",
-      "summary": "Samsung confirmed on Nov 22 that a third-party vendor handling advertising data for Samsung Ads in North America suffered a security incident, after the n0n ransomware group dumped roughly 220MB of files on its leak site. Analysis cited from Cybernews found about 150,000 2024 smart-TV viewing events with timestamps, durations, device details, cities and ZIP codes, though not what individual viewers watched. Other sets include 42,600 political-ad records, about 99,100 AI ad-model training embeddings from 2021, and internal documents exposing an employee's details and data-warehouse infrastructure. Samsung says it is still determining scope; the vendor and affected user count remain unknown.",
-      "impact": "The leak shows how automatic content recognition data becomes a liability once shared with processors, reviving smart-TV privacy concerns and a Texas consent agreement. For enterprises, third-party adtech remains a weak link that can expose sensitive telemetry even when core systems are untouched.",
-      "url": "https://www.varindia.com/news/samsung-confirms-dark-web-data-leak"
+      "title": "Anthropic Turns MCP Servers into Skill Distributors as Tasks and Elicitation Go GA",
+      "source": "Anthropic / TNW",
+      "summary": "Anthropic opened Skills over MCP to public beta on Nov 24 in Claude and Claude Code: an MCP server can now ship step-by-step playbooks and best practices alongside its tools, loaded only when needed and updated with the server. Shopify uses them for store design and HubSpot for customer onboarding. Two protocol features reached general availability - Tasks, which lets a server run long background jobs, and Elicitation, which pauses for user confirmation (GitHub requires typing a repo name before deletion; Supabase confirms paid-project costs). File Uploads is coming next. Anthropic reports over 700 million monthly MCP SDK downloads; the beta is on by default for Pro, Max and Ultra.",
+      "impact": "The agent toolchain is standardizing beyond tool calls into instructions, async work and human checkpoints - useful for anyone wiring agents into enterprise systems. The same flexibility is an attack surface: researchers found malicious agent skills after about 1.7 million installs in August, so skill provenance deserves the same scrutiny as package dependencies.",
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
     },
     {
-      "title": "South Korean Financial Sector Hit by Fresh Breach Wave as AI-Assisted Attacks Outpace Audits",
-      "source": "The Dong-A Ilbo",
-      "summary": "Samsung Securities disclosed on Nov 23 that an intrusion into its Voice of Customer system on Nov 21 exposed personal data of 8,241 customers across 13 categories, including account numbers, addresses and driver's licence numbers. Yebyeol General Insurance separately reported a breach affecting 66 people via outsourced claims processor LK Insurance Brokerage. From Sept 8 to Nov 5, cyber incidents at 37 financial institutions compromised 472,619 records, a tally that excludes newer cases. The Financial Services Commission ordered more than 580 institutions to audit IT access points on Nov 5, yet attacks suspected of using AI agents have continued, exposing weaknesses in a sector long shielded by strict network segregation.",
-      "impact": "The breaches undercut the assumption that network isolation alone protects finance and are fuelling arguments for letting Korean institutions deploy AI defensively. They also highlight outsourcing and customer-feedback systems as soft entry points that regulator-led asset inventories have yet to close.",
-      "url": "https://www.donga.com/en/article/all/20261124/6471352/1"
+      "title": "BAAI Launches REAL, a Physical-AI Benchmark That Finds Even Leaders Barely Above Half",
+      "source": "Beijing Academy of Artificial Intelligence",
+      "summary": "At its REAL Physical AI Open Day on Nov 24, BAAI published an evaluation system spanning 5 capability domains, 14 dimensions, 55 capabilities and 158 metrics, linked across benchmark, simulation and real-robot tracks, plus four first leaderboards. Kling 4.0 led the world-model board at 53.32 (closed models averaged 48.7, open models 30.3; best open model MiniMax H3 placed eighth). Gemini 4 Argon topped embodied reasoning at 75, with the top three all closed general models and the best dedicated embodied model, RynnBrain1.1-122B-A10B, at 18th. pi0.5 led simulated manipulation (59.83) and InternVLA-A1.5 real-robot manipulation (66.56). Science understanding averaged 83.8 but short-term memory only 37.8. BAAI also released the Innata-0 world system, Physis-V1-Preview, a 12,500-hour first-person HumanCOIN dataset sample and a human-centric safety whitepaper. Results were published by BAAI and not independently reproduced.",
+      "impact": "This is the first attempt at a unified, deployment-oriented yardstick for physical AI, and the numbers puncture demo-driven narratives: spatial and physical reasoning remain weak and memory is a glaring bottleneck. The accompanying REAL Olympics, built with logistics, auto, home-appliance and manufacturing partners, shifts the test from staged tasks to real operating conditions.",
+      "url": "https://realphysical.ai/"
     },
     {
-      "title": "Virginia and Oregon Sue SpaceX Over Grok Deepfakes and 'Spicy Mode' Safety Claims",
-      "source": "CNBC",
-      "summary": "Virginia and Oregon attorneys general filed separate state-court suits on Nov 23 accusing SpaceX and its AI subsidiary of failing to stop Grok from generating sexualized images of real people, including children, and of falsely marketing Grok and X as safe. The complaints cite research by the Internet Watch Foundation and the Center for Countering Digital Hate; one study estimates about three million sexualized images were posted on X between late December and early January, roughly 23,000 appearing to depict children. The states seek injunctions, civil penalties, disgorgement and legal costs, with Virginia also seeking consumer restitution. SpaceX says it acts against misuse and notifies law enforcement.",
-      "impact": "The first state-led suits turn AI deepfake harms into consumer-protection enforcement, bypassing a stalled federal response and Section 230 defenses. A ruling could force generators to prove safeguards work by design, not merely disclaim liability after abuse occurs.",
-      "url": "https://www.cnbc.com/2026/11/23/oregon-virginia-spacex-grok-deepfake-lawsuits.html"
+      "title": "Waymo Recalls 4,400+ Robotaxis After 11 Incursions into Closed Freeway Lanes",
+      "source": "Gizmodo / NHTSA filings",
+      "summary": "NHTSA filings disclosed this week show Waymo filed two voluntary recalls on Nov 19 covering more than 4,400 vehicles with fifth- and sixth-generation driver systems. Between Oct 1 and Nov 6, eight robotaxis entered freeway areas closed by cones, construction or California Highway Patrol traffic breaks; a few days after Waymo deployed a fix, three more entered a construction site. Only two of the 11 incidents had been public. The California DMV banned Waymo from state freeways on Nov 11, citing an imminent hazard and saying the ban stays until effective corrective action is demonstrated. Waymo says no collisions or injuries occurred and that it runs six million driverless miles a week.",
+      "impact": "Even the most mature autonomous fleet still fails on dynamic, human-controlled edge cases - cones, construction layouts and police gestures - which is exactly the long tail that matters for deploying robots in the physical world. The regulator's willingness to suspend operations also shows that aggregate safety statistics do not substitute for handling rare scenarios correctly.",
+      "url": "https://gizmodo.com/waymo-recalls-vehicles-after-11-robotaxis-entered-closed-freeway-lanes-2000844815"
     }
   ]
 }
